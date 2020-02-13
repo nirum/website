@@ -1,7 +1,7 @@
 module.exports = {
   siteMetadata: {
-    title: 'Niru Maheswaranathan',
-    description: 'Niru Maheswaranathan\'s personal website.'
+    title: "Niru Maheswaranathan",
+    description: "Niru Maheswaranathan's personal website.",
   },
   plugins: [
     {
@@ -18,5 +18,5 @@ module.exports = {
       },
     },
     `gatsby-transformer-remark`,
-  ]
+  ],
 }

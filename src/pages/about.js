@@ -4,6 +4,6 @@ import Header from "../components/header"
 export default () => (
   <div>
     <Header />
-    <div>Hello world!</div>
+    <div>About me</div>
   </div>
 )
