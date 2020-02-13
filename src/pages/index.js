@@ -1,9 +1,11 @@
 import React from "react"
 import Header from "../components/header"
+import Footer from "../components/footer"
 
 export default () => (
-  <div>
+  <div className="flex flex-col min-h-screen">
     <Header />
-    <div>Hello world!</div>
+    <div className="flex-grow">Hello world!</div>
+    <Footer />
   </div>
 )

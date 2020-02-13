@@ -15,7 +15,8 @@
   "dependencies": {
     "gatsby": "^2.19.7",
     "react": "^16.12.0",
-    "react-dom": "^16.12.0"
+    "react-dom": "^16.12.0",
+    "typeface-lobster": "^0.0.72"
   },
   "devDependencies": {
     "autoprefixer": "^9.7.4",

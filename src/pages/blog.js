@@ -1,6 +1,9 @@
 import React from "react"
+import { graphql } from "gatsby"
+
 import PostLink from "../components/post-link"
 import Header from "../components/header"
+import Footer from "../components/footer"
 
 const IndexPage = ({
   data: {
@@ -11,9 +14,10 @@ const IndexPage = ({
     .filter(edge => !!edge.node.frontmatter.date)
     .map(edge => <PostLink key={edge.node.id} post={edge.node} />)
   return (
-    <div>
+    <div className="flex flex-col min-h-screen">
       <Header />
-      <div>{Posts}</div>
+      <div className="flex-grow">{Posts}</div>
+      <Footer />
     </div>
   )
 }
