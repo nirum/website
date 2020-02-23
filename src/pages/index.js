@@ -1,11 +1,13 @@
 import React from "react"
-import Header from "../components/header"
-import Footer from "../components/footer"
+import Layout from "../components/layout"
 
 export default () => (
-  <div className="flex flex-col min-h-screen">
-    <Header />
-    <div className="flex-grow">Hello world!</div>
-    <Footer />
-  </div>
+  <Layout>
+    <h4>Testing the hierarchy.</h4>
+    <h1>Testing</h1>
+    <h2>Here is an h2</h2>
+    <p>This is a test.</p>
+    <h3>And an h3</h3>
+    <p>This is a test.</p>
+  </Layout>
 )

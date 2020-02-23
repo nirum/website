@@ -1,3 +1,126 @@
 @tailwind base;
+
+@font-face {
+    font-family: 'IBMPlexSans';
+    src: url("fonts/IBMPlexSans-Light.woff2");
+    font-weight: 300;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'IBMPlexSans';
+    src: url("fonts/IBMPlexSans-Light-Italic.woff2");
+    font-weight: 300;
+    font-style: italic;
+}
+@font-face {
+    font-family: 'IBMPlexSans';
+    src: url("fonts/IBMPlexSans-Regular.woff2");
+    font-weight: 400;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'IBMPlexSans';
+    src: url("fonts/IBMPlexSans-Regular-Italic.woff2");
+    font-weight: 400;
+    font-style: italic;
+}
+@font-face {
+    font-family: 'IBMPlexSans';
+    src: url("fonts/IBMPlexSans-Semibold.woff2");
+    font-weight: 600;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'IBMPlexSans';
+    src: url("fonts/IBMPlexSans-Semibold-Italic.woff2");
+    font-weight: 600;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'SourceSerif';
+    src: url("fonts/SourceSerifPro-Light.woff2");
+    font-weight: 300;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'SourceSerif';
+    src: url("fonts/SourceSerifPro-Light-Italic.woff2");
+    font-weight: 300;
+    font-style: italic;
+}
+@font-face {
+    font-family: 'SourceSerif';
+    src: url("fonts/SourceSerifPro-Regular.woff2");
+    font-weight: 400;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'SourceSerif';
+    src: url("fonts/SourceSerifPro-Regular-Italic.woff2");
+    font-weight: 400;
+    font-style: italic;
+}
+@font-face {
+    font-family: 'SourceSerif';
+    src: url("fonts/SourceSerifPro-Semibold.woff2");
+    font-weight: 600;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'SourceSerif';
+    src: url("fonts/SourceSerifPro-Semibold-Italic.woff2");
+    font-weight: 600;
+    font-style: italic;
+}
+
 @tailwind components;
 @tailwind utilities;
+
+.footer-link {
+    @apply border-b mb-1 border-warm-grey-700;
+}
+
+.footer-link:hover {
+    @apply text-brand-light border-brand-light;
+}
+
+.header-link {
+    @apply text-sm; /*border-b border-warm-grey-300 text-sm;*/
+}
+
+.header-link:hover {
+    @apply text-brand border-brand;
+}
+
+.header-active {
+    @apply text-brand border-b-2 border-brand;
+}
+
+h1 {
+    @apply font-serif text-3xl text-warm-grey-900;
+}
+
+h2 {
+    @apply font-serif text-2xl text-warm-grey-900 mt-6;
+}
+
+h3 {
+    @apply font-serif text-lg text-warm-grey-900 italic mt-4;
+}
+
+h4 {
+    @apply font-sans text-warm-grey-500;
+}
+
+p {
+    @apply font-serif text-warm-grey-800 leading-loose;
+}
+
+a {
+    @apply border-b border-warm-grey-200;
+}
+
+a:hover {
+    @apply border-brand text-brand;
+}
