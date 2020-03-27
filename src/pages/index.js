@@ -2,7 +2,7 @@ import React from "react"
 import Layout from "../components/layout"
 import Social from "../components/social"
 
-import profile from "./profile512.png"
+import profile from "../static/profile256.jpg"
 
 export default () => (
   <Layout>

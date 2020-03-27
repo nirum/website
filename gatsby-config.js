@@ -4,6 +4,7 @@ module.exports = {
     description: "Niru Maheswaranathan's personal website.",
   },
   plugins: [
+    `gatsby-plugin-react-helmet`,
     `gatsby-transformer-remark`,
     {
       resolve: `gatsby-source-filesystem`,
