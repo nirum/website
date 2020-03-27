@@ -21,23 +21,16 @@ module.exports = {
     },
 
     fontFamily: {
-      sans: ['IBMPlexSans', 'system-ui', '-apple-system', 'BlinkMacSystemFont', '"Helvetica Neue"', '"Segoe UI"', 'Roboto', '"Noto Sans"', 'sans-serif', 'Arial', '"Apple Color Emoji"', '"Segoe UI Emoji"', '"Segoe UI Symbol"', '"Noto Color Emoji"', ],
-      serif: ['SourceSerif', 'Georgia', 'Cambria', '"Times New Roman"', 'Times', 'serif'],
+      sans: ['"Source Sans Pro"', 'system-ui', '-apple-system', 'BlinkMacSystemFont', '"Helvetica Neue"', '"Segoe UI"', 'Roboto', '"Noto Sans"', 'sans-serif', 'Arial', '"Apple Color Emoji"', '"Segoe UI Emoji"', '"Segoe UI Symbol"', '"Noto Color Emoji"'],
+      serif: ['Georgia', 'Cambria', '"Times New Roman"', 'Times', 'serif'],
     },
 
     fontWeight: {
       light: 300,
-      normal:400,
+      normal: 400,
       semibold: 600,
     },
 
-    extend: {
-      spacing: {
-        '128': '32rem',
-        '192': '48rem',
-        '256': '64rem',
-      }
-    },
   },
   variants: {},
   plugins: [],

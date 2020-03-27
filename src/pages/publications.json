@@ -31,7 +31,7 @@
   "bibtex": "@article{williams2020discovering, title={Discovering precise temporal patterns in large-scale neural recordings through robust and interpretable time warping}, author={Williams, Alex H and Poole, Ben and Maheswaranathan, Niru and Dhawale, Ashesh K and Fisher, Tucker and Wilson, Christopher D and Brann, David H and Trautmann, Eric M and Ryu, Stephen and Shusterman, Roman and others}, journal={Neuron}, volume={105}, number={2}, pages={246--259}, year={2020}, publisher={Elsevier} }"
 }, {
   "title": "The dynamic neural code of the retina for natural scenes",
-  "authors": ["Niru Maheswaranathan"],
+  "authors": ["Niru Maheswaranathan*", "Lane T. Mcintosh*", "Hidenori Tanaka", "Satchel Grant", "David B. Kastner", "Josh B. Melander", "Aran Nayebi", "Luke Brezovec", "Julia Wang", "Surya Ganguli", "Stephen A. Baccus"],
   "date": "December 17, 2019",
   "year": "2019",
   "url": "https://www.biorxiv.org/content/10.1101/340943v5",

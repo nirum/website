@@ -1,48 +1,30 @@
 @tailwind base;
 
 @font-face {
-    font-family: 'IBMPlexSans';
-    src: url("fonts/IBMPlexSans-Light.woff2");
-    font-weight: 300;
-    font-style: normal;
-}
-@font-face {
-    font-family: 'IBMPlexSans';
-    src: url("fonts/IBMPlexSans-Light-Italic.woff2");
-    font-weight: 300;
-    font-style: italic;
-}
-@font-face {
-    font-family: 'IBMPlexSans';
-    src: url("fonts/IBMPlexSans-Regular.woff2");
+    font-family: "Source Sans Pro";
+    src: url("fonts/SourceSansPro-Regular.otf.woff2");
     font-weight: 400;
     font-style: normal;
 }
 @font-face {
-    font-family: 'IBMPlexSans';
-    src: url("fonts/IBMPlexSans-Regular-Italic.woff2");
-    font-weight: 400;
-    font-style: italic;
-}
-@font-face {
-    font-family: 'IBMPlexSans';
-    src: url("fonts/IBMPlexSans-Semibold.woff2");
+    font-family: "Source Sans Pro";
+    src: url("fonts/SourceSansPro-Semibold.otf.woff2");
     font-weight: 600;
     font-style: normal;
-}
-@font-face {
-    font-family: 'IBMPlexSans';
-    src: url("fonts/IBMPlexSans-Semibold-Italic.woff2");
-    font-weight: 600;
-    font-style: italic;
 }
 
 @tailwind components;
 @tailwind utilities;
 
+/* Responsive width */
+.responsive-width {
+    @apply w-5/6 max-w-3xl;
+}
+
 .body-bg {
     background-image: linear-gradient(#FCFCFA, #FFFFFF);
 }
+
 
 .footer-link {
     @apply border-b mb-1 border-warm-grey-700;
@@ -64,24 +46,32 @@
     @apply text-brand border-b-2 border-brand;
 }
 
+.tightbold {
+    @apply tracking-tight font-semibold;
+}
+
+.lightupper {
+    @apply tracking-wide uppercase text-warm-grey-500;
+}
+
 h1 {
-    @apply font-sans text-3xl text-warm-grey-900 font-semibold;
+    @apply font-sans text-3xl tightbold text-warm-grey-900;
 }
 
 h2 {
-    @apply font-serif text-2xl text-warm-grey-900 mt-6;
+    @apply font-sans text-2xl text-warm-grey-900 mt-6;
 }
 
 h3 {
-    @apply font-serif text-lg text-warm-grey-900 italic mt-4;
+    @apply font-sans text-lg text-warm-grey-900 italic mt-4;
 }
 
 h4 {
-    @apply font-sans text-warm-grey-500;
+    @apply font-sans lightupper;
 }
 
 p {
-    @apply font-sans text-warm-grey-800 leading-7;
+    @apply font-sans text-warm-grey-800 leading-8;
 }
 
 a {

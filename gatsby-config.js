@@ -4,12 +4,7 @@ module.exports = {
     description: "Niru Maheswaranathan's personal website.",
   },
   plugins: [
-    {
-      resolve: `gatsby-plugin-postcss`,
-      options: {
-        postCssPlugins: [require("tailwindcss"), require("autoprefixer")],
-      },
-    },
+    `gatsby-transformer-remark`,
     {
       resolve: `gatsby-source-filesystem`,
       options: {
@@ -17,6 +12,19 @@ module.exports = {
         name: `blog`,
       },
     },
-    `gatsby-transformer-remark`,
+    {
+      resolve: `gatsby-plugin-postcss`,
+      options: {
+        postCssPlugins: [require("tailwindcss"), require("autoprefixer")],
+      },
+    },
+    {
+      resolve: `gatsby-plugin-purgecss`,
+      options: {
+        printRejected: false,
+        develop: false,
+        tailwind: true,
+      }
+    }
   ],
 }
