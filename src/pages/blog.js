@@ -14,7 +14,8 @@ const IndexPage = ({
     .map(edge => (<li><PostLink key={edge.node.id} post={edge.node} /></li>))
   return (
     <Layout>
-      <h4>Recent Blog Posts</h4>
+      <h4>Writing</h4>
+      <h1>Blog posts</h1>
       <ul>
         {Posts}
       </ul>

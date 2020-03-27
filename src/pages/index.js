@@ -6,7 +6,6 @@ import profile from "../static/profile256.jpg"
 
 export default () => (
   <Layout>
-    {/* <div className="flex items-start justify-between flex-row-reverse lg:justify-left lg:flex-row"> */}
     <div className="flex flex-col items-start sm:flex-row-reverse sm:justify-between xl:flex-row xl:justify-start">
       <div className="mr-8 -mt-3 xl:-ml-32">
         <img className="w-24 h-24 rounded-full shadow-xl" src={profile} alt="Splash" />
