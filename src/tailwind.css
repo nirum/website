@@ -37,45 +37,12 @@
     font-style: italic;
 }
 
-@font-face {
-    font-family: 'SourceSerif';
-    src: url("fonts/SourceSerifPro-Light.woff2");
-    font-weight: 300;
-    font-style: normal;
-}
-@font-face {
-    font-family: 'SourceSerif';
-    src: url("fonts/SourceSerifPro-Light-Italic.woff2");
-    font-weight: 300;
-    font-style: italic;
-}
-@font-face {
-    font-family: 'SourceSerif';
-    src: url("fonts/SourceSerifPro-Regular.woff2");
-    font-weight: 400;
-    font-style: normal;
-}
-@font-face {
-    font-family: 'SourceSerif';
-    src: url("fonts/SourceSerifPro-Regular-Italic.woff2");
-    font-weight: 400;
-    font-style: italic;
-}
-@font-face {
-    font-family: 'SourceSerif';
-    src: url("fonts/SourceSerifPro-Semibold.woff2");
-    font-weight: 600;
-    font-style: normal;
-}
-@font-face {
-    font-family: 'SourceSerif';
-    src: url("fonts/SourceSerifPro-Semibold-Italic.woff2");
-    font-weight: 600;
-    font-style: italic;
-}
-
 @tailwind components;
 @tailwind utilities;
+
+.body-bg {
+    background-image: linear-gradient(#FCFCFA, #FFFFFF);
+}
 
 .footer-link {
     @apply border-b mb-1 border-warm-grey-700;
@@ -86,7 +53,7 @@
 }
 
 .header-link {
-    @apply text-sm; /*border-b border-warm-grey-300 text-sm;*/
+    @apply border-b-2 border-warm-grey-300;
 }
 
 .header-link:hover {
@@ -98,7 +65,7 @@
 }
 
 h1 {
-    @apply font-serif text-3xl text-warm-grey-900;
+    @apply font-sans text-3xl text-warm-grey-900 font-semibold;
 }
 
 h2 {
@@ -114,7 +81,7 @@ h4 {
 }
 
 p {
-    @apply font-serif text-warm-grey-800 leading-loose;
+    @apply font-sans text-warm-grey-800 leading-7;
 }
 
 a {
@@ -123,4 +90,12 @@ a {
 
 a:hover {
     @apply border-brand text-brand;
+}
+
+.button {
+    @apply text-sm mr-2 shadow-sm rounded-lg bg-brand text-warm-grey-050 p-1 px-2;
+}
+
+.button:hover {
+    @apply bg-brand-light text-warm-grey-050;
 }

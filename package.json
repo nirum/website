@@ -14,6 +14,7 @@
   },
   "dependencies": {
     "gatsby": "^2.19.19",
+    "gatsby-cli": "^2.11.2",
     "react": "^16.12.0",
     "react-dom": "^16.12.0"
   },

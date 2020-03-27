@@ -10,9 +10,8 @@ export default () => (
                     <ul className="mt-2 leading-6">
                         {/* <li><Link className="footer-link">Return to Top</Link></li> */}
                         <li><Link className="footer-link" to="/">Home</Link></li>
-                        <li><Link className="footer-link" to="/about">About</Link></li>
-                        <li><Link className="footer-link" to="/blog">Blog</Link></li>
                         <li><Link className="footer-link" to="/research">Research</Link></li>
+                        {/* <li><Link className="footer-link" to="/blog">Blog</Link></li> */}
                     </ul>
                 </div>
                 <div className="flex flex-col justify-start">

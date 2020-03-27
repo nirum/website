@@ -16,6 +16,8 @@ module.exports = {
       "brand-light": "#3994C1",
       "brand": "#1D6F98",
       "brand-dark": "#166086",
+
+      "white": "#FFFFFF",
     },
 
     fontFamily: {
