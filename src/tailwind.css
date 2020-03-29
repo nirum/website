@@ -23,21 +23,16 @@
     @apply w-5/6 max-w-3xl;
 }
 
-.body-bg {
-    background-image: linear-gradient(#FCFCFA, #FFFFFF);
-}
-
-
 .footer-link {
-    @apply border-b mb-1 border-warm-grey-700;
+    @apply border-b mb-1 border-gray-700;
 }
 
 .footer-link:hover {
-    @apply text-brand-light border-brand-light;
+    @apply text-brand-lighter border-brand-lighter;
 }
 
 .header-link {
-    @apply border-b-2 border-warm-grey-300;
+    @apply border-b-2 border-gray-300;
 }
 
 .header-link:hover {
@@ -53,19 +48,19 @@
 }
 
 .lightupper {
-    @apply tracking-wide uppercase text-warm-grey-500;
+    @apply tracking-wide uppercase text-gray-500;
 }
 
 h1 {
-    @apply font-sans text-3xl tightbold text-warm-grey-900;
+    @apply font-sans text-3xl tightbold text-gray-900;
 }
 
 h2 {
-    @apply font-sans text-2xl text-warm-grey-900 mt-6;
+    @apply font-sans text-2xl text-gray-900 mt-6;
 }
 
 h3 {
-    @apply font-sans text-lg text-warm-grey-900 mt-4;
+    @apply font-sans text-lg text-gray-900 mt-4;
 }
 
 h4 {
@@ -73,11 +68,11 @@ h4 {
 }
 
 p {
-    @apply font-sans text-warm-grey-800 leading-8;
+    @apply font-sans text-gray-800 leading-8;
 }
 
 a {
-    @apply border-b border-warm-grey-200;
+    @apply border-b border-gray-200;
 }
 
 a:hover {
@@ -85,14 +80,33 @@ a:hover {
 }
 
 .button {
-    @apply text-sm mr-2 shadow-lg rounded-lg bg-brand text-warm-grey-050 p-1 px-2;
-    background-image: linear-gradient(#3994C1, #1D6F98);
+    @apply text-sm mr-2 shadow-lg rounded-lg text-gray-050 p-1 px-2 bg-brand border-none;
 }
 
 .button:hover {
-    @apply bg-brand-light text-warm-grey-050;
-    background-image: linear-gradient(#1D6F98, #166086);
+    @apply text-gray-050 bg-brand-lighter;
 }
-      /* "brand-light": "#3994C1", */
-      /* "brand": "#1D6F98", */
-      /* "brand-dark": "#166086", */
+
+@screen dark-mode {
+    h1, h2, h3 {
+        @apply text-gray-100;
+    }
+    p {
+        @apply text-gray-200;
+    }
+    a {
+        @apply border-b border-gray-700;
+    }
+    a:hover {
+        @apply text-brand-lighter border-brand-lighter;
+    }
+    .button {
+        @apply shadow-none;
+    }
+    .header-active {
+        @apply text-brand-lighter border-b-2 border-brand-lighter;
+    }
+    .header-link:hover {
+        @apply text-brand-lighter border-brand-lighter;
+    }
+}

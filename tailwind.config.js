@@ -1,23 +1,30 @@
 module.exports = {
   theme: {
+    extend: {
+      screens: {
+        "dark-mode": {raw: '(prefers-color-scheme: dark)'}
+      }
+    },
 
     colors: {
-      "warm-grey-050": "#FCFCFA",
-      "warm-grey-100": "#E8E6E1",
-      "warm-grey-200": "#D3CEC4",
-      "warm-grey-300": "#B8B2A7",
-      "warm-grey-400": "#A39E93",
-      "warm-grey-500": "#857F72",
-      "warm-grey-600": "#625D52",
-      "warm-grey-700": "#504A40",
-      "warm-grey-800": "#423D33",
-      "warm-grey-900": "#27241D",
-
-      "brand-light": "#3994C1",
-      "brand": "#1D6F98",
-      "brand-dark": "#166086",
-
-      "white": "#FFFFFF",
+      gray: {
+        "050": "#FCFCFA",
+        "100": "#E8E6E1",
+        "200": "#D3CEC4",
+        "300": "#B8B2A7",
+        "400": "#A39E93",
+        "500": "#857F72",
+        "600": "#625D52",
+        "700": "#504A40",
+        "800": "#423D33",
+        "900": "#27241D",
+      },
+      brand: {
+        "lighter": "#3994C1",
+        "default": "#1D6F98",
+        "darker": "#166086"
+      },
+      white: '#FFFFFF',
     },
 
     fontFamily: {
