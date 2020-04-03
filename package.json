@@ -8,13 +8,12 @@
     "build": "gatsby build",
     "develop": "gatsby develop",
     "format": "prettier --write \"**/*.{js,jsx,json,md}\"",
-    "start": "npm run develop",
-    "serve": "gatsby serve",
-    "clean": "gatsby clean"
+    "clean": "gatsby clean",
+    "deploy": "gatsby build; rsync -zarvh public/ nirum@198.74.50.117:/var/www/nirumaheswaranathan.com/"
   },
   "dependencies": {
     "gatsby": "^2.19.19",
-    "gatsby-cli": "^2.11.3",
+    "gatsby-cli": "^2.11.4",
     "gatsby-plugin-google-analytics": "^2.2.2",
     "gatsby-plugin-purgecss": "^5.0.0",
     "gh-polyglot": "^2.3.2",
