@@ -26,6 +26,12 @@ module.exports = {
         develop: false,
         tailwind: true,
       }
-    }
+    },
+    {
+      resolve: `gatsby-plugin-google-analytics`,
+      options: {
+        trackingId: "UA-162709542-1",
+      },
+    },
   ],
 }
