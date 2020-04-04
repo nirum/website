@@ -1,4 +1,4 @@
-import React from "react"
+import React, { useState, useEffect } from "react"
 import Layout from "../components/layout"
 // import Profile from "../components/github-profile"
 // import Repos from "../components/github-repos"
@@ -11,6 +11,7 @@ import ReposData from "../data/repos.json"
 import TestChart from "../charts/test"
 
 const UserPage = () => {
+    const [stars, setStars] = useState(null)
 
     // const  const LIMIT = 5;
     // const sortProperty = 'stargazers_count';
@@ -19,12 +20,32 @@ const UserPage = () => {
     //   .sort((a, b) => b[sortProperty] - a[sortProperty])
     //   .slice(0, LIMIT);
 
-    const mostStars = ReposData
-        .filter(repo => !repo.fork)
-        .sort((a, b) => b['stargazers_count'] - a['stargazers_count'])
-        .slice(0, 4)
-        .map(d => ({x: d["name"], y: d["stargazers_count"]}));
-    console.log(mostStars)
+    const addStars = () => {
+        setStars(stars.map(d => {
+            return {
+                x: d.x,
+                y: d.y + 5,
+            }
+        }))
+    }
+
+    const subStars = () => {
+        setStars(stars.map(d => {
+            return {
+                x: d.x,
+                y: d.y - 5,
+            }
+        }))
+    }
+
+    useEffect(() => {
+        setStars(ReposData
+            .filter(repo => !repo.fork)
+            .sort((a, b) => b['stargazers_count'] - a['stargazers_count'])
+            .slice(0, 6)
+            .map(d => ({x: d["name"], y: d["stargazers_count"]})));
+    }, [])
+
 
     return (
         <Layout>
@@ -36,8 +57,12 @@ const UserPage = () => {
                 {/* return <RepoCard key={`repo_${i}`} repo={d} /> */}
             {/* })} */}
             <div className="flex flex-row justify-around mt-8">
-                <div className="w-96 border-2 border-brand">
-                    <TestChart data={mostStars} width={384} height={330} />
+                <div className="w-full border-2 border-brand">
+                    <TestChart data={stars} />
+                    <div className="flex flex-row my-4">
+                        <button onClick={addStars} className="cursor-pointer px-4 py-1 bg-brand text-gray-200 rounded-md font-semibold">ADD</button>
+                        <button onClick={subStars} className="cursor-pointer ml-4 px-4 py-1 bg-brand text-gray-200 rounded-md font-semibold">Subtract</button>
+                    </div>
                 </div>
             </div>
         </Layout>
