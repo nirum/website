@@ -9,9 +9,11 @@
     "develop": "gatsby develop",
     "format": "prettier --write \"**/*.{js,jsx,json,md}\"",
     "clean": "gatsby clean",
-    "deploy": "gatsby build; rsync -zarvh public/ nirum@198.74.50.117:/var/www/nirumaheswaranathan.com/"
+    "fetch": "wget 'https://api.github.com/users/nirum/repos?per_page=100' -O src/data/repos.json; wget 'https://api.github.com/users/nirum' -O src/data/user.json;",
+    "deploy": "npm run fetch; gatsby build; rsync -zarvh public/ nirum@198.74.50.117:/var/www/nirumaheswaranathan.com/"
   },
   "dependencies": {
+    "d3": "^5.15.1",
     "gatsby": "^2.19.19",
     "gatsby-cli": "^2.11.4",
     "gatsby-plugin-google-analytics": "^2.2.2",
@@ -29,7 +31,8 @@
     "gatsby-transformer-remark": "^2.6.50",
     "prettier": "^1.19.1",
     "react-helmet": "^5.2.1",
-    "tailwindcss": "^1.2.0"
+    "tailwindcss": "^1.2.0",
+    "victory": "^34.1.3"
   },
   "repository": {
     "type": "git",

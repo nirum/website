@@ -11,8 +11,8 @@ export default () => (
                 <nav className="flex text-gray-600 dark-mode:text-gray-400 mt-2" >
                     <Link activeClassName="header-active" className="header-link" to="/">Home</Link>
                     <Link activeClassName="header-active" className="header-link ml-4" partiallyActive={true} to="/research">Research</Link>
-                    {/* <Link activeClassName="header-active" className="header-link ml-4" partiallyActive={true} to="/code">Code</Link> */}
-                    {/* <Link activeClassName="header-active" className="header-link ml-4" partiallyActive={true} to="/blog">Blog</Link> */}
+                    <Link activeClassName="header-active" className="header-link ml-4" partiallyActive={true} to="/code">Code</Link>
+                    <Link activeClassName="header-active" className="header-link ml-4" partiallyActive={true} to="/blog">Blog</Link>
                 </nav>
             </div>
         </div>

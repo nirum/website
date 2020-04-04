@@ -9,7 +9,3 @@ export default () => (
       <Button className="m-1" icon="pinboard" text="Pinboard" href="https://pinboard.in/u:nirum/" />
     </div>
 )
-//       <a className="button" href="https://twitter.com/niru_m/">
-//       <a className="button mt-2 sm:mt-0" href="">
-//       <a className="button mt-2 sm:mt-0" href="https://github.com/nirum/">
-//       <a className="button mt-2 sm:mt-0" href="">

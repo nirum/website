@@ -5,7 +5,3 @@ export default ({ repos }) => (
       <p>{repos.length} Repositories.</p>
   </div>
 )
-
-//   const Posts = edges
-    // .filter(edge => !!edge.node.frontmatter.date)
-    // .map(edge => (<li><PostLink key={edge.node.id} post={edge.node} /></li>))

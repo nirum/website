@@ -3,6 +3,10 @@ module.exports = {
     extend: {
       screens: {
         "dark-mode": {raw: '(prefers-color-scheme: dark)'}
+      },
+      spacing: {
+        '72': '18rem',
+        '96': '24rem',
       }
     },
 

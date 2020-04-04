@@ -1,5 +1,5 @@
 import React from "react"
-import PubsData from "./publications.json"
+import PubsData from "../data/publications.json"
 
 import Layout from "../components/layout"
 import PublicationCard from "../components/pubcard"
