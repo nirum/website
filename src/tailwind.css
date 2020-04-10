@@ -18,13 +18,18 @@
 @tailwind components;
 @tailwind utilities;
 
+/* CSS Grid */
+.justify-items-center {
+    justify-items: center;
+}
+
 /* Responsive width */
 .responsive-width {
     @apply w-5/6 max-w-3xl;
 }
 
 .footer-link {
-    @apply border-b mb-1 border-gray-700;
+    @apply mb-1 border-b border-gray-700;
 }
 
 .footer-link:hover {
@@ -40,27 +45,27 @@
 }
 
 .header-active {
-    @apply text-brand border-b-2 border-brand;
+    @apply border-b-2 text-brand border-brand;
 }
 
 .tightbold {
-    @apply tracking-tight font-semibold;
+    @apply font-semibold tracking-tight;
 }
 
 .lightupper {
-    @apply tracking-wide uppercase text-gray-500;
+    @apply tracking-wide text-gray-500 uppercase;
 }
 
 h1 {
-    @apply font-sans text-3xl tightbold text-gray-900;
+    @apply font-sans text-3xl text-gray-900 tightbold;
 }
 
 h2 {
-    @apply font-sans text-2xl text-gray-900 mt-6;
+    @apply font-sans text-2xl text-gray-900;
 }
 
 h3 {
-    @apply font-sans text-lg text-gray-900 mt-4;
+    @apply font-sans text-lg text-gray-900;
 }
 
 h4 {
@@ -68,7 +73,7 @@ h4 {
 }
 
 p {
-    @apply font-sans text-gray-800 leading-8;
+    @apply font-sans leading-8 text-gray-800;
 }
 
 a {
@@ -80,7 +85,7 @@ a:hover {
 }
 
 .button {
-    @apply text-sm mr-2 shadow-lg rounded-lg text-gray-050 p-1 px-2 bg-brand border-none;
+    @apply p-1 px-2 mr-2 text-sm border-none rounded-lg shadow-lg text-gray-050 bg-brand;
 }
 
 .button:hover {
@@ -115,7 +120,7 @@ a:hover {
         @apply shadow-none;
     }
     .header-active {
-        @apply text-brand-lighter border-b-2 border-brand-lighter;
+        @apply border-b-2 text-brand-lighter border-brand-lighter;
     }
     .header-link:hover {
         @apply text-brand-lighter border-brand-lighter;

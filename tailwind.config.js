@@ -24,6 +24,7 @@ module.exports = {
         "900": "#27241D",
       },
       brand: {
+        "lightest": "#8BD3F7",
         "lighter": "#3994C1",
         "default": "#1D6F98",
         "darker": "#166086"
