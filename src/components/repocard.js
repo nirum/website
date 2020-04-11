@@ -15,7 +15,7 @@ export default ({ url }) => {
       .then(response => response.json())
       .then(json => setRepoData(json))
       .catch(error => console.error('Error: ', error))
-  }, []);
+  });
 
   if (!repoData) {
     return <div></div>

@@ -27,11 +27,5 @@ module.exports = {
         tailwind: true,
       }
     },
-    {
-      resolve: `gatsby-plugin-google-analytics`,
-      options: {
-        trackingId: "UA-162709542-1",
-      },
-    },
   ],
 }

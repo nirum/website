@@ -15,9 +15,9 @@
     "d3": "^5.15.1",
     "gatsby": "^2.19.19",
     "gatsby-cli": "^2.11.5",
-    "gatsby-plugin-google-analytics": "^2.2.2",
     "gatsby-plugin-purgecss": "^5.0.0",
     "gh-polyglot": "^2.3.2",
+    "prettifier": "^0.4.0",
     "react": "^16.12.0",
     "react-dom": "^16.12.0"
   },
