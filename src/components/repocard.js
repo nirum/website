@@ -1,11 +1,12 @@
 import React, { useState, useEffect } from "react"
-import * as EmojiJS from "emoji-js"
+// import * as EmojiJS from "emoji-js"
+import emoji from "node-emoji"
 import dateFormat from "dateformat"
 import Icon from "./icons"
 
-const emojify = new EmojiJS()
-emojify.allow_native = true;
-emojify.replace_moe = 'unified';
+// const emojify = new EmojiJS()
+// emojify.allow_native = true;
+// emojify.replace_moe = 'unified';
 
 export default ({ url }) => {
   const [repoData, setRepoData] = useState(null);
@@ -25,7 +26,7 @@ export default ({ url }) => {
         <div className="">
           <h4>Created on: {dateFormat(Date.parse(repoData.created_at), "mmmm d, yyyy")}</h4>
           <p className="mt-2 text-xl font-semibold"><a href={repoData.html_url}>{repoData.full_name}</a></p>
-          {repoData.description && <p className="my-2 leading-snug">{emojify.replace_colons(repoData.description)}</p>}
+          {repoData.description && <p className="my-2 leading-snug">{emoji.emojify(repoData.description)}</p>}
         </div>
 
         <div className="flex flex-row flex-wrap justify-start mt-2 -ml-2 text-gray-050 dark-mode:text-gray-200">

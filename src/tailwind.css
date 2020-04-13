@@ -102,6 +102,10 @@ a:hover {
     @apply font-sans text-lg
 }
 
+body.dark-mode {
+    @apply bg-brand;
+}
+
 
 @screen dark-mode {
     h1, h2, h3 {
