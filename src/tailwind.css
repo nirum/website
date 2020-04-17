@@ -124,6 +124,14 @@ a:hover {
     @apply text-brand border-brand-ternary;
 }
 
+/* Icons */
+.primary {
+    fill: var(--fg-ternary);
+}
+.secondary {
+    fill: var(--brand-primary);
+}
+
 /* Typography */
 h1 {
     @apply font-sans text-3xl font-semibold tracking-tight text-foreground-primary;

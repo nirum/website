@@ -4,11 +4,7 @@ import { graphql } from "gatsby"
 import PostLink from "../components/post-link"
 import Layout from "../components/layout"
 
-const IndexPage = ({
-  data: {
-    allMarkdownRemark: { edges },
-  },
-}) => {
+export default ({data: {allMarkdownRemark: { edges }}}) => {
   const Posts = edges
     .filter(edge => !!edge.node.frontmatter.date)
     .map(edge => (<li><PostLink key={edge.node.id} post={edge.node} /></li>))
@@ -22,11 +18,13 @@ const IndexPage = ({
     </Layout>
   )
 }
-export default IndexPage
 
-export const pageQuery = graphql`
+export const query = graphql`
   query {
-    allMarkdownRemark(sort: { order: DESC, fields: [frontmatter___date] }) {
+    allMarkdownRemark(
+        sort: { order: DESC, fields: [frontmatter___date] },
+        filter: { fileAbsolutePath: {regex : "\/blog/"} },
+      ) {
       edges {
         node {
           id

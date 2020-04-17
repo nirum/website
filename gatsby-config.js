@@ -7,12 +7,21 @@ module.exports = {
     "gatsby-plugin-use-dark-mode",
     "gatsby-plugin-react-helmet",
     "gatsby-transformer-remark",
-    // "gatsby-plugin-dark-mode",
+    "gatsby-transformer-yaml",
     {
       resolve: "gatsby-source-filesystem",
       options: {
         path: `${__dirname}/src/blog`,
         name: "blog",
+        ignore: [`**/\.*`], // ignore files starting with a dot
+      },
+    },
+    {
+      resolve: "gatsby-source-filesystem",
+      options: {
+        path: `${__dirname}/src/publications`,
+        name: "publications",
+        ignore: [`**/\.*`], // ignore files starting with a dot
       },
     },
     {

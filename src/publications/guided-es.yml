@@ -1,0 +1,15 @@
+title: "Guided evolutionary strategies: augmenting random search with surrogate gradients"
+authors: 
+  - Niru Maheswaranathan
+  - Luke Metz
+  - George Tucker
+  - Dami Choi
+  - Jascha Sohl-Dickstein
+
+date: 2019-06-10
+location: International Conference on Machine Learning
+
+url: "https://arxiv.org/abs/1806.10230"
+pdf: "https://arxiv.org/pdf/1806.10230.pdf"
+code: "https://github.com/brain-research/guided-evolutionary-strategies"
+bibtex: "@inproceedings{maheswaranathan2019guided, title={Guided evolutionary strategies: augmenting random search with surrogate gradients}, author={Maheswaranathan, Niru and Metz, Luke and Tucker, George and Choi, Dami and Sohl-Dickstein, Jascha}, booktitle={International Conference on Machine Learning}, pages={4264--4273}, year={2019}"

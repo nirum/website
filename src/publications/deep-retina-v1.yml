@@ -1,0 +1,16 @@
+title: Deep learning models of the retinal response to natural scenes
+
+authors:
+  - Lane T. Mcintosh*
+  - Niru Maheswaranathan*
+  - Aran Nayebi
+  - Surya Ganguli
+  - Stephen A. Baccus
+
+date: 2016-12-06
+location: Neural Information Processing Systems
+
+url: "http://papers.nips.cc/paper/6388-deep-learning-models-of-the-retinal-response-to-natural-scenes"
+pdf: "https://papers.nips.cc/paper/6388-deep-learning-models-of-the-retinal-response-to-natural-scenes.pdf"
+code: "https://github.com/baccuslab/deep-retina"
+bibtex: "@inproceedings{mcintosh2016deep, title={Deep learning models of the retinal response to natural scenes}, author={McIntosh, Lane and Maheswaranathan, Niru and Nayebi, Aran and Ganguli, Surya and Baccus, Stephen}, booktitle={Advances in neural information processing systems}, pages={1369--1377}, year={2016} }"
