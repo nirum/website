@@ -107,9 +107,19 @@ red:
 }
 
 /* Header */
-/* nav {
+nav a {
+    @apply border-0;
+}
 
-} */
+/* Body */
+a {
+    @apply border-b border-background-secondary;
+}
+a:hover {
+    @apply text-brand border-brand;
+}
+
+
 /* .header-link { */
   /* nav@apply border-b-2 text-foreground; */
 /* } */

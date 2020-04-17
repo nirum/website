@@ -16,7 +16,7 @@ export default ({ children }) => (
     <Header />
     <div className="flex-grow">
       <div className="flex justify-around">
-        <div className="responsive-width">
+        <div id="body" className="responsive-width">
             {children}
         </div>
       </div>
