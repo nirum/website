@@ -1,0 +1,15 @@
+title: Reverse engineering recurrent networks for sentiment classification reveals line attractor dynamics
+
+authors:
+  - Niru Maheswaranathan*
+  - Alex H. Williams*
+  - Matthew D. Golub
+  - Surya Ganguli
+  - David Sussillo
+
+date: 2019-12-04
+location: Neural Information Processing Systems
+
+url: "https://arxiv.org/abs/1906.10720"
+pdf: "https://arxiv.org/pdf/1906.10720.pdf"
+bibtex: "@inproceedings{maheswaranathan2019reverse, title={Reverse engineering recurrent networks for sentiment classification reveals line attractor dynamics}, author={Maheswaranathan, Niru and Williams, Alex and Golub, Matthew and Ganguli, Surya and Sussillo, David}, booktitle={Advances in Neural Information Processing Systems}, pages={15670--15679}, year={2019}"

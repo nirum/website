@@ -27,22 +27,22 @@ const UserPage = () => {
     const [langs, setLangs] = useState(null)
     const [error, setError] = useState(null)
 
-    useEffect(() => {
-        fetch(`https://api.github.com/users/nirum/repos`)
-        .then(response => response.json())
-        .then(json => setRepos(json))
-        .catch(err => setError(err));
-    }, []);
+    // useEffect(() => {
+    //     fetch(`https://api.github.com/users/nirum/repos`)
+    //     .then(response => response.json())
+    //     .then(json => setRepos(json))
+    //     .catch(err => setError(err));
+    // }, []);
 
-    useEffect(() => {
-        if (!repos) { return; }
-        const validRepos = repos.filter(repo => !repo.fork);
-        setStars(validRepos
-            .sort((a, b) => b['stargazers_count'] - a['stargazers_count'])
-            .slice(0, 6)
-            .map(d => ({x: d.name, y: d.stargazers_count})));
-        setLangs(validRepos.map(d => d.language));
-    }, [repos])
+    // useEffect(() => {
+    //     if (!repos) { return; }
+    //     const validRepos = repos.filter(repo => !repo.fork);
+    //     setStars(validRepos
+    //         .sort((a, b) => b['stargazers_count'] - a['stargazers_count'])
+    //         .slice(0, 6)
+    //         .map(d => ({x: d.name, y: d.stargazers_count})));
+    //     setLangs(validRepos.map(d => d.language));
+    // }, [repos])
 
     return (
         <Layout>
@@ -50,8 +50,12 @@ const UserPage = () => {
             <h1>GitHub project stats</h1>
             <p>Having some fun exploring my GitHub activity using the <a href="https://developer.github.com/v3/">GitHub API</a> and <a href="https://d3js.org">d3.js</a>, inspired by <a href="https://github.com/bchiang7/octoprofile">Octoprofile</a>.</p>
             <div className="flex flex-col">
-
                 <div className="w-full mt-12">
+                    <h2>Overview</h2>
+                    <Loading />
+                </div>
+
+                {/* <div className="w-full mt-12">
                     {error && <Alert header="GitHub API limit reached." text="The API rate limit is 60 requests per hour. Please try again later." />}
                     {!error && (<div>
                         <h2>Overview</h2>
@@ -80,7 +84,7 @@ const UserPage = () => {
                             })}
                         </div>
                     </div>)}
-                </div>
+                </div> */}
             </div>
         </Layout>
     )
