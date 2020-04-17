@@ -1,23 +1,23 @@
 import React from "react"
 import { Link } from "gatsby"
-import ThemeToggler from "../components/theme-toggler"
+import Toggle from "./theme-toggle"
 
-export default () => (
-    <header className="flex justify-around pt-6 pb-6 border-t-8 bg-gray-050 dark-mode:bg-gray-900 border-brand-lighter dark-mode:border-brand" >
-        <div className="flex flex-row mb-12 responsive-width">
-            <div className="flex flex-col items-start font-sans text-gray-600">
-                <div className="font-semibold text-gray-900 dark-mode:text-gray-100">
-                    Niru Maheswaranathan
-                </div>
-                <nav className="flex mt-2 text-gray-600 dark-mode:text-gray-400" >
-                    <Link activeClassName="header-active" className="header-link" to="/">Home</Link>
-                    <Link activeClassName="header-active" className="ml-4 header-link" partiallyActive={true} to="/research">Research</Link>
-                    <Link activeClassName="header-active" className="ml-4 header-link" partiallyActive={true} to="/code">Code</Link>
-                    {/* <Link activeClassName="header-active" className="ml-4 header-link" partiallyActive={true} to="/blog">Blog</Link> */}
+export default () => {
+    // CSS
+    const activeLink = "bg-brand-ternary text-brand-primary"
+    const link = "ml-1 px-2 py-1 rounded-lg text-foreground-secondary hover:bg-brand-ternary cursor-pointer"
+
+    return (
+        <header className="flex justify-around pt-2 pb-6 border-t-8 bg-background-primary border-brand" >
+            <div className="flex flex-wrap items-center justify-between mb-12 responsive-width">
+                <nav className="flex mt-6 -ml-1 font-sans font-semibold" >
+                    <Link activeClassName={activeLink} className={link} to="/">Home</Link>
+                    <Link activeClassName={activeLink} className={link} partiallyActive={true} to="/research">Research</Link>
+                    <Link activeClassName={activeLink} className={link} partiallyActive={true} to="/code">Code</Link>
+                    <Link activeClassName={activeLink} className={link} partiallyActive={true} to="/icons">Icons</Link>
                 </nav>
+                <Toggle />
             </div>
-            <div className="flex-grow"></div>
-            <ThemeToggler />
-        </div>
-    </header>
-)
+        </header>
+    )
+};

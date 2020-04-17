@@ -7,7 +7,7 @@ module.exports = {
     "gatsby-plugin-use-dark-mode",
     "gatsby-plugin-react-helmet",
     "gatsby-transformer-remark",
-    "gatsby-plugin-dark-mode",
+    // "gatsby-plugin-dark-mode",
     {
       resolve: "gatsby-source-filesystem",
       options: {

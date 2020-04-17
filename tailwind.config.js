@@ -1,9 +1,6 @@
 module.exports = {
   theme: {
     extend: {
-      screens: {
-        "dark-mode": {raw: '(prefers-color-scheme: dark)'}
-      },
       spacing: {
         '72': '18rem',
         '96': '24rem',
@@ -11,36 +8,30 @@ module.exports = {
     },
 
     colors: {
-      gray: {
-        "050": "#FCFCFA",
-        "100": "#E8E6E1",
-        "200": "#D3CEC4",
-        "300": "#B8B2A7",
-        "400": "#A39E93",
-        "500": "#857F72",
-        "600": "#625D52",
-        "700": "#504A40",
-        "800": "#423D33",
-        "900": "#27241D",
+      foreground: {
+        default: 'var(--fg-default)',
+        primary: 'var(--fg-primary)',
+        secondary: 'var(--fg-secondary)',
+        ternary: 'var(--fg-ternary)'
       },
-      red: {
-        "100": "#FFF5F5",
-        "200": "#FED7D7",
-        "300": "#FEB2B2",
-        "400": "#FC8181",
-        "500": "#F56565",
-        "600": "#E53E3E",
-        "700": "#C53030",
-        "800": "#9B2C2C",
-        "900": "#742A2A"
+      background: {
+        default: 'var(--bg-default)',
+        primary: 'var(--bg-primary)',
+        secondary: 'var(--bg-secondary)',
+        ternary: 'var(--bg-ternary)'
+      },
+      error: {
+        default: 'var(--error-default)',
+        primary: 'var(--error-primary)',
+        secondary: 'var(--error-secondary)',
+        ternary: 'var(--error-ternary)'
       },
       brand: {
-        "lightest": "#8BD3F7",
-        "lighter": "#3994C1",
-        "default": "#1D6F98",
-        "darker": "#166086"
+        default: 'var(--brand-default)',
+        primary: 'var(--brand-primary)',
+        secondary: 'var(--brand-secondary)',
+        ternary: 'var(--brand-ternary)'
       },
-      white: '#FFFFFF',
     },
 
     fontFamily: {
@@ -49,7 +40,6 @@ module.exports = {
     },
 
     fontWeight: {
-      light: 300,
       normal: 400,
       semibold: 600,
     },

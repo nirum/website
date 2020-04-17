@@ -1,11 +1,9 @@
 import React from "react"
-import Icon from "../components/icons"
 
-export default ({ icon, text, href, className = '' }) => (
-    <a href={href} className={`text-gray-800 dark-mode:text-gray-200 shadow bg-transparent border border-gray-500 font-bold py-1 px-2 rounded ${className}`.trim()}>
+export default ({ children }) => (
+    <button className="px-2 py-1 font-bold bg-transparent border border-gray-500 rounded shadow text-fg-primary">
         <div className="inline-flex items-center">
-            <Icon name={icon} className="w-4 h-4 mr-1" />
-            <span>{text}</span>
+            { children }
         </div>
-    </a>
+    </button>
 );

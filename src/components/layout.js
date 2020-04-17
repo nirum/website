@@ -4,7 +4,7 @@ import Footer from "../components/footer"
 import { Helmet } from "react-helmet"
 
 export default ({ children }) => (
-  <div className="flex flex-col min-h-screen bg-gray-050 dark-mode:bg-gray-900">
+  <div className="flex flex-col min-h-screen bg-background-primary">
     <Helmet>
       <meta charSet="utf-8" />
       <title>Niru Maheswaranathan</title>
@@ -14,7 +14,7 @@ export default ({ children }) => (
       <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
     </Helmet>
     <Header />
-    <div id="body" className="flex-grow">
+    <div className="flex-grow">
       <div className="flex justify-around">
         <div className="responsive-width">
             {children}
