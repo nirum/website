@@ -106,52 +106,27 @@ red:
     @apply w-5/6 max-w-3xl;
 }
 
-/* Header */
+/* Header and Footer */
 nav a {
     @apply border-0;
+}
+
+nav a:hover {
+    @apply text-brand-primary;
 }
 
 /* Body */
 a {
     @apply border-b border-background-secondary;
 }
+
 a:hover {
-    @apply text-brand border-brand;
+    @apply text-brand border-brand-ternary;
 }
-
-
-/* .header-link { */
-  /* nav@apply border-b-2 text-foreground; */
-/* } */
-
-/* .header-link:hover { */
-    /* @apply text-brand border-brand; */
-/* } */
-
-/* .header-active { */
-    /* @apply border-b-2 text-brand border-brand; */
-/* } */
-
-/* Footer */
-/* .footer-link { */
-    /* @apply mb-1 border-b border-gray-700; */
-/* } */
-
-/* .footer-link:hover { */
-    /* @apply text-brand-lighter border-brand-lighter; */
-/* } */
 
 /* Typography */
-.tightbold {
-    @apply font-semibold tracking-tight;
-}
-
-.lightupper {
-    @apply tracking-wide uppercase text-foreground-secondary;
-}
-
 h1 {
-    @apply font-sans text-3xl text-foreground-primary tightbold;
+    @apply font-sans text-3xl font-semibold tracking-tight text-foreground-primary;
 }
 
 h2 {
@@ -163,19 +138,11 @@ h3 {
 }
 
 h4 {
-    @apply font-sans lightupper;
+    @apply font-sans tracking-wide uppercase text-foreground-secondary;
 }
 
 p {
     @apply font-sans leading-8 text-foreground;
-}
-
-.button {
-    @apply p-1 px-2 mr-2 text-sm border-none rounded-lg shadow-lg text-foreground bg-brand;
-}
-
-.button:hover {
-    @apply text-foreground-primary bg-brand-primary;
 }
 
 /* .chart { */
