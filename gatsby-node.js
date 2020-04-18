@@ -1,3 +1,5 @@
+// Builds a static page for each blog post.
+
 const path = require(`path`)
 exports.createPages = async ({ actions, graphql, reporter }) => {
   const { createPage } = actions

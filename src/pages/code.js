@@ -5,9 +5,6 @@ import Layout from "../components/layout"
 import StarChart from "../charts/github-star-chart"
 import LangChart from "../charts/github-lang-chart"
 
-import Loading from "../components/loading"
-import Alert from "../components/alert"
-
 const fixed_repos = [
     "nirum/tableprint",
     "nirum/ADMM",
@@ -21,11 +18,21 @@ const fixed_repos = [
     "baccuslab/pyret",
 ]
 
+const parseStargazers = repos => repos.map(d => ({x: d.node.name, y: d.node.stargazers.totalCount}));
+const parseLanguages = repos => {
+    const nested_langs = repos.map(d => d.node.languages.edges.map(d => d.node.name))
+    return nested_langs.reduce((prev, curr) => prev.concat(curr));
+}
+
 export default ({ data }) => {
-    const [repos, setRepos] = useState(null)
-    const [stars, setStars] = useState(null)
-    const [langs, setLangs] = useState(null)
-    const [error, setError] = useState(null)
+    const repos = data.githubData.data.user.repositories.edges
+    const stars = parseStargazers(repos.slice(0, 6));
+    const langs = parseLanguages(repos);
+    console.log(langs);
+    // const [repos, setRepos] = useState(null)
+    // const [stars, setStars] = useState(null)
+    // const [langs, setLangs] = useState(null)
+    // const [error, setError] = useState(null)
 
     // useEffect(() => {
     //     fetch(`https://api.github.com/users/nirum/repos`)
@@ -52,10 +59,16 @@ export default ({ data }) => {
             <div className="flex flex-col">
                 <div className="w-full mt-12">
                     <h2>Overview</h2>
-                    <div className="my-4"></div>
-                    <Loading />
-                    <div className="my-4"></div>
-                    <Alert header="GitHub API limit reached." text="The API rate limit is 60 requests per hour. Please try again later." />
+                    <div className="grid justify-around gap-4 mt-8 md:grid-cols-2">
+                        <div className="pb-2 text-gray-800 border-2 border-gray-600 rounded-lg dark-mode:text-gray-200">
+                            <p className="pt-4 text-xl text-center">Most starred repositories</p>
+                            <StarChart data={stars} />
+                        </div>
+                        <div className="pb-2 text-gray-800 border-2 border-gray-600 rounded-lg dark-mode:text-gray-200">
+                            <p className="pt-4 text-xl text-center">Top programming languages</p>
+                            <LangChart data={langs} />
+                        </div>
+                    </div>
                 </div>
 
                 {/* <div className="w-full mt-12">
@@ -92,6 +105,38 @@ export default ({ data }) => {
         </Layout>
     )
 };
+
+export const githubUserQuery = graphql`
+    query onGithub {
+        githubData {
+            data {
+                user {
+                    updatedAt
+                    followers {totalCount}
+                    gists {totalCount}
+                    repositories {
+                        totalCount
+                        edges {
+                            node {
+                                name
+                                languages {
+                                    edges {
+                                        node {
+                                            name
+                                        }
+                                    }
+                                }
+                                stargazers {
+                                    totalCount
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+`;
 
 // export const userQuery = graphql`
 //     query {

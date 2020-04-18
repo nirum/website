@@ -9,10 +9,50 @@ module.exports = {
     "gatsby-transformer-remark",
     "gatsby-transformer-yaml",
     {
-      resolve: "gatsby-source-graphql",
+      resolve: "gatsby-source-github-api",
       options: {
-        fieldName: "github",
-        url: "https://api.github.com/graphql"
+        token: process.env.TOKEN,
+        graphQLQuery: `
+          query {
+            user(login: "nirum") {
+              updatedAt
+              followers {
+                totalCount
+              }
+              repositories(first: 100, privacy: PUBLIC, isFork: false, orderBy: {field: STARGAZERS, direction: DESC}, ownerAffiliations: OWNER) {
+                edges {
+                  node {
+                    createdAt
+                    forkCount
+                    diskUsage
+                    description
+                    nameWithOwner
+                    name
+                    isPrivate
+                    id
+                    languages(first: 10) {
+                      edges {
+                        node {
+                          id
+                          color
+                          name
+                        }
+                      }
+                    }
+                    updatedAt
+                    url
+                    stargazers {
+                      totalCount
+                    }
+                  }
+                }
+                totalCount
+              }
+              gists {
+                totalCount
+              }
+            }
+          }`
       },
     },
     {

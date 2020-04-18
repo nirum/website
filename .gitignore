@@ -71,3 +71,6 @@ yarn-error.log
 
 # Yarn Integrity file
 .yarn-integrity
+
+# API tokens
+.github_api_token

@@ -153,15 +153,16 @@ p {
     @apply font-sans leading-8 text-foreground;
 }
 
-/* .chart { */
-    /* @apply text-foreground-ternary; */
-/* } */
-/* .chart > .axis { */
-    /* @apply font-sans text-sm */
-/* } */
-/* .chart > .axis > .label { */
-    /* @apply font-sans text-lg */
-/* } */
+/* Charts */
+.chart {
+    @apply text-foreground-secondary;
+}
+.chart > .axis {
+    @apply font-sans text-sm;
+}
+.chart > .axis > .label {
+    @apply font-sans text-lg;
+}
 
 
 /* Toggle */

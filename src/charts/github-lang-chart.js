@@ -7,7 +7,9 @@ export default ({ data }) => {
     const svgNode = useRef();
     const wrapperNode = useRef();
     const dims = useResizeObserver(wrapperNode);
-    const [label, setLabel] = useState("Language");
+    const defaultLabel = "Hover to see languages"
+    const numLangs = 10;
+    const [label, setLabel] = useState(defaultLabel);
 
     useEffect(() => {
         const svg = d3.select(svgNode.current)
@@ -22,7 +24,8 @@ export default ({ data }) => {
         const radius = Math.min(dims.width, dims.height) / 2
         const counts = d3.nest()
             .key(d => d).rollup(d => d.length).entries(data)
-            .sort((a, b) => b.value - a.value);
+            .sort((a, b) => b.value - a.value)
+            .slice(0, numLangs);
         const pie_data = d3.pie().value(d => d.value)(counts);
 
         const arc = d3.arc().innerRadius(0).outerRadius(radius - 1)
@@ -32,7 +35,7 @@ export default ({ data }) => {
             .attr("fill", (d, i) => d3.schemeCategory10[i])
             .attr("d", arc)
             .on("mouseover", (d, i) => setLabel(counts[i].key))
-            .on("mouseleave", () => setLabel("Language"))
+            .on("mouseleave", () => setLabel(defaultLabel))
             .style("transform", `translate(${dims.width / 2}px,${dims.height / 2}px)`)
         
         svg.select(".legend")
@@ -46,7 +49,7 @@ export default ({ data }) => {
     }, [data, dims, label]);
 
     return (
-        <div className="mt-12 mb-4 md:mb-0 chart-wrapper" ref={wrapperNode}>
+        <div className="mt-12 mb-4 md:mb-0 chart" ref={wrapperNode}>
             <svg className="w-full h-full overflow-visible" ref={svgNode}>
                 <text className="legend" />
             </svg>

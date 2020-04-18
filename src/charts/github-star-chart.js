@@ -95,7 +95,7 @@ export default ({ data }) => {
             .style("transform", "scale(1, -1)")
             .attr("x", (d, i) => x(i))
             .attr("y", margin.bottom-dims.height)
-            .attr("fill", (d, i) => i === hoverIdx ? theme.colors.brand.lighter : theme.colors.brand.default)
+            .attr("fill", (d, i) => i === hoverIdx ? theme.colors.brand.primary : theme.colors.brand.secondary)
             .attr("width", x.bandwidth())
             .on("mouseover", (d, i) => {
                 setHoverIdx(i);
@@ -131,7 +131,7 @@ export default ({ data }) => {
     }, [data, dims, hoverIdx, label]);
 
     return (
-        <div className="p-8 chart-wrapper" ref={wrapperNode}>
+        <div className="p-8 chart" ref={wrapperNode}>
             <svg className="w-full h-full overflow-visible" ref={svgNode}>
                 <g className="axis x-axis" />
                 <text className="axis x-label" />
