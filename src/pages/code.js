@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react"
 import Layout from "../components/layout"
-import RepoCard from "../components/repocard"
+// import RepoCard from "../components/repocard"
 
 import StarChart from "../charts/github-star-chart"
 import LangChart from "../charts/github-lang-chart"
@@ -21,7 +21,7 @@ const fixed_repos = [
     "baccuslab/pyret",
 ]
 
-const UserPage = () => {
+export default ({ data }) => {
     const [repos, setRepos] = useState(null)
     const [stars, setStars] = useState(null)
     const [langs, setLangs] = useState(null)
@@ -52,7 +52,10 @@ const UserPage = () => {
             <div className="flex flex-col">
                 <div className="w-full mt-12">
                     <h2>Overview</h2>
+                    <div className="my-4"></div>
                     <Loading />
+                    <div className="my-4"></div>
+                    <Alert header="GitHub API limit reached." text="The API rate limit is 60 requests per hour. Please try again later." />
                 </div>
 
                 {/* <div className="w-full mt-12">
@@ -89,4 +92,13 @@ const UserPage = () => {
         </Layout>
     )
 };
-export default UserPage
+
+// export const userQuery = graphql`
+//     query {
+//         github {
+//             user (login: "nirum") {
+//                 name
+//             }
+//         }
+//     }
+// `

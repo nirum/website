@@ -1,6 +1,5 @@
 import React from "react";
 import Button from "./button";
-import moment from "moment";
 import { Code, Document, Library, Link } from "./icons";
 
 export default ({ pub }) => {
@@ -9,7 +8,7 @@ export default ({ pub }) => {
   return (
     <div className="mt-16">
       <div className="flex flex-col lg:-ml-24 lg:items-center lg:flex-row">
-        <div className={datePill}>{moment(pub.date).format("MMM YYYY")}</div>
+        <div className={datePill}>{pub.date}</div>
         <div className="mt-2 text-lg tracking-wide uppercase lg:ml-4 lg:-mt-2 text-foreground-secondary">{pub.location}</div>
       </div>
       <div>

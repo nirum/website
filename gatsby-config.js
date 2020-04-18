@@ -9,6 +9,13 @@ module.exports = {
     "gatsby-transformer-remark",
     "gatsby-transformer-yaml",
     {
+      resolve: "gatsby-source-graphql",
+      options: {
+        fieldName: "github",
+        url: "https://api.github.com/graphql"
+      },
+    },
+    {
       resolve: "gatsby-source-filesystem",
       options: {
         path: `${__dirname}/src/blog`,

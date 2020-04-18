@@ -1,16 +1,14 @@
 import React from "react";
 import Layout from "../components/layout";
 import PublicationCard from "../components/publication-card";
-import moment from "moment";
 
 export default ({data}) => {
-  const most_recent = moment(Math.max.apply(null, data.allFile.edges.map(p => new Date(p.node.mtime))));
-  console.log(most_recent)
+  const most_recent = data.allFile.edges[0].node.mtime;
   const Publications = data.allPublicationsYaml.edges
     .map(p => (<PublicationCard key={p.node.id} pub={p.node} />))
   return (
     <Layout>
-      <h4>Last updated: {most_recent.fromNow()}</h4>
+      <h4>Last updated: {most_recent}</h4>
       <h1>Selected Publications</h1>
       <p>For a full list of publications, visit <a href="https://scholar.google.com/citations?user=bEOT7ScAAAAJ">Google Scholar</a>.</p>
       <div>{Publications}</div>
@@ -18,7 +16,7 @@ export default ({data}) => {
   )
 };
 
-export const query = graphql`
+export const publicationsQuery = graphql`
   query {
     allPublicationsYaml(sort: {order: DESC, fields: date}) {
       edges {
@@ -28,16 +26,16 @@ export const query = graphql`
           title
           pdf
           location
-          date
+          date(formatString: "MMM YYYY")
           code
           authors
         }
       }
     }
-    allFile(filter: {sourceInstanceName: {eq: "publications"}}) {
+    allFile(filter: {sourceInstanceName: {eq: "publications"}}, sort: {fields: mtimeMs, order: DESC}, limit: 1) {
       edges {
         node {
-          mtime
+          mtime(fromNow: true)
         }
       }
     }
