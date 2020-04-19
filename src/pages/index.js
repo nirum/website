@@ -1,14 +1,35 @@
 import React from "react"
+import { graphql } from "gatsby"
 import Layout from "../components/layout"
-import Social from "../components/social"
+import { Twitter, GitHub, Pinboard, Scholar } from "../components/icons"
+import Button from "../components/button"
+import Img from "gatsby-image"
 
-import profile from "../static/profile256.jpg"
+const icons = [
+  {icon: Twitter, text: "Twitter", url: "https://twitter.com/niru_m/"},
+  {icon: Scholar, text: "Google Scholar", url: "https://twitter.com/niru_m/"},
+  {icon: GitHub, text: "GitHub", url: "https://twitter.com/niru_m/"},
+  {icon: Pinboard, text: "Pinboard", url: "https://twitter.com/niru_m/"},
+]
 
-export default () => (
+const Social = () => (
+    <div className="flex flex-col items-start mt-8 -m-1 sm:flex-row text-foreground">
+      {icons.map((d, i) => {
+        return (
+          <Button key={i} url={d.url} text={d.text} icon={d.path}>
+            <d.icon size="8" />
+            <span className="pr-1">{d.text}</span>
+          </Button>
+        )
+      })}
+    </div>
+)
+
+export default ({ data }) => (
   <Layout>
     <div className="flex flex-col items-start sm:flex-row-reverse sm:justify-between xl:flex-row xl:justify-start">
       <div className="mr-8 -mt-3 xl:-ml-32">
-        <img className="w-24 h-24 rounded-full shadow-xl" src={profile} alt="Splash" />
+        <Img className="w-24 h-24 rounded-full shadow-xl" fixed={data.file.childImageSharp.fixed} alt="Profile" />
       </div>
       <div className="mt-8 sm:mt-0">
         <h4>About Me</h4>
@@ -22,3 +43,15 @@ export default () => (
     <Social />
   </Layout>
 )
+
+export const query = graphql`
+  query {
+    file(relativePath: {eq: "profile.png"}) {
+      childImageSharp {
+        fixed(width: 96, height: 96) {
+          ...GatsbyImageSharpFixed
+        }
+      }
+    }
+  }
+`

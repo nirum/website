@@ -8,6 +8,8 @@ module.exports = {
     "gatsby-plugin-react-helmet",
     "gatsby-transformer-remark",
     "gatsby-transformer-yaml",
+    "gatsby-transformer-sharp",
+    "gatsby-plugin-sharp",
     {
       resolve: "gatsby-source-github-api",
       options: {
@@ -61,17 +63,24 @@ module.exports = {
     {
       resolve: "gatsby-source-filesystem",
       options: {
-        path: `${__dirname}/src/blog`,
         name: "blog",
+        path: `${__dirname}/src/blog`,
         ignore: [`**/\.*`], // ignore files starting with a dot
       },
     },
     {
       resolve: "gatsby-source-filesystem",
       options: {
-        path: `${__dirname}/src/publications`,
         name: "publications",
+        path: `${__dirname}/src/publications`,
         ignore: [`**/\.*`], // ignore files starting with a dot
+      },
+    },
+    {
+      resolve: "gatsby-source-filesystem",
+      options: {
+        name: "images",
+        path: `${__dirname}/src/images`,
       },
     },
     {
@@ -84,8 +93,8 @@ module.exports = {
       resolve: "gatsby-plugin-purgecss",
       options: {
         whitelist: ['dark-mode', 'light-mode'],
-        printRejected: true,
-        develop: true,
+        printRejected: false,
+        develop: false,
         tailwind: true,
       }
     },
