@@ -5,11 +5,11 @@
   "version": "0.2.0",
   "license": "MIT",
   "scripts": {
-    "build": "gatsby build",
+    "build": "export TOKEN=`cat .github_api_token`; gatsby build",
     "develop": "gatsby develop",
     "format": "prettier --write \"**/*.{js,jsx,json,md}\"",
     "clean": "gatsby clean",
-    "deploy": "gatsby build; rsync -zarvh public/ nirum@198.74.50.117:/var/www/nirumaheswaranathan.com/"
+    "deploy": "export TOKEN=`cat .github_api_token`; gatsby build; rsync -zarvh public/ nirum@198.74.50.117:/var/www/nirumaheswaranathan.com/"
   },
   "dependencies": {
     "d3": "^5.15.1",
@@ -34,8 +34,8 @@
     "gatsby-source-filesystem": "^2.1.48",
     "gatsby-transformer-remark": "^2.6.50",
     "local-storage-fallback": "^4.1.1",
-    "prettier": "^1.19.1",
-    "react-helmet": "^5.2.1",
+    "prettier": "^2.0.4",
+    "react-helmet": "^6.0.0",
     "resize-observer-polyfill": "^1.5.1",
     "tailwindcss": "^1.2.0"
   },
