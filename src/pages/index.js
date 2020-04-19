@@ -7,9 +7,9 @@ import Img from "gatsby-image"
 
 const icons = [
   {icon: Twitter, text: "Twitter", url: "https://twitter.com/niru_m/"},
-  {icon: Scholar, text: "Google Scholar", url: "https://twitter.com/niru_m/"},
-  {icon: GitHub, text: "GitHub", url: "https://twitter.com/niru_m/"},
-  {icon: Pinboard, text: "Pinboard", url: "https://twitter.com/niru_m/"},
+  {icon: Scholar, text: "Google Scholar", url: "https://scholar.google.com/citations?user=bEOT7ScAAAAJ"},
+  {icon: GitHub, text: "GitHub", url: "https://www.github.com/nirum/"},
+  {icon: Pinboard, text: "Pinboard", url: "https://pinboard.in/u:nirum/"},
 ]
 
 const Social = () => (
