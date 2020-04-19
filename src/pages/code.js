@@ -1,22 +1,10 @@
 import React, { useState, useEffect } from "react"
+import { graphql } from "gatsby"
 import Layout from "../components/layout"
-// import RepoCard from "../components/repocard"
+import RepoCard from "../components/repository-card"
 
 import StarChart from "../charts/github-star-chart"
 import LangChart from "../charts/github-lang-chart"
-
-const fixed_repos = [
-    "nirum/tableprint",
-    "nirum/ADMM",
-    "ganguli-lab/proxalgs",
-    "brain-research/guided-evolutionary-strategies",
-    "nirum/descent",
-    "nirum/jetpack",
-    "nirum/heather",
-    "nirum/fibonacci",
-    "baccuslab/deep-retina",
-    "baccuslab/pyret",
-]
 
 const parseStargazers = repos => repos.map(d => ({x: d.node.name, y: d.node.stargazers.totalCount}));
 const parseLanguages = repos => {
@@ -28,28 +16,6 @@ export default ({ data }) => {
     const repos = data.githubData.data.user.repositories.edges
     const stars = parseStargazers(repos.slice(0, 6));
     const langs = parseLanguages(repos);
-    console.log(langs);
-    // const [repos, setRepos] = useState(null)
-    // const [stars, setStars] = useState(null)
-    // const [langs, setLangs] = useState(null)
-    // const [error, setError] = useState(null)
-
-    // useEffect(() => {
-    //     fetch(`https://api.github.com/users/nirum/repos`)
-    //     .then(response => response.json())
-    //     .then(json => setRepos(json))
-    //     .catch(err => setError(err));
-    // }, []);
-
-    // useEffect(() => {
-    //     if (!repos) { return; }
-    //     const validRepos = repos.filter(repo => !repo.fork);
-    //     setStars(validRepos
-    //         .sort((a, b) => b['stargazers_count'] - a['stargazers_count'])
-    //         .slice(0, 6)
-    //         .map(d => ({x: d.name, y: d.stargazers_count})));
-    //     setLangs(validRepos.map(d => d.language));
-    // }, [repos])
 
     return (
         <Layout>
@@ -59,15 +25,24 @@ export default ({ data }) => {
             <div className="flex flex-col">
                 <div className="w-full mt-12">
                     <h2>Overview</h2>
-                    <div className="grid justify-around gap-4 mt-8 md:grid-cols-2">
-                        <div className="pb-2 text-gray-800 border-2 border-gray-600 rounded-lg dark-mode:text-gray-200">
+                    <div className="grid justify-around gap-4 mt-4 md:grid-cols-2">
+                        <div className="pb-2 border rounded-lg text-foreground border-background-ternary">
                             <p className="pt-4 text-xl text-center">Most starred repositories</p>
                             <StarChart data={stars} />
                         </div>
-                        <div className="pb-2 text-gray-800 border-2 border-gray-600 rounded-lg dark-mode:text-gray-200">
+                        <div className="pb-2 border rounded-lg text-foreground border-background-ternary">
                             <p className="pt-4 text-xl text-center">Top programming languages</p>
                             <LangChart data={langs} />
                         </div>
+                    </div>
+
+                </div>
+                <div className="w-full mt-12">
+                    <h2>Selected projects</h2>
+                    <div className="grid gap-4 mt-4 md:grid-cols-2">
+                        {repos.slice(0, 6).map(d => {
+                            return <RepoCard key={d.node.id} repo={d.node} />
+                        })}
                     </div>
                 </div>
 
@@ -94,11 +69,6 @@ export default ({ data }) => {
                 <div className="w-full mt-16">
                     {!error && (<div>
                         <h2>Selected projects</h2>
-                        <div className="grid gap-4 mt-8 md:grid-cols-2">
-                            {fixed_repos.map((d, i) => {
-                                return <RepoCard key={`repo_${i}`} url={`https://api.github.com/repos/${d}`} />
-                            })}
-                        </div>
                     </div>)}
                 </div> */}
             </div>
@@ -107,7 +77,7 @@ export default ({ data }) => {
 };
 
 export const githubUserQuery = graphql`
-    query onGithub {
+    query {
         githubData {
             data {
                 user {
@@ -118,11 +88,21 @@ export const githubUserQuery = graphql`
                         totalCount
                         edges {
                             node {
+                                id
                                 name
+                                createdAt(fromNow: true)
+                                description
+                                descriptionHTML
+                                forkCount
+                                shortDescriptionHTML
+                                nameWithOwner
+                                url
                                 languages {
                                     edges {
                                         node {
+                                            id
                                             name
+                                            color
                                         }
                                     }
                                 }
@@ -137,13 +117,3 @@ export const githubUserQuery = graphql`
         }
     }
 `;
-
-// export const userQuery = graphql`
-//     query {
-//         github {
-//             user (login: "nirum") {
-//                 name
-//             }
-//         }
-//     }
-// `

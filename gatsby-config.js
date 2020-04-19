@@ -23,9 +23,13 @@ module.exports = {
                 edges {
                   node {
                     createdAt
+                    pushedAt
+                    updatedAt
                     forkCount
                     diskUsage
                     description
+                    descriptionHTML
+                    shortDescriptionHTML
                     nameWithOwner
                     name
                     isPrivate
@@ -39,7 +43,6 @@ module.exports = {
                         }
                       }
                     }
-                    updatedAt
                     url
                     stargazers {
                       totalCount
