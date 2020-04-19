@@ -19,6 +19,7 @@ export default ({ pub }) => {
           {pub.url && (<Button url={pub.url}><Link size="6" /><span className={buttonText}>URL</span></Button>)}
           {pub.pdf && (<Button url={pub.pdf}><Document size="6" /><span className={buttonText}>PDF</span></Button>)}
           {pub.code && (<Button url={pub.code}><Code size="6" /><span className={buttonText}>CODE</span></Button>)}
+          {/* {pub.bibtex && (<Button url=""><Library size="6" /><span className={buttonText}>BIBTEX</span></Button>)} */}
         </div>
     </div>)
 };

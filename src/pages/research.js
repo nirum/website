@@ -25,6 +25,7 @@ export const publicationsQuery = graphql`
           id
           url
           title
+          bibtex
           pdf
           location
           date(formatString: "MMM YYYY")

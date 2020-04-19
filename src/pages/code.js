@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react"
+import React from "react"
 import { graphql } from "gatsby"
 import Layout from "../components/layout"
 import RepoCard from "../components/repository-card"
@@ -45,32 +45,6 @@ export default ({ data }) => {
                         })}
                     </div>
                 </div>
-
-                {/* <div className="w-full mt-12">
-                    {error && <Alert header="GitHub API limit reached." text="The API rate limit is 60 requests per hour. Please try again later." />}
-                    {!error && (<div>
-                        <h2>Overview</h2>
-                        {(!stars && !langs) && <Loading />}
-                        <div className="grid justify-around gap-4 mt-8 md:grid-cols-2">
-                            {stars && (<div className="pb-2 text-gray-800 border-2 border-gray-600 rounded-lg dark-mode:text-gray-200">
-                                <p className="pt-4 text-xl text-center">Most starred repositories</p>
-                                <StarChart data={stars} />
-                            </div>)}
-
-                            {langs && (<div className="pb-2 text-gray-800 border-2 border-gray-600 rounded-lg dark-mode:text-gray-200">
-                                <p className="pt-4 text-xl text-center">Top programming languages</p>
-                                <LangChart data={langs} />
-                            </div>)}
-
-                        </div>
-                    </div>)}
-                </div>
-
-                <div className="w-full mt-16">
-                    {!error && (<div>
-                        <h2>Selected projects</h2>
-                    </div>)}
-                </div> */}
             </div>
         </Layout>
     )
