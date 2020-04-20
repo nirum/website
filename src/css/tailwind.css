@@ -126,10 +126,10 @@ a:hover {
 
 /* Icons */
 .primary {
-    fill: var(--fg-ternary);
+    fill: var(--brand-secondary);
 }
 .secondary {
-    fill: var(--brand-primary);
+    fill: var(--brand-default);
 }
 
 /* Typography */

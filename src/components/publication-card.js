@@ -1,6 +1,7 @@
-import React from "react";
-import Button from "./button";
-import { Code, Document, Library, Link } from "./icons";
+import React from "react"
+import { Button, ButtonLink } from "./button"
+import { Code, Document, Library, Link } from "./icons"
+import { join } from "path"
 
 export default ({ pub }) => {
   const datePill = "bg-brand-secondary px-2 rounded-md text-background-primary font-semibold w-20"
@@ -19,7 +20,7 @@ export default ({ pub }) => {
           {pub.url && (<Button url={pub.url}><Link size="6" /><span className={buttonText}>URL</span></Button>)}
           {pub.pdf && (<Button url={pub.pdf}><Document size="6" /><span className={buttonText}>PDF</span></Button>)}
           {pub.code && (<Button url={pub.code}><Code size="6" /><span className={buttonText}>CODE</span></Button>)}
-          {/* {pub.bibtex && (<Button url=""><Library size="6" /><span className={buttonText}>BIBTEX</span></Button>)} */}
+          {pub.bibtex && (<ButtonLink url={join("research", "bibtex", pub.slug)}><Library size="6" /><span className={buttonText}>BIBTEX</span></ButtonLink>)}
         </div>
     </div>)
 };

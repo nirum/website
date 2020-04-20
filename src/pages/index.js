@@ -2,7 +2,7 @@ import React from "react"
 import { graphql } from "gatsby"
 import Layout from "../components/layout"
 import { Twitter, GitHub, Pinboard, Scholar } from "../components/icons"
-import Button from "../components/button"
+import { Button } from "../components/button"
 import Img from "gatsby-image"
 
 const icons = [

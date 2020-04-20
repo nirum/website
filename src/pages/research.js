@@ -31,6 +31,7 @@ export const publicationsQuery = graphql`
           date(formatString: "MMM YYYY")
           code
           authors
+          slug
         }
       }
     }

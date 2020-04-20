@@ -21,5 +21,7 @@ location: NEURON
 
 url: "https://www.cell.com/neuron/fulltext/S0896-6273(19)30894-3"
 pdf: "https://www.biorxiv.org/content/10.1101/661165v1.full.pdf"
-code": "https://github.com/ahwillia/affinewarp"
-bibtex": "@article{williams2020discovering, title={Discovering precise temporal patterns in large-scale neural recordings through robust and interpretable time warping}, author={Williams, Alex H and Poole, Ben and Maheswaranathan, Niru and Dhawale, Ashesh K and Fisher, Tucker and Wilson, Christopher D and Brann, David H and Trautmann, Eric M and Ryu, Stephen and Shusterman, Roman and others}, journal={Neuron}, volume={105}, number={2}, pages={246--259}, year={2020}, publisher={Elsevier} }"
+code: "https://github.com/ahwillia/affinewarp"
+
+slug: "time-warp-data-analysis"
+bibtex: "@article{williams2020discovering, title={Discovering precise temporal patterns in large-scale neural recordings through robust and interpretable time warping}, author={Williams, Alex H and Poole, Ben and Maheswaranathan, Niru and Dhawale, Ashesh K and Fisher, Tucker and Wilson, Christopher D and Brann, David H and Trautmann, Eric M and Ryu, Stephen and Shusterman, Roman and others}, journal={Neuron}, volume={105}, number={2}, pages={246--259}, year={2020}, publisher={Elsevier} }"

@@ -18,4 +18,6 @@ location: bioRxiv
 
 url: "https://www.biorxiv.org/content/10.1101/340943v5"
 pdf: "https://www.biorxiv.org/content/10.1101/340943v5.full.pdf"
+
+slug: 'deep-retina-v2'
 bibtex: "@article{maheswaranathan2018deep, title={Deep learning models reveal internal structure and diverse computations in the retina under natural scenes}, author={Maheswaranathan, Niru and McIntosh, Lane T and Kastner, David B and Melander, Josh and Brezovec, Luke and Nayebi, Aran and Wang, Julia and Ganguli, Surya and Baccus, Stephen A}, journal={bioRxiv}, pages={340943}, year={2018}, publisher={Cold Spring Harbor Laboratory} }"
