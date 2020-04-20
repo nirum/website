@@ -22,7 +22,7 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
   `)
   // Handle errors
   if (result.errors) {
-    reporter.panicOnBuild(`Error while running blog post GraphQL query.`)
+    reporter.panicOnBuild("Error while running blog post GraphQL query.")
     return
   }
   result.data.allMarkdownRemark.edges.forEach(({ node }) => {
@@ -50,7 +50,7 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
   }
   `)
   if (result.errors) {
-    reporter.panicOnBuild(`Error while running blog post GraphQL query.`)
+    reporter.panicOnBuild("Error while running blog post GraphQL query.")
     return
   }
   result.data.allPublicationsYaml.edges.forEach(({ node }) => {
