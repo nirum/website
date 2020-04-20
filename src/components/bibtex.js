@@ -12,7 +12,7 @@ export default function Template({ data, pageContext }) {
             <h4>Bibtex</h4>
             <h1>{title}</h1>
             <div className="mt-8">
-                <p className="font-mono text-sm" style={{textIndent: "-2em", marginLeft: "2em"}}>{bibtex}</p>
+                <p className="font-mono text-sm leading-snug" style={{textIndent: "-2em", marginLeft: "2em"}}>{bibtex}</p>
             </div>
             <div className="flex mt-8 text-brand-primary">
                 <ButtonLink url="/research"><Back size="6" /><span className="mx-1 tracking-wide uppercase">back to research</span></ButtonLink>

@@ -1,0 +1,13 @@
+title: How recurrent networks implement contextual processing in sentiment analysis
+
+authors:
+  - Niru Maheswaranathan*
+  - David Sussillo*
+
+date: 2020-04-19
+location: arxiv
+
+url: "https://arxiv.org/abs/2004.08013"
+pdf: "https://arxiv.org/pdf/2004.08013.pdf"
+
+slug: "rnn-sentiment-context"
