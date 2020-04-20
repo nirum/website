@@ -16,7 +16,7 @@ export default ({ pub }) => {
         <p className="mt-2 font-sans text-xl font-semibold leading-tight tracking-tight text-foreground">{pub.title}</p>
       </div>
         <p className="mt-2 font-sans leading-snug text-foreground-secondary">{pub.authors.join(", ")}</p>
-        <div className="flex mt-2 -mx-1 text-foreground">
+        <div className="flex flex-row flex-wrap mt-2 -mx-1 text-foreground">
           {pub.url && (<Button url={pub.url}><Link size="6" /><span className={buttonText}>URL</span></Button>)}
           {pub.pdf && (<Button url={pub.pdf}><Document size="6" /><span className={buttonText}>PDF</span></Button>)}
           {pub.code && (<Button url={pub.code}><Code size="6" /><span className={buttonText}>CODE</span></Button>)}

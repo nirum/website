@@ -29,7 +29,6 @@ export default ({ repo }) => {
         <div className={pill}>
           <GitHubBookmark size="3" />
           <span className="ml-1" dangerouslySetInnerHTML={{__html: pluralize(repo.stargazers.totalCount, 'star')}}></span>
-            {/* <Icon name="star" width="16" height="16" className="w-4 h-4 mr-1" />&nbsp;<span className="">{repoData.stargazers_count}&nbsp;stars</span> */}
         </div>
         <div className={pill}>
           <GitHubFork size="3" />

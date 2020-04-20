@@ -13,12 +13,12 @@ const icons = [
 ]
 
 const Social = () => (
-    <div className="flex flex-col items-start mt-8 -m-1 sm:flex-row text-foreground">
+    <div className="flex flex-row flex-wrap items-start mt-8 -m-1 text-brand">
       {icons.map((d, i) => {
         return (
           <Button key={i} url={d.url} text={d.text} icon={d.path}>
-            <d.icon size="8" />
-            <span className="pr-1">{d.text}</span>
+            <d.icon size="6" />
+            <span className="pr-1 text-foreground">{d.text}</span>
           </Button>
         )
       })}
