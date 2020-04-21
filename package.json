@@ -6,8 +6,7 @@
   "license": "MIT",
   "scripts": {
     "build": "export TOKEN=`cat .github_api_token`; gatsby build",
-    "develop": "gatsby develop",
-    "format": "prettier --write \"**/*.{js,jsx,json,md}\"",
+    "develop": "export TOKEN=`cat .github_api_token`; gatsby develop",
     "clean": "gatsby clean",
     "deploy": "export TOKEN=`cat .github_api_token`; gatsby build; rsync -zarvh public/ nirum@198.74.50.117:/var/www/nirumaheswaranathan.com/"
   },

@@ -5,8 +5,8 @@ import { join } from "path"
 
 export default ({ pub }) => {
   const datePill = "bg-brand-secondary px-2 rounded-md text-background-primary font-semibold w-20"
-  const buttonText = "uppercase tracking-wide mx-1"
-  const iconSize = "5"
+  const buttonText = "uppercase tracking-wide mx-1 text-sm text-foreground"
+  const iconSize = "6"
   return (
     <div className="mt-16">
       <div className="flex flex-col lg:-ml-24 lg:items-center lg:flex-row">
