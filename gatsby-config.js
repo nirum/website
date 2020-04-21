@@ -10,6 +10,7 @@ module.exports = {
     "gatsby-transformer-yaml",
     "gatsby-transformer-sharp",
     "gatsby-plugin-sharp",
+    "gatsby-plugin-twitter",
     {
       resolve: "gatsby-source-github-api",
       options: {

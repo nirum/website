@@ -32,6 +32,7 @@ export const publicationsQuery = graphql`
           code
           authors
           slug
+          tweet
         }
       }
     }
