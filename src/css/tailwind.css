@@ -153,6 +153,10 @@ p {
     @apply font-sans leading-8 text-foreground;
 }
 
+blockquote {
+    @apply font-sans leading-8 text-foreground;
+}
+
 /* Charts */
 .chart {
     @apply text-foreground-secondary;
