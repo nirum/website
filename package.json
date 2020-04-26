@@ -5,16 +5,18 @@
   "version": "0.2.1",
   "license": "MIT",
   "scripts": {
-    "build": "export TOKEN=`cat .github_api_token`; gatsby build",
-    "develop": "export TOKEN=`cat .github_api_token`; gatsby develop",
+    "build": "gatsby build",
+    "develop": "gatsby develop",
     "clean": "gatsby clean",
-    "deploy": "export TOKEN=`cat .github_api_token`; gatsby build; rsync -zarvh public/ nirum@198.74.50.117:/var/www/nirumaheswaranathan.com/"
+    "deploy": "gatsby build; rsync -zarvh public/ nirum@198.74.50.117:/var/www/nirumaheswaranathan.com/"
   },
   "dependencies": {
     "d3": "^5.15.1",
+    "dotenv": "^8.2.0",
     "gatsby": "^2.19.19",
     "gatsby-cli": "^2.11.5",
     "gatsby-image": "^2.3.4",
+    "gatsby-plugin-google-analytics": "^2.2.5",
     "gatsby-plugin-purgecss": "^5.0.0",
     "gatsby-plugin-sharp": "^2.5.6",
     "gatsby-plugin-twitter": "^2.2.4",
