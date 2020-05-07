@@ -11,7 +11,7 @@ export default ({ children }) => {
       <Helmet>
         <meta charSet="utf-8" />
         <title>Niru Maheswaranathan</title>
-        <link rel="canonical" href="https://nirumaheswaranathan.com/" />
+        <link rel="canonical" href="https://niru.dev/" />
         <meta name="description" content="Personal website of Niru Maheswaranathan" />
         <meta name="keywords" content="research, machine learning, neuroscience, developer" />
         <meta name="twitter:widgets:theme" content={darkMode.value ? "dark" : "light"} />

@@ -74,3 +74,6 @@ yarn-error.log
 
 # API tokens
 .github_api_token
+
+# vscode
+*.code-workspace

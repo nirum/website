@@ -8,7 +8,7 @@
     "build": "export TOKEN=`cat .github_api_token`; gatsby build",
     "develop": "export TOKEN=`cat .github_api_token`; gatsby develop",
     "clean": "gatsby clean",
-    "deploy": "export TOKEN=`cat .github_api_token`; gatsby build; rsync -zarvh public/ nirum@198.74.50.117:/var/www/nirumaheswaranathan.com/"
+    "deploy": "export TOKEN=`cat .github_api_token`; gatsby build; rsync -zarvh public/ nirum@198.74.50.117:/var/www/niru.dev/"
   },
   "dependencies": {
     "d3": "^5.15.1",
