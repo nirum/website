@@ -1,3 +1,5 @@
+require('dotenv').config()
+
 module.exports = {
   siteMetadata: {
     title: "Niru Maheswaranathan",
@@ -12,9 +14,15 @@ module.exports = {
     "gatsby-plugin-sharp",
     "gatsby-plugin-twitter",
     {
+      resolve: `gatsby-plugin-google-analytics`,
+      options: {
+        trackingId: process.env.GOOGLE_ANALYTICS_ID
+      }
+    },
+    {
       resolve: "gatsby-source-github-api",
       options: {
-        token: process.env.TOKEN,
+        token: process.env.GITHUB_API_TOKEN,
         graphQLQuery: `
           query {
             user(login: "nirum") {
