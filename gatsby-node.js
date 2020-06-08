@@ -1,10 +1,11 @@
 const path = require(`path`)
 
-// Builds a static page for each blog post.
 exports.createPages = async ({ actions, graphql, reporter }) => {
   const { createPage } = actions
+
+  // Builds a static page for each blog post.
   const post = path.resolve("src/components/blog-post.js")
-  const result = await graphql(`
+  const blogposts = await graphql(`
     {
       allMarkdownRemark(
         sort: { order: DESC, fields: [frontmatter___date] }
@@ -21,24 +22,21 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
     }
   `)
   // Handle errors
-  if (result.errors) {
+  if (blogposts.errors) {
     reporter.panicOnBuild("Error while running blog post GraphQL query.")
     return
   }
-  result.data.allMarkdownRemark.edges.forEach(({ node }) => {
+  blogposts.data.allMarkdownRemark.edges.forEach(({ node }) => {
     createPage({
       path: node.frontmatter.path,
       component: post,
       context: {}, // additional data can be passed via context
     })
   })
-}
 
-// Builds a page containing bibtex for every publication.
-exports.createPages = async ({ actions, graphql, reporter }) => {
-  const { createPage } = actions
+  // Builds a page containing bibtex for every publication.
   const bibtex = path.resolve("src/components/bibtex.js")
-  const result = await graphql(`
+  const pubs = await graphql(`
   {
     allPublicationsYaml {
       edges {
@@ -49,11 +47,11 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
     }
   }
   `)
-  if (result.errors) {
+  if (pubs.errors) {
     reporter.panicOnBuild("Error while running blog post GraphQL query.")
     return
   }
-  result.data.allPublicationsYaml.edges.forEach(({ node }) => {
+  pubs.data.allPublicationsYaml.edges.forEach(({ node }) => {
     createPage({
       path: path.join("research", "bibtex", node.slug),
       component: bibtex,

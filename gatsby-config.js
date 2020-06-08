@@ -12,7 +12,7 @@ module.exports = {
     "gatsby-transformer-yaml",
     "gatsby-transformer-sharp",
     "gatsby-plugin-sharp",
-    "gatsby-plugin-twitter",
+    // "gatsby-plugin-twitter",
     {
       resolve: `gatsby-plugin-google-analytics`,
       options: {
