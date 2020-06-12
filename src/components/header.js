@@ -9,14 +9,14 @@ export default () => {
 
     return (
         <header className="flex justify-around pt-2 pb-6 border-t-8 bg-background-primary border-brand-secondary" >
-            <div className="flex justify-between mb-12 items-center flex-row responsive-width">
+            <div className="flex flex-col-reverse justify-between mb-12 sm:items-center sm:flex-row responsive-width">
                 <nav className="flex mt-6 -ml-3 font-sans font-semibold" >
                     <Link activeClassName={activePill} className={pill} to="/">Home</Link>
                     <Link activeClassName={activePill} className={pill} partiallyActive={true} to="/research">Research</Link>
                     <Link activeClassName={activePill} className={pill} partiallyActive={true} to="/code">Code</Link>
                     <Link activeClassName={activePill} className={pill} partiallyActive={true} to="/blog">Blog</Link>
                 </nav>
-                {/* <Toggle /> */}
+                <Toggle />
             </div>
         </header>
     )

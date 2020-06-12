@@ -8,11 +8,23 @@ module.exports = {
   plugins: [
     "gatsby-plugin-use-dark-mode",
     "gatsby-plugin-react-helmet",
-    "gatsby-transformer-remark",
+    {
+      resolve: `gatsby-transformer-remark`,
+      options: {
+        plugins: [
+          {
+            resolve: `gatsby-remark-katex`,
+            options: {
+              strict: `ignore`
+            }
+          },
+        ],
+      }
+    },
     "gatsby-transformer-yaml",
     "gatsby-transformer-sharp",
     "gatsby-plugin-sharp",
-    // "gatsby-plugin-twitter",
+    "gatsby-plugin-twitter",
     {
       resolve: `gatsby-plugin-google-analytics`,
       options: {

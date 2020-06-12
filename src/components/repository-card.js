@@ -17,10 +17,10 @@ export default ({ repo }) => {
       <div className="">
         <h4>Created: {repo.createdAt}</h4>
         <div className="mt-2 text-xl font-semibold tracking-tight">
-          <p className="inline-flex items-center">
+          <div className="inline-flex items-center text-foreground">
               <a className="mr-2" href={repo.url}>{repo.nameWithOwner}</a>
               <GitHubRepo size="6" />
-          </p>
+          </div>
         </div>
         {repo.descriptionHTML && <p className="my-4 leading-snug" dangerouslySetInnerHTML={{__html: repo.descriptionHTML}}></p>}
       </div>

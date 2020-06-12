@@ -8,8 +8,8 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
   const blogposts = await graphql(`
     {
       allMarkdownRemark(
-        sort: { order: DESC, fields: [frontmatter___date] }
-        limit: 1000
+        sort: { order: DESC, fields: [frontmatter___date] },
+        limit: 100
       ) {
         edges {
           node {

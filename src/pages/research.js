@@ -11,7 +11,7 @@ export default ({data}) => {
     <Layout>
       <h4>Last updated: {most_recent}</h4>
       <h1>Selected Publications</h1>
-      <p>For a full list of publications, visit <a href="https://scholar.google.com/citations?user=bEOT7ScAAAAJ">Google Scholar</a>.</p>
+      <div className="text-foreground">For a full list of publications, visit <a href="https://scholar.google.com/citations?user=bEOT7ScAAAAJ">Google Scholar</a>.</div>
       <div>{Publications}</div>
     </Layout>
   )

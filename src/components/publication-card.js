@@ -17,12 +17,12 @@ export default ({ pub }) => {
         <p className="mt-2 font-sans text-xl font-semibold leading-tight tracking-tight text-foreground">{pub.title}</p>
       </div>
         <p className="mt-2 font-sans leading-snug text-foreground-secondary">{pub.authors.join(", ")}</p>
-        {/* {pub.tweet && <div className="flex flex-row" dangerouslySetInnerHTML={{__html: pub.tweet}} />} */}
         <div className="flex flex-row flex-wrap mt-2 -mx-1 text-foreground">
           {pub.url && (<Button url={pub.url}><Link size={iconSize} /><span className={buttonText}>URL</span></Button>)}
           {pub.pdf && (<Button url={pub.pdf}><Document size={iconSize} /><span className={buttonText}>PDF</span></Button>)}
           {pub.code && (<Button url={pub.code}><Code size={iconSize} /><span className={buttonText}>CODE</span></Button>)}
           {pub.bibtex && (<ButtonLink url={join("research", "bibtex", pub.slug)}><Library size={iconSize} /><span className={buttonText}>BIBTEX</span></ButtonLink>)}
         </div>
+        {pub.tweet && <div className="flex flex-row items-center w-full justify-around" dangerouslySetInnerHTML={{__html: pub.tweet}} />}
     </div>)
 };

@@ -1,29 +1,7 @@
 import React from "react"
 import { graphql } from "gatsby"
 import Layout from "../components/layout"
-import { Twitter, GitHub, Pinboard, Scholar } from "../components/icons"
-import { Button } from "../components/button"
 import Img from "gatsby-image"
-
-const icons = [
-  {icon: Twitter, text: "Twitter", url: "https://twitter.com/niru_m/"},
-  {icon: Scholar, text: "Google Scholar", url: "https://scholar.google.com/citations?user=bEOT7ScAAAAJ"},
-  {icon: GitHub, text: "GitHub", url: "https://www.github.com/nirum/"},
-  {icon: Pinboard, text: "Pinboard", url: "https://pinboard.in/u:nirum/"},
-]
-
-const Social = () => (
-    <div className="flex flex-row flex-wrap items-start mt-8 -m-1 text-brand">
-      {icons.map((d, i) => {
-        return (
-          <Button key={i} url={d.url} text={d.text} icon={d.path}>
-            <d.icon size="6" />
-            <span className="pr-1 text-foreground">{d.text}</span>
-          </Button>
-        )
-      })}
-    </div>
-)
 
 export default ({ data }) => (
   <Layout>
@@ -40,7 +18,7 @@ export default ({ data }) => (
     <p className='mt-4'>Previously, I completed my PhD in neuroscience in the labs of <a href="https://ganguli-gang.stanford.edu/people.html" target="_blank" rel="noopener noreferrer">Surya Ganguli</a> and <a href="https://baccuslab.sites.stanford.edu" target="_blank" rel="noopener noreferrer">Steve Baccus</a> at Stanford University, where I studied neural circuits in the retina. My research focused on bringing together computational models and data from electrophysiological experiments to better understand how we process visual information.</p>
     <p className='mt-4'>Outside of research, I enjoy cooking, working on open source projects, and playing soccer. I majored in biomedical and electrical & computer engineering at Duke University. Before that, I attended the SC Governor&rsquo;s School for Science and Math (<a href="https://www.scgssm.org" target="_blank" rel="noopener noreferrer">GSSM</a>) in Hartsville, SC. I grew up in Rock Hill, South Carolina.</p>
     <p className='mt-4'>You can get in contact with me at: <a href="mailto:niru@fastmail.com" target="_blank" rel="noopener noreferrer">niru@fastmail.com</a></p>
-    <Social />
+    {/* <Social /> */}
   </Layout>
 )
 

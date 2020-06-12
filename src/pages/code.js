@@ -21,23 +21,23 @@ export default ({ data }) => {
         <Layout>
             <h4>Open source projects</h4>
             <h1>GitHub project stats</h1>
-            <p>Having some fun exploring my GitHub activity using the <a href="https://developer.github.com/v3/">GitHub API</a> and <a href="https://d3js.org">d3.js</a>, inspired by <a href="https://github.com/bchiang7/octoprofile">Octoprofile</a>.</p>
+            <div className="text-foreground">Having some fun exploring my GitHub activity using the <a href="https://developer.github.com/v3/">GitHub API</a> and <a href="https://d3js.org">d3.js</a>, inspired by <a href="https://github.com/bchiang7/octoprofile">Octoprofile</a>.</div>
             <div className="flex flex-col">
-                <div className="w-full mt-12">
+                <div className="w-full">
                     <h2>Overview</h2>
                     <div className="grid justify-around gap-4 mt-4 md:grid-cols-2">
                         <div className="pb-2 border rounded-lg text-foreground border-background-ternary">
-                            <p className="pt-4 text-xl text-center">Most starred repositories</p>
+                            <div className="pt-4 text-xl text-center">Most starred repositories</div>
                             <StarChart data={stars} />
                         </div>
                         <div className="pb-2 border rounded-lg text-foreground border-background-ternary">
-                            <p className="pt-4 text-xl text-center">Top programming languages</p>
+                            <div className="pt-4 text-xl text-center">Top programming languages</div>
                             <LangChart data={langs} />
                         </div>
                     </div>
 
                 </div>
-                <div className="w-full mt-12">
+                <div className="w-full">
                     <h2>Selected projects</h2>
                     <div className="grid gap-4 mt-4 md:grid-cols-2">
                         {repos.slice(0, 6).map(d => {
