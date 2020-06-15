@@ -14,7 +14,7 @@ export default () => {
                     <Link activeClassName={activePill} className={pill} to="/">Home</Link>
                     <Link activeClassName={activePill} className={pill} partiallyActive={true} to="/research">Research</Link>
                     <Link activeClassName={activePill} className={pill} partiallyActive={true} to="/code">Code</Link>
-                    <Link activeClassName={activePill} className={pill} partiallyActive={true} to="/blog">Blog</Link>
+                    {/* <Link activeClassName={activePill} className={pill} partiallyActive={true} to="/blog">Blog</Link> */}
                 </nav>
                 <Toggle />
             </div>

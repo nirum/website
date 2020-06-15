@@ -19,7 +19,7 @@ export default () => {
                     <li className="mt-2"><Link className={pill} to="/">Home</Link></li>
                     <li className="mt-2"><Link className={pill} to="/research">Research</Link></li>
                     <li className="mt-2"><Link className={pill} to="/code">Code</Link></li>
-                    <li className="mt-2"><Link className={pill} to="/blog">Blog</Link></li>
+                    {/* <li className="mt-2"><Link className={pill} to="/blog">Blog</Link></li> */}
                 </ul>
             </div>
             <div className="flex flex-col items-start justify-start">
