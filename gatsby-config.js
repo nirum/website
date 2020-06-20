@@ -29,7 +29,6 @@ module.exports = {
       resolve: `gatsby-plugin-goatcounter`,
       options: {
         code: process.env.GOATCOUNTER_ID,
-        allowLocal: true,
       }
     },
     {
