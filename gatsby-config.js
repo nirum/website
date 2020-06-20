@@ -26,9 +26,10 @@ module.exports = {
     "gatsby-plugin-sharp",
     "gatsby-plugin-twitter",
     {
-      resolve: `gatsby-plugin-google-analytics`,
+      resolve: `gatsby-plugin-goatcounter`,
       options: {
-        trackingId: process.env.GOOGLE_ANALYTICS_ID
+        code: process.env.GOATCOUNTER_ID,
+        allowLocal: true,
       }
     },
     {
