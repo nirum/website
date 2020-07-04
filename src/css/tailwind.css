@@ -5,14 +5,28 @@
     src: url("../fonts/SourceSansPro-Regular.otf.woff2");
     font-weight: 400;
     font-style: normal;
-    font-display: swap;
+    font-display: fallback;
 }
 @font-face {
     font-family: "Source Sans Pro";
     src: url("../fonts/SourceSansPro-Semibold.otf.woff2");
     font-weight: 600;
     font-style: normal;
-    font-display: swap;
+    font-display: fallback;
+}
+@font-face {
+    font-family: "Source Sans Pro";
+    src: url("../fonts/SourceSansPro-Bold.otf.woff2");
+    font-weight: 700;
+    font-style: normal;
+    font-display: fallback;
+}
+@font-face {
+    font-family: "Source Sans Pro";
+    src: url("../fonts/SourceSansPro-Black.otf.woff2");
+    font-weight: 900;
+    font-style: normal;
+    font-display: fallback;
 }
 
 @tailwind components;
@@ -101,6 +115,11 @@ red:
     --brand-ternary: #1D6F98;
 }
 
+/* Gradients */
+.gradient-bar {
+    background-image: linear-gradient(to right, rgb(65, 28, 126), rgb(114, 47, 158));
+}
+
 /* Responsive one column width */
 .responsive-width {
     @apply w-5/6 max-w-3xl;
@@ -138,7 +157,7 @@ h1 {
 }
 
 h2 {
-    @apply font-sans text-2xl text-foreground-primary mt-12;
+    @apply mt-12 font-sans text-2xl text-foreground-primary;
 }
 
 h3 {
@@ -150,7 +169,7 @@ h4 {
 }
 
 p {
-    @apply font-sans leading-7 text-foreground mt-8;
+    @apply mt-8 font-sans leading-7 text-foreground;
 }
 
 blockquote {
