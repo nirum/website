@@ -1,6 +1,64 @@
 @tailwind base;
 
 @font-face {
+    font-family: "Source Serif Pro";
+    src: url("../fonts/SourceSerifPro-Regular.otf.woff2");
+    font-weight: 400;
+    font-style: normal;
+    font-display: fallback;
+}
+@font-face {
+    font-family: "Source Serif Pro";
+    src: url("../fonts/SourceSerifPro-Semibold.otf.woff2");
+    font-weight: 600;
+    font-style: normal;
+    font-display: fallback;
+}
+@font-face {
+    font-family: "Source Serif Pro";
+    src: url("../fonts/SourceSerifPro-Bold.otf.woff2");
+    font-weight: 700;
+    font-style: normal;
+    font-display: fallback;
+}
+@font-face {
+    font-family: "Source Serif Pro";
+    src: url("../fonts/SourceSerifPro-Black.otf.woff2");
+    font-weight: 900;
+    font-style: normal;
+    font-display: fallback;
+}
+
+@font-face {
+    font-family: "Source Serif Pro";
+    src: url("../fonts/SourceSerifPro-It.otf.woff2");
+    font-weight: 400;
+    font-style: italic;
+    font-display: fallback;
+}
+@font-face {
+    font-family: "Source Serif Pro";
+    src: url("../fonts/SourceSerifPro-SemiboldIt.otf.woff2");
+    font-weight: 600;
+    font-style: italic;
+    font-display: fallback;
+}
+@font-face {
+    font-family: "Source Serif Pro";
+    src: url("../fonts/SourceSerifPro-BoldIt.otf.woff2");
+    font-weight: 700;
+    font-style: italic;
+    font-display: fallback;
+}
+@font-face {
+    font-family: "Source Serif Pro";
+    src: url("../fonts/SourceSerifPro-BlackIt.otf.woff2");
+    font-weight: 900;
+    font-style: italic;
+    font-display: fallback;
+}
+
+@font-face {
     font-family: "Source Sans Pro";
     src: url("../fonts/SourceSansPro-Regular.otf.woff2");
     font-weight: 400;
@@ -26,6 +84,35 @@
     src: url("../fonts/SourceSansPro-Black.otf.woff2");
     font-weight: 900;
     font-style: normal;
+    font-display: fallback;
+}
+
+@font-face {
+    font-family: "Source Sans Pro";
+    src: url("../fonts/SourceSansPro-It.otf.woff2");
+    font-weight: 400;
+    font-style: italic;
+    font-display: fallback;
+}
+@font-face {
+    font-family: "Source Sans Pro";
+    src: url("../fonts/SourceSansPro-SemiboldIt.otf.woff2");
+    font-weight: 600;
+    font-style: italic;
+    font-display: fallback;
+}
+@font-face {
+    font-family: "Source Sans Pro";
+    src: url("../fonts/SourceSansPro-BoldIt.otf.woff2");
+    font-weight: 700;
+    font-style: italic;
+    font-display: fallback;
+}
+@font-face {
+    font-family: "Source Sans Pro";
+    src: url("../fonts/SourceSansPro-BlackIt.otf.woff2");
+    font-weight: 900;
+    font-style: italic;
     font-display: fallback;
 }
 
@@ -91,18 +178,20 @@ red:
     --brand-default: #2D83AE;
     --brand-secondary: #55AAD4;
     --brand-ternary: #A7D8F0;
+
+    --gradient: linear-gradient(to right, hsl(209, 90%, 49%), hsl(260, 90%, 50%), hsl(276, 83%, 63%));
 }
 
 .dark-mode {
-    --fg-primary: #FCFCFA;
-    --fg-default: #E8E6E1;
-    --fg-secondary: #D3CEC4;
-    --fg-ternary: #B8B2A7;
+    --fg-primary: hsl(218, 50%, 98%);
+    --fg-default: hsl(218, 5%, 95%);
+    --fg-secondary: hsl(218, 17%, 80%);
+    --fg-ternary: hsl(244, 5%, 70%);
 
-    --bg-primary: #27241D;
-    --bg-default: #423D33;
-    --bg-secondary: #625D62;
-    --bg-ternary: #A39E93;
+    --bg-primary: hsl(247, 80%, 2%);
+    --bg-default: hsl(247, 8%, 10%);
+    --bg-secondary: hsl(218, 14%, 30%);
+    --bg-ternary: hsl(244, 5%, 60%);
 
     --error-primary: #FED7D7;
     --error-default: #FC8181;
@@ -113,11 +202,27 @@ red:
     --brand-default: #7CC1E4;
     --brand-secondary: #3994C1;
     --brand-ternary: #1D6F98;
+
+    --gradient: linear-gradient(to right, hsl(193, 94%, 68%), hsl(233, 100%, 85%), hsl(292, 89%, 69%));
 }
 
 /* Gradients */
 .gradient-bar {
-    background-image: linear-gradient(to right, rgb(65, 28, 126), rgb(114, 47, 158));
+    background-image: var(--gradient);
+}
+
+.pillbox {
+    @apply border-0 rounded-lg cursor-pointer;
+}
+.pillbox:hover {
+    background-image: var(--gradient);
+    @apply text-background-primary;
+}
+
+.text-gradient {
+    background: var(--gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
 /* Responsive one column width */
@@ -126,33 +231,33 @@ red:
 }
 
 /* Header and Footer */
-nav a {
+/* nav a {
     @apply border-0;
 }
 
 nav a:hover {
     @apply text-brand-primary;
-}
+} */
 
 /* Body */
-a {
-    @apply border-b border-background-secondary;
+/* a {
+    @apply border-b border-background;
 }
 
 a:hover {
     @apply text-brand border-brand-ternary;
-}
+} */
 
 /* Icons */
-.primary {
+/* .primary {
     fill: var(--brand-secondary);
 }
 .secondary {
     fill: var(--brand-default);
-}
+} */
 
 /* Typography */
-h1 {
+/* h1 {
     @apply font-sans text-3xl font-semibold tracking-tight text-foreground-primary;
 }
 
@@ -174,10 +279,10 @@ p {
 
 blockquote {
     @apply font-sans leading-8 text-foreground;
-}
+} */
 
 /* Charts */
-.chart {
+/* .chart {
     @apply text-foreground-secondary;
 }
 .chart > .axis {
@@ -185,4 +290,4 @@ blockquote {
 }
 .chart > .axis > .label {
     @apply font-sans text-lg;
-}
+} */
