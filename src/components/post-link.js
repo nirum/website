@@ -2,11 +2,11 @@ import React from "react"
 import { Link } from "gatsby"
 export default ({ post }) => {
   return (
-  <div className="mt-8 sm:mt-4 text-foreground">
+  <div className="text-foreground">
     <Link to={post.frontmatter.path}>
-      <div className="flex flex-col sm:flex-row border-t-2 border-brand pt-1 mt-8">
+      <div className="flex flex-col pt-1 border-t-2 sm:flex-row border-brand">
         <div className="w-32 text-lg">{post.frontmatter.date}</div>
-        <div className="font-semibold text-lg">{post.frontmatter.title}</div>
+        <div className="text-lg font-semibold">{post.frontmatter.title}</div>
       </div>
     </Link>
   </div>

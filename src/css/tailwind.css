@@ -119,44 +119,6 @@
 @tailwind components;
 @tailwind utilities;
 
-
-/* Color palattes
-blue:
-    "050": #EBF8FF,
-    "100": #D1EEFC,
-    "200": #A7D8F0,
-    "300": #7CC1E4,
-    "400": #55AAD4,
-    "500": #3994C1,
-    "600": #2D83AE,
-    "700": #1D6F98,
-    "800": #166086,
-    "900": #0B4F71,
-
-gray:
-    "050": "#FCFCFA",
-    "100": "#E8E6E1",
-    "200": "#D3CEC4",
-    "300": "#B8B2A7",
-    "400": "#A39E93",
-    "500": "#857F72",
-    "600": "#625D52",
-    "700": "#504A40",
-    "800": "#423D33",
-    "900": "#27241D",
-
-red:
-    "100": "#FFF5F5",
-    "200": "#FED7D7",
-    "300": "#FEB2B2",
-    "400": "#FC8181",
-    "500": "#F56565",
-    "600": "#E53E3E",
-    "700": "#C53030",
-    "800": "#9B2C2C",
-    "900": "#742A2A"
-*/
-
 /* Theme colors */
 .light-mode {
     --fg-primary: #27241D;
@@ -177,33 +139,27 @@ red:
     --brand-primary: #166086;
     --brand-default: #2D83AE;
     --brand-secondary: #55AAD4;
-    --brand-ternary: #A7D8F0;
 
     --gradient: linear-gradient(to right, hsl(209, 90%, 49%), hsl(260, 90%, 50%), hsl(276, 83%, 63%));
 }
 
 .dark-mode {
-    --fg-primary: hsl(218, 50%, 98%);
-    --fg-default: hsl(218, 5%, 95%);
-    --fg-secondary: hsl(218, 17%, 80%);
-    --fg-ternary: hsl(244, 5%, 70%);
+    --fg-primary: hsl(195, 5%, 97%);
+    --fg-default: hsl(195, 7%, 70%);
+    --fg-secondary: hsl(195, 10%, 46%);
 
-    --bg-primary: hsl(247, 80%, 2%);
-    --bg-default: hsl(247, 8%, 10%);
-    --bg-secondary: hsl(218, 14%, 30%);
-    --bg-ternary: hsl(244, 5%, 60%);
+    --bg-default: hsl(195, 5%, 7%);
 
     --error-primary: #FED7D7;
     --error-default: #FC8181;
     --error-secondary: #E53E3E;
     --error-ternary: #9B2C2C;
 
-    --brand-primary: #D1EEFC;
-    --brand-default: #7CC1E4;
-    --brand-secondary: #3994C1;
-    --brand-ternary: #1D6F98;
+    --brand-primary: hsl(195, 74%, 68%);
+    --brand-default: hsl(195, 80%, 50%);
+    --brand-secondary: hsl(195, 90%, 35%);
 
-    --gradient: linear-gradient(to right, hsl(193, 94%, 68%), hsl(233, 100%, 85%), hsl(292, 89%, 69%));
+    --gradient: linear-gradient(to right, hsl(193, 94%, 68%), hsl(233, 100%, 85%), hsl(292, 89%, 79%));
 }
 
 /* Gradients */
@@ -216,7 +172,7 @@ red:
 }
 .pillbox:hover {
     background-image: var(--gradient);
-    @apply text-background-primary;
+    @apply text-background;
 }
 
 .text-gradient {
@@ -240,21 +196,25 @@ nav a:hover {
 } */
 
 /* Body */
-/* a {
-    @apply border-b border-background;
+#body a {
+    @apply border-b border-foreground-secondary;
+}
+
+#body a:hover {
+    @apply border-brand-primary;
 }
 
 a:hover {
-    @apply text-brand border-brand-ternary;
-} */
+    @apply text-brand-primary;
+}
 
 /* Icons */
-/* .primary {
+.primary {
     fill: var(--brand-secondary);
 }
 .secondary {
-    fill: var(--brand-default);
-} */
+    fill: var(--brand-primary);
+}
 
 /* Typography */
 /* h1 {
@@ -282,7 +242,7 @@ blockquote {
 } */
 
 /* Charts */
-/* .chart {
+.chart {
     @apply text-foreground-secondary;
 }
 .chart > .axis {
@@ -290,4 +250,4 @@ blockquote {
 }
 .chart > .axis > .label {
     @apply font-sans text-lg;
-} */
+}

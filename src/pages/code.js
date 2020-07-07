@@ -19,12 +19,11 @@ export default ({ data }) => {
 
     return (
         <Layout>
-            <h4>Open source projects</h4>
-            <h1>GitHub project stats</h1>
+            <h1 className="text-2xl font-black tracking-tighter sm:text-3xl md:text-4xl text-gradient">GitHub project stats</h1>
             <div className="text-foreground">Having some fun exploring my GitHub activity using the <a href="https://developer.github.com/v3/">GitHub API</a> and <a href="https://d3js.org">d3.js</a>, inspired by <a href="https://github.com/bchiang7/octoprofile">Octoprofile</a>.</div>
-            <div className="flex flex-col">
+            <div className="flex flex-col mt-4">
                 <div className="w-full">
-                    <h2>Overview</h2>
+                    <h2 className="mt-16 mb-8 font-serif text-2xl italic text-foreground">Overview</h2>
                     <div className="grid justify-around gap-4 mt-4 md:grid-cols-2">
                         <div className="pb-2 border rounded-lg text-foreground border-background-ternary">
                             <div className="pt-4 text-xl text-center">Most starred repositories</div>
@@ -38,7 +37,7 @@ export default ({ data }) => {
 
                 </div>
                 <div className="w-full">
-                    <h2>Selected projects</h2>
+                    <h2 className="mt-16 mb-8 font-serif text-xl italic text-foreground">Selected projects</h2>
                     <div className="grid gap-4 mt-4 md:grid-cols-2">
                         {repos.slice(0, 6).map(d => {
                             return <RepoCard key={d.node.id} repo={d.node} />

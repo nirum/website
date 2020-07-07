@@ -11,13 +11,9 @@ module.exports = {
           default: 'var(--fg-default)',
           primary: 'var(--fg-primary)',
           secondary: 'var(--fg-secondary)',
-          ternary: 'var(--fg-ternary)'
         },
         background: {
           default: 'var(--bg-default)',
-          primary: 'var(--bg-primary)',
-          secondary: 'var(--bg-secondary)',
-          ternary: 'var(--bg-ternary)'
         },
         error: {
           default: 'var(--error-default)',
@@ -29,7 +25,6 @@ module.exports = {
           default: 'var(--brand-default)',
           primary: 'var(--brand-primary)',
           secondary: 'var(--brand-secondary)',
-          ternary: 'var(--brand-ternary)'
         },
       },
     },

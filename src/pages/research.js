@@ -9,9 +9,8 @@ export default ({data}) => {
     .map(p => (<PublicationCard key={p.node.id} pub={p.node} />))
   return (
     <Layout>
-      <h4>Last updated: {most_recent}</h4>
-      <h1>Selected Publications</h1>
-      <div className="text-foreground">For a full list of publications, visit <a href="https://scholar.google.com/citations?user=bEOT7ScAAAAJ">Google Scholar</a>.</div>
+      <h1 className="text-2xl font-black tracking-tighter sm:text-3xl md:text-4xl text-gradient">Selected Publications</h1>
+      <div className="font-serif text-lg italic text-foreground-secondary">For a full list of publications, visit <a href="https://scholar.google.com/citations?user=bEOT7ScAAAAJ">Google Scholar</a>.</div>
       <div>{Publications}</div>
     </Layout>
   )

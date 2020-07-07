@@ -10,11 +10,11 @@ const pluralize = (value, word, plural = word + 's') => (value === 1) ? value + 
 export default ({ repo }) => {
 
   // CSS
-  const pill = "inline-flex items-center px-2 m-1 rounded-lg bg-brand-ternary"
+  const pill = "inline-flex items-center px-2 m-1 rounded-lg bg-brand-secondary"
 
   return (
-    <div className="w-full px-6 pt-5 pb-6 border rounded-lg border-background-ternary">
-      <div className="">
+    <div className="w-full px-6 pt-5 pb-6 border rounded-lg border-foreground-secondary">
+      <div className="text-foreground-secondary">
         <h4>Created: {repo.createdAt}</h4>
         <div className="mt-2 text-xl font-semibold tracking-tight">
           <div className="inline-flex items-center text-foreground">

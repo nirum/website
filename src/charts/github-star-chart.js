@@ -1,5 +1,4 @@
 import React, { useEffect, useRef, useState } from 'react'
-import { theme } from "../../tailwind.config"
 import * as d3 from 'd3'
 
 const margin = {
@@ -95,7 +94,7 @@ export default ({ data }) => {
             .style("transform", "scale(1, -1)")
             .attr("x", (d, i) => x(i))
             .attr("y", margin.bottom-dims.height)
-            .attr("fill", (d, i) => i === hoverIdx ? theme.colors.brand.default : theme.colors.brand.secondary)
+            .attr("fill", (d, i) => i === hoverIdx ? "#cc00ff" : "#aaeeff")
             .attr("width", x.bandwidth())
             .on("mouseover", (d, i) => {
                 setHoverIdx(i);

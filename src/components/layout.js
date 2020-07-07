@@ -7,7 +7,7 @@ import useDarkMode from "use-dark-mode"
 export default ({ children }) => {
   const darkMode = useDarkMode(false);
   return (
-    <div className="flex flex-col min-h-screen bg-background-primary">
+    <div className="flex flex-col min-h-screen bg-background">
       <Helmet>
         <meta charSet="utf-8" />
         <title>Niru Maheswaranathan</title>
@@ -20,7 +20,7 @@ export default ({ children }) => {
       <Header />
       <div className="flex-grow">
         <div className="flex justify-around">
-          <div id="body" className="responsive-width">
+          <div id="body" className="mt-6 lg:mt-20 responsive-width">
               {children}
           </div>
         </div>

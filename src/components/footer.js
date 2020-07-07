@@ -7,12 +7,12 @@ export default () => {
 
     // CSS
     const heading = "font-sans font-semibold text-foreground uppercase tracking-wide pb-2"
-    const pill = "-ml-2 px-2 py-1 pillbox"
-    const nolink = "border-0 hover:text-blue-100"
+    const pill = "-ml-2 px-2 py-1"
+    const nolink = "border-0"
 
     return (
-    <footer className="inset-x-0 bottom-0 flex justify-around py-4 pb-8 border-t border-background min-h-32">
-        <div className="grid gap-8 mt-8 mb-8 ml-16 text-foreground-ternary md:gap-4 responsive-width sm:ml-0 sm:grid-cols-2 md:grid-cols-3">
+    <footer className="inset-x-0 bottom-0 flex justify-around py-4 pb-8 mt-24 border-t md:mt-32 border-foreground-secondary min-h-32">
+        <div className="grid gap-8 mt-8 mb-8 ml-16 text-foreground-secondary md:gap-4 responsive-width sm:ml-0 sm:grid-cols-2 md:grid-cols-3">
             <div className="flex flex-col justify-start">
                 <div className={heading}>Sitemap</div>
                 <ul>

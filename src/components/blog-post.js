@@ -11,7 +11,7 @@ export default function Template({ data }) {
       <div>
         <h4 className="tracking-wider">{frontmatter.date}</h4>
         <div dangerouslySetInnerHTML={{ __html: html }} />
-        <div className="flex mt-8 text-brand-primary -ml-1">
+        <div className="flex mt-8 -ml-1 text-brand-primary">
             <ButtonLink url="/blog"><Back size="6" /><span className="mx-1 tracking-wide uppercase">back to blog</span></ButtonLink>
         </div>
       </div>
