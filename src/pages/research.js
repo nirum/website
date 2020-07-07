@@ -10,7 +10,7 @@ export default ({data}) => {
   return (
     <Layout>
       <h1 className="text-2xl font-black tracking-tighter sm:text-3xl md:text-4xl text-gradient">Selected Publications</h1>
-      <div className="font-serif text-lg italic text-foreground-secondary">For a full list of publications, visit <a href="https://scholar.google.com/citations?user=bEOT7ScAAAAJ">Google Scholar</a>.</div>
+      <div className="font-serif text-lg italic text-foreground">For a full list of publications, see <a href="https://scholar.google.com/citations?user=bEOT7ScAAAAJ">Google Scholar</a>.</div>
       <div>{Publications}</div>
     </Layout>
   )

@@ -4,19 +4,19 @@ import { Code, Document, Library, Link } from "./icons"
 import { join } from "path"
 
 export default ({ pub }) => {
-  const datePill = "bg-brand-secondary px-2 rounded-md text-background-primary font-semibold w-20"
+  const datePill = "bg-brand px-2 rounded-md text-background font-semibold w-20 -mt-2"
   const buttonText = "uppercase tracking-wide mx-1 text-sm text-foreground"
   const iconSize = "6"
   return (
     <div className="mt-24">
       <div className="flex flex-col lg:-ml-24 lg:items-center lg:flex-row">
         <div className={datePill}>{pub.date}</div>
-        <div className="mt-2 text-lg tracking-wide uppercase lg:ml-4 lg:-mt-2 text-foreground-secondary">{pub.location}</div>
+        <div className="mt-4 text-base tracking-wide uppercase lg:ml-4 lg:-mt-2 text-foreground">{pub.location}</div>
       </div>
       <div>
-        <p className="mt-2 font-sans text-xl font-semibold leading-tight tracking-tight text-foreground">{pub.title}</p>
+        <p className="mt-2 font-sans text-xl font-semibold leading-tight tracking-tight text-foreground-primary">{pub.title}</p>
       </div>
-        <p className="mt-2 font-serif leading-snug text-foreground-secondary">{pub.authors.join(", ")}</p>
+        <p className="mt-2 font-serif leading-snug text-foreground">{pub.authors.join(", ")}</p>
         <div className="flex flex-row flex-wrap mt-4 -mx-1 text-foreground">
           {pub.url && (<Button url={pub.url}><Link size={iconSize} /><span className={buttonText}>URL</span></Button>)}
           {pub.pdf && (<Button url={pub.pdf}><Document size={iconSize} /><span className={buttonText}>PDF</span></Button>)}

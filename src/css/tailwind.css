@@ -121,23 +121,14 @@
 
 /* Theme colors */
 .light-mode {
-    --fg-primary: #27241D;
-    --fg-default: #423D33;
-    --fg-secondary: #625D62;
-    --fg-ternary: #A39E93;
+    --fg-primary: hsl(272, 27%, 5%);
+    --fg-default: hsl(272, 10%, 24%);
+    --fg-secondary: hsl(272, 8%, 60%);
 
-    --bg-primary: #FCFCFA;
-    --bg-default: #E8E6E1;
-    --bg-secondary: #D3CEC4;
-    --bg-ternary: #B8B2A7;
-
-    --error-primary: #742A2A;
-    --error-default: #C53030;
-    --error-secondary: #F56565;
-    --error-ternary: #FEB2B2;
+    --bg-default: hsl(272, 3%, 98%);
 
     --brand-primary: #166086;
-    --brand-default: #2D83AE;
+    --brand-default: hsl(272, 96%, 50%);
     --brand-secondary: #55AAD4;
 
     --gradient: linear-gradient(to right, hsl(209, 90%, 49%), hsl(260, 90%, 50%), hsl(276, 83%, 63%));
@@ -156,7 +147,7 @@
     --error-ternary: #9B2C2C;
 
     --brand-primary: hsl(195, 74%, 68%);
-    --brand-default: hsl(195, 80%, 50%);
+    --brand-default: hsl(195, 88%, 67%);
     --brand-secondary: hsl(195, 90%, 35%);
 
     --gradient: linear-gradient(to right, hsl(193, 94%, 68%), hsl(233, 100%, 85%), hsl(292, 89%, 79%));
@@ -201,19 +192,19 @@ nav a:hover {
 }
 
 #body a:hover {
-    @apply border-brand-primary;
+    @apply border-brand;
 }
 
 a:hover {
-    @apply text-brand-primary;
+    @apply text-brand;
 }
 
 /* Icons */
 .primary {
-    fill: var(--brand-secondary);
+    fill: var(--brand-default);
 }
 .secondary {
-    fill: var(--brand-primary);
+    fill: var(--brand-secondary);
 }
 
 /* Typography */
