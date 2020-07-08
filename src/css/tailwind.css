@@ -129,7 +129,7 @@
 
     --brand-primary: #166086;
     --brand-default: hsl(272, 96%, 50%);
-    --brand-secondary: #55AAD4;
+    --brand-secondary: hsl(272, 56%, 72%);
 
     --gradient: linear-gradient(to right, hsl(209, 90%, 49%), hsl(260, 90%, 50%), hsl(276, 83%, 63%));
 }
@@ -148,7 +148,7 @@
 
     --brand-primary: hsl(195, 74%, 68%);
     --brand-default: hsl(195, 88%, 67%);
-    --brand-secondary: hsl(195, 90%, 35%);
+    --brand-secondary: hsl(195, 88%, 30%);
 
     --gradient: linear-gradient(to right, hsl(193, 94%, 68%), hsl(233, 100%, 85%), hsl(292, 89%, 79%));
 }
@@ -156,6 +156,11 @@
 /* Gradients */
 .gradient-bar {
     background-image: var(--gradient);
+}
+
+.logo:hover {
+    background-image: var(--gradient);
+    @apply text-background;
 }
 
 .pillbox {
@@ -234,7 +239,7 @@ blockquote {
 
 /* Charts */
 .chart {
-    @apply text-foreground-secondary;
+    @apply text-foreground;
 }
 .chart > .axis {
     @apply font-sans text-sm;

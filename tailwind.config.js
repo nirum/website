@@ -23,7 +23,6 @@ module.exports = {
         },
         brand: {
           default: 'var(--brand-default)',
-          primary: 'var(--brand-primary)',
           secondary: 'var(--brand-secondary)',
         },
       },

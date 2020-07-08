@@ -19,7 +19,9 @@ export default ({ data }) => {
 
     return (
         <Layout>
-            <h1 className="text-2xl font-black tracking-tighter sm:text-3xl md:text-4xl text-gradient">GitHub project stats</h1>
+            <div className="flex flex-row items-start">
+                <h1 className="text-2xl font-black tracking-tighter sm:text-3xl md:text-4xl text-gradient">GitHub project stats</h1>
+            </div>
             <div className="font-serif text-lg italic text-foreground">Having some fun exploring my GitHub activity using the <a href="https://developer.github.com/v3/">GitHub API</a> and <a href="https://d3js.org">d3.js</a>, inspired by <a href="https://github.com/bchiang7/octoprofile">Octoprofile</a>.</div>
             <div className="flex flex-col mt-4">
                 <div className="w-full">

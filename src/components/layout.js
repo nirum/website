@@ -20,7 +20,7 @@ export default ({ children }) => {
       <Header />
       <div className="flex-grow">
         <div className="flex justify-around">
-          <div id="body" className="mt-6 lg:mt-20 responsive-width">
+          <div id="body" className="mt-12 lg:mt-20 responsive-width">
               {children}
           </div>
         </div>

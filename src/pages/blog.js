@@ -10,7 +10,9 @@ export default ({data: {allMarkdownRemark: { edges }}}) => {
     .map(edge => (<li><PostLink key={edge.node.id} post={edge.node} /></li>))
   return (
     <Layout>
-      <h1 className="text-2xl font-black tracking-tighter sm:text-3xl md:text-4xl text-gradient">Blog Roll</h1>
+      <div className="flex flex-row items-start">
+        <h1 className="text-2xl font-black tracking-tighter sm:text-3xl md:text-4xl text-gradient">Blog Roll</h1>
+      </div>
       <div className="font-serif text-lg italic text-foreground">Thoughts on research, data visualization, technology, and design.</div>
       <ul className="mt-16 space-y-8">
         {Posts}

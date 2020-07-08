@@ -10,7 +10,7 @@ const pluralize = (value, word, plural = word + 's') => (value === 1) ? value + 
 export default ({ repo }) => {
 
   // CSS
-  const pill = "inline-flex items-center px-2 m-1 rounded-lg bg-brand text-background"
+  const pill = "inline-flex items-center px-2 m-1 rounded-lg bg-brand-secondary text-foreground-primary"
 
   return (
     <div className="w-full px-6 pt-5 pb-6 border rounded-lg shadow-md border-foreground-secondary">
@@ -28,15 +28,15 @@ export default ({ repo }) => {
       <div className="flex flex-row flex-wrap justify-start mt-2 -ml-2 text-foreground-primary">
         <div className={pill}>
           <GitHubBookmark size="3" />
-          <span className="ml-1" dangerouslySetInnerHTML={{__html: pluralize(repo.stargazers.totalCount, 'star')}}></span>
+          <span className="mx-1" dangerouslySetInnerHTML={{__html: pluralize(repo.stargazers.totalCount, 'star')}}></span>
         </div>
         <div className={pill}>
           <GitHubFork size="3" />
-          <span className="ml-1" dangerouslySetInnerHTML={{__html: pluralize(repo.forkCount, 'fork')}}></span>
+          <span className="mx-1" dangerouslySetInnerHTML={{__html: pluralize(repo.forkCount, 'fork')}}></span>
         </div>
         <div className={pill}>
           <GitHubCode size="3" />
-          <span className="ml-1">{repo.languages.edges[0].node.name}</span>
+          <span className="mx-1">{repo.languages.edges[0].node.name}</span>
         </div>
       </div>
     </div>)
