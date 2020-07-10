@@ -28,11 +28,11 @@ export default ({ data }) => {
                     <h2 className="pt-2 mt-20 mb-8 font-sans text-2xl font-semibold tracking-tight border-t-2 border-brand text-foreground">Overview</h2>
                     <div className="grid justify-around gap-4 mt-4 md:grid-cols-2">
                         <div className="pb-2 border rounded-lg shadow-md text-foreground border-foreground-secondary">
-                            <div className="pt-4 text-xl text-center">Most starred repositories</div>
+                            <div className="pt-4 text-xl text-center text-foreground-primary">Most starred repositories</div>
                             <StarChart data={stars} />
                         </div>
                         <div className="pb-2 border rounded-lg shadow-md text-foreground border-foreground-secondary">
-                            <div className="pt-4 text-xl text-center">Top programming languages</div>
+                            <div className="pt-4 text-xl text-center text-foreground-primary">Top programming languages</div>
                             <LangChart data={langs} />
                         </div>
                     </div>

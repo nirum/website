@@ -13,7 +13,7 @@ export default ({data}) => {
       <h2 className="font-serif text-sm italic tracking-tight sm:text-lg md:text-2xl text-foreground">Machine learning and neuroscience research</h2>
     </div>
     <div className="flex flex-col items-center py-12 mb-16 md:mb-24">
-      <Img className="object-cover w-32 h-32 border-2 rounded-full shadow-xl md:w-48 md:h-48 border-brand" fluid={data.file.childImageSharp.fluid} alt="Profile" />
+      <Img className="object-cover w-32 h-32 border-2 rounded-full shadow-xl md:w-48 md:h-48 border-brand bg-background" fluid={data.file.childImageSharp.fluid} alt="Profile" />
       <div className="w-full h-0 -my-16 border-t-2 md:-my-24 border-brand"></div>
     </div>
     <div className="pt-16 font-serif text-base md:text-lg md:pt-24 text-foreground">
