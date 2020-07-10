@@ -12,7 +12,7 @@ export default ({data}) => {
       <div className="flex flex-row items-start">
         <h1 className="text-2xl font-black tracking-tighter sm:text-3xl md:text-4xl text-gradient">Selected Publications</h1>
       </div>
-      <div className="font-serif italic sm:text-lg text-foreground">For a full list of publications, see <a href="https://scholar.google.com/citations?user=bEOT7ScAAAAJ">Google Scholar</a>.</div>
+      <div className="font-serif italic sm:text-lg md:text-xl text-foreground">For a full list of publications, see <a href="https://scholar.google.com/citations?user=bEOT7ScAAAAJ">Google Scholar</a>.</div>
       <div>{Publications}</div>
     </Layout>
   )

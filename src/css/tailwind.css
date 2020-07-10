@@ -191,18 +191,38 @@ nav a:hover {
     @apply text-brand-primary;
 } */
 
-/* Body */
+/* header a {
+    @apply border-b border-foreground-secondary;
+} */
+
+header a:hover {
+    @apply text-brand;
+}
+
+footer a:hover {
+    @apply text-brand;
+}
+
 #body a {
-    @apply border-0 border-foreground-secondary;
+    @apply border-b border-foreground-secondary;
 }
 
 #body a:hover {
-    @apply border-brand;
+    @apply text-brand border-brand;
 }
 
-a:hover {
+/* Body */
+/* .url a {
+    @apply border-0 border-foreground-secondary;
+}
+
+.url a:hover {
     @apply text-brand;
 }
+
+.url a:hover {
+    @apply border-brand;
+} */
 
 /* Typography */
 /* h1 {

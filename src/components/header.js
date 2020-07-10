@@ -14,8 +14,9 @@ export default () => {
                         </div>
                     </Link>
                     <div class="flex-grow"></div>
-                    <Link activeClassName={activeLink} partiallyActive={true} to="/about">About</Link>
-                    <Link activeClassName={activeLink} partiallyActive={true} to="/blog">Blog</Link>
+                    <Link activeClassName={activeLink} to="/">Home</Link>
+                    {/* k activeClassName={activeLink} partiallyActive={true} to="/about">About</Link> */}
+                    {/* <Link activeClassName={activeLink} partiallyActive={true} to="/blog">Blog</Link> */}
                     <Link activeClassName={activeLink} partiallyActive={true} to="/research">Research</Link>
                     <Link activeClassName={activeLink} partiallyActive={true} to="/code">Code</Link>
                 </nav>
