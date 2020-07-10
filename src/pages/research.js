@@ -4,7 +4,7 @@ import Layout from "../components/layout";
 import PublicationCard from "../components/publication-card";
 
 export default ({data}) => {
-  const most_recent = data.allFile.edges[0].node.mtime;
+  // const most_recent = data.allFile.edges[0].node.mtime;
   const Publications = data.allPublicationsYaml.edges
     .map(p => (<PublicationCard key={p.node.id} pub={p.node} />))
   return (
@@ -12,7 +12,7 @@ export default ({data}) => {
       <div className="flex flex-row items-start">
         <h1 className="text-2xl font-black tracking-tighter sm:text-3xl md:text-4xl text-gradient">Selected Publications</h1>
       </div>
-      <div className="font-serif text-lg italic text-foreground">For a full list of publications, see <a href="https://scholar.google.com/citations?user=bEOT7ScAAAAJ">Google Scholar</a>.</div>
+      <div className="font-serif italic sm:text-lg text-foreground">For a full list of publications, see <a href="https://scholar.google.com/citations?user=bEOT7ScAAAAJ">Google Scholar</a>.</div>
       <div>{Publications}</div>
     </Layout>
   )

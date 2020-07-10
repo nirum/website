@@ -14,10 +14,10 @@ export default ({ repo }) => {
 
   return (
     <div className="w-full px-6 pt-5 pb-6 border rounded-lg shadow-md border-foreground-secondary">
-      <div className="text-foreground-secondary">
+      <div className="text-foreground">
         <h4>Created: {repo.createdAt}</h4>
         <div className="mt-2 text-xl font-semibold tracking-tight">
-          <div className="inline-flex items-center text-foreground">
+          <div className="inline-flex items-center text-foreground-primary">
               <a className="mr-2" href={repo.url}>{repo.nameWithOwner}</a>
               <GitHubRepo size="6" />
           </div>

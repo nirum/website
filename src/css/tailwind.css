@@ -193,7 +193,7 @@ nav a:hover {
 
 /* Body */
 #body a {
-    @apply border-b border-foreground-secondary;
+    @apply border-0 border-foreground-secondary;
 }
 
 #body a:hover {
@@ -202,14 +202,6 @@ nav a:hover {
 
 a:hover {
     @apply text-brand;
-}
-
-/* Icons */
-.primary {
-    fill: var(--brand-default);
-}
-.secondary {
-    fill: var(--brand-secondary);
 }
 
 /* Typography */
