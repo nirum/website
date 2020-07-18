@@ -2,7 +2,7 @@ import React from "react"
 import Layout from "../components/layout"
 import Title from "../components/title"
 import { graphql } from "gatsby"
-import { Button } from "./button"
+import { FatButton } from "./button"
 import { Link } from "gatsby"
 import { Back } from "./icons"
 
@@ -17,7 +17,7 @@ export default function Template({ data }) {
           <div dangerouslySetInnerHTML={{ __html: html }} />
         </article>
         <div className="mt-16">
-            <Link to="/blog"><Button><Back size="4" /><span>Back to Blog</span></Button></Link>
+            <Link to="/blog"><FatButton><Back size="4" /><span>Back to Blog</span></FatButton></Link>
         </div>
       </div>
     </Layout>

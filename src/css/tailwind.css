@@ -293,7 +293,19 @@ article blockquote {
     @apply font-sans text-lg;
 }
 
-blockquote.twitter-tweet {
+blockquote {
+    @apply pl-4 my-6 border-l-8 border-brand-secondary text-foreground;
+}
+
+.twitter-tweet {
+    @apply my-6 font-sans text-sm text-base font-semibold tracking-tight border-0 rounded-lg text-foreground;
+}
+
+.twitter-tweet p {
+    @apply mb-4 font-sans text-lg font-normal tracking-normal;
+}
+
+/* blockquote.twitter-tweet {
     display: inline-block;
     font-family: "Helvetica Neue", Roboto, "Segoe UI", Calibri, sans-serif;
     font-size: 12px;
@@ -325,4 +337,4 @@ blockquote.twitter-tweet {
   blockquote.twitter-tweet a:hover,
   blockquote.twitter-tweet a:focus {
     text-decoration: underline;
-  }
+  } */

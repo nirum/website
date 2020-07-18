@@ -18,11 +18,11 @@ export default ({ pub }) => {
       </div>
         <p className="mt-2 font-sans leading-snug text-foreground">{pub.authors.join(", ")}</p>
         <div className="flex flex-row flex-wrap mt-2 space-x-1">
-          {pub.url && (<a href={pub.url}><Button><Links size={iconSize} /><span>URL</span></Button></a>)}
-          {pub.pdf && (<a href={pub.pdf}><Button><Document size={iconSize} /><span>PDF</span></Button></a>)}
-          {pub.code && (<a href={pub.code}><Button><Code size={iconSize} /><span>CODE</span></Button></a>)}
+          {pub.url && (<a href={pub.url} aria-label="url"><Button><Links size={iconSize} /><span>URL</span></Button></a>)}
+          {pub.pdf && (<a href={pub.pdf} aria-label="pdf"><Button><Document size={iconSize} /><span>PDF</span></Button></a>)}
+          {pub.code && (<a href={pub.code} aria-label="code"><Button><Code size={iconSize} /><span>CODE</span></Button></a>)}
           {pub.bibtex && (<Link to={join("bibtex", pub.slug)}><Button><Library size={iconSize} /><span>BIB</span></Button></Link>)}
         </div>
-        {pub.tweet && <div className="flex flex-row items-center justify-start w-full mt-2" dangerouslySetInnerHTML={{__html: pub.tweet}} />}
+        {pub.tweet && <div className="flex flex-row items-start justify-start w-full mt-2" dangerouslySetInnerHTML={{__html: pub.tweet}} />}
     </div>)
 };

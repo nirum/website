@@ -1,7 +1,7 @@
 import React from "react"
 import Layout from "../components/layout"
 import { graphql } from "gatsby"
-import { Button } from "./button"
+import { FatButton } from "./button"
 import { Back } from "./icons"
 import { Link } from "gatsby"
 
@@ -15,7 +15,7 @@ export default function Template({ data, pageContext }) {
                 <p className="font-mono text-sm leading-snug text-foreground" style={{textIndent: "-2em", marginLeft: "2em"}}>{bibtex}</p>
             </div>
             <div className="flex mt-8">
-                <Link to="/research"><Button><Back size="4" /><span>Back to Research</span></Button></Link>
+                <Link to="/research"><FatButton><Back size="4" /><span>Back to Research</span></FatButton></Link>
             </div>
         </div>
         </Layout>
