@@ -16,7 +16,7 @@ export default () => {
             <div className={column}>
                 <div className={heading}>Sitemap</div>
                 <div><Link to="/">Home</Link></div>
-                <div><Link to="/blog">Blog</Link></div>
+                {/* <div><Link to="/blog">Blog</Link></div> */}
                 <div><Link to="/research">Research</Link></div>
                 <div><Link to="/code">Code</Link></div>
             </div>
