@@ -11,11 +11,12 @@ export default () => {
     const column = "flex flex-col justify-start space-y-2"
 
     return (
-    <footer className="inset-x-0 bottom-0 mt-16 mb-8 border-t md:mt-32 border-foreground-secondary min-h-32 text-foreground-secondary ">
+    <footer className="inset-x-0 bottom-0 mt-16 mb-16 border-t md:mt-32 border-foreground-secondary min-h-32 text-foreground-secondary ">
         <div className="grid gap-10 pl-12 m-auto mt-12 mb-6 sm:pl-0 sm:grid-cols-2 md:grid-cols-3 responsive-width">
             <div className={column}>
                 <div className={heading}>Sitemap</div>
                 <div><Link to="/">Home</Link></div>
+                <div><Link to="/blog">Blog</Link></div>
                 <div><Link to="/research">Research</Link></div>
                 <div><Link to="/code">Code</Link></div>
             </div>

@@ -1,7 +1,9 @@
 import React from "react"
 import Layout from "../components/layout"
+import Title from "../components/title"
 import { graphql } from "gatsby"
-import { ButtonLink } from "./button"
+import { Button } from "./button"
+import { Link } from "gatsby"
 import { Back } from "./icons"
 
 export default function Template({ data }) {
@@ -9,10 +11,13 @@ export default function Template({ data }) {
   return (
     <Layout>
       <div>
-        <h4 className="tracking-wider">{frontmatter.date}</h4>
-        <div dangerouslySetInnerHTML={{ __html: html }} />
-        <div className="flex mt-8 -ml-1 text-brand-primary">
-            <ButtonLink url="/blog"><Back size="6" /><span className="mx-1 tracking-wide uppercase">back to blog</span></ButtonLink>
+        <article>
+          <Title text={frontmatter.title} />
+          <h4>{frontmatter.date}</h4>
+          <div dangerouslySetInnerHTML={{ __html: html }} />
+        </article>
+        <div className="mt-16">
+            <Link to="/blog"><Button><Back size="4" /><span>Back to Blog</span></Button></Link>
         </div>
       </div>
     </Layout>

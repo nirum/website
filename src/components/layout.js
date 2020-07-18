@@ -21,12 +21,12 @@ export default ({ children }) => {
         <meta name="twitter:widgets:theme" content={darkMode.value ? "dark" : "light"} />
         <link rel="icon" href={favicon16} sizes="16x16" type="image/png" />
         <link rel="icon" href={favicon32} sizes="32x32" type="image/png" />
-        <link rel="shortcut icon" href={favicon64} type="image/png" />
+        <link rel="icon" href={favicon64} type="image/png" />
       </Helmet>
       <Header />
       <div className="flex-grow">
         <div className="flex justify-around">
-          <div id="body" className="mt-12 lg:mt-20 responsive-width">
+          <div id="body" className="pt-2 mt-12 xl:mt-20 responsive-width">
               {children}
           </div>
         </div>

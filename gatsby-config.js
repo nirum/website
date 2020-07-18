@@ -113,9 +113,9 @@ module.exports = {
     {
       resolve: "gatsby-plugin-purgecss",
       options: {
-        whitelist: ['dark-mode', 'light-mode'],
+        whitelist: ['dark-mode', 'light-mode', 'w-2', 'w-3', 'w-4', 'w-6', 'h-2', 'h-3', 'h-4', 'h-6'],
         printRejected: false,
-        develop: false,
+        develop: true,
         tailwind: true,
       }
     },

@@ -11,9 +11,9 @@ export default ({data: {allMarkdownRemark: { edges }}}) => {
   return (
     <Layout>
       <div className="flex flex-row items-start">
-        <h1 className="text-2xl font-black tracking-tighter sm:text-3xl md:text-4xl text-gradient">Blog Roll</h1>
+        <h1>Blog Roll</h1>
       </div>
-      <div className="font-serif italic sm:text-lg text-foreground">Thoughts on research, data visualization, technology, and design.</div>
+      <h4>Thoughts on research, data visualization, technology, and design.</h4>
       <ul className="mt-16 space-y-8">
         {Posts}
       </ul>

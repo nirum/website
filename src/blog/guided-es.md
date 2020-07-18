@@ -5,7 +5,6 @@ title: "Guided Evolutionary Strategies"
 tags: ["research", "optimization"]
 draft: True
 ---
-# Guided Evolutionary Strategies
 
 This post is about a research paper published at ICML last year called [Guided Evolutionary Strategies](http://proceedings.mlr.press/v97/maheswaranathan19a.html). It's a paper that I'm particularly fond of, and wanted to explain why I love it in more detail.
 

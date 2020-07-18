@@ -148,7 +148,7 @@
 
     --brand-primary: hsl(195, 74%, 68%);
     --brand-default: hsl(195, 88%, 67%);
-    --brand-secondary: hsl(195, 88%, 30%);
+    --brand-secondary: hsl(195, 74%, 42%);
 
     --gradient: linear-gradient(to right, hsl(193, 94%, 68%), hsl(233, 100%, 85%), hsl(292, 89%, 79%));
 }
@@ -203,12 +203,44 @@ footer a:hover {
     @apply text-brand;
 }
 
-#body a {
+p a {
     @apply border-b border-foreground-secondary;
 }
 
-#body a:hover {
+p a:hover {
     @apply text-brand border-brand;
+}
+
+/* Typography */
+h1 {
+    @apply font-sans text-2xl font-black leading-none tracking-tighter text-gradient;
+     /* sm:text-3xl md:text-4xl  */
+}
+h2 {
+    @apply pt-2 mt-20 font-sans text-xl font-semibold leading-snug tracking-tight border-t-2 text-foreground border-brand;
+}
+h4 {
+    @apply font-serif italic tracking-tight text-foreground;
+      /* font-serif italic sm:text-lg md:text-xl text-foreground */
+}
+article {
+    @apply font-serif text-foreground;
+}
+article p {
+    @apply mt-8 leading-7;
+}
+
+
+@screen sm {
+    h1 {@apply text-3xl;}
+    h4 {@apply text-lg;}
+}
+
+@screen md {
+    h1 {@apply text-4xl;}
+    h2 {@apply text-2xl;}
+    h4 {@apply text-xl;}
+    article p {@apply text-lg;}
 }
 
 /* Body */
@@ -223,29 +255,30 @@ footer a:hover {
 .url a:hover {
     @apply border-brand;
 } */
-
-/* Typography */
-/* h1 {
-    @apply font-sans text-3xl font-semibold tracking-tight text-foreground-primary;
+/* 
+    <div className="text-foreground">
+    </div>
+article h1 {
+    @apply font-sans text-3xl font-semibold tracking-tight;
 }
 
-h2 {
+article h2 {
     @apply mt-12 font-sans text-2xl text-foreground-primary;
 }
 
-h3 {
+article h3 {
     @apply font-sans text-lg text-foreground-primary;
 }
 
-h4 {
+article h4 {
     @apply font-sans tracking-wide uppercase text-foreground-secondary;
 }
 
-p {
+article p {
     @apply mt-8 font-sans leading-7 text-foreground;
 }
 
-blockquote {
+article blockquote {
     @apply font-sans leading-8 text-foreground;
 } */
 
@@ -259,3 +292,37 @@ blockquote {
 .chart > .axis > .label {
     @apply font-sans text-lg;
 }
+
+blockquote.twitter-tweet {
+    display: inline-block;
+    font-family: "Helvetica Neue", Roboto, "Segoe UI", Calibri, sans-serif;
+    font-size: 12px;
+    font-weight: bold;
+    line-height: 16px;
+    border-color: #eee #ddd #bbb;
+    border-radius: 5px;
+    border-style: solid;
+    border-width: 1px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.15);
+    margin: 10px 5px;
+    padding: 0 16px 16px 16px;
+    max-width: 468px;
+  }
+  
+  blockquote.twitter-tweet p {
+    font-size: 16px;
+    font-weight: normal;
+    line-height: 20px;
+  }
+  
+  blockquote.twitter-tweet a {
+    color: inherit;
+    font-weight: normal;
+    text-decoration: none;
+    outline: 0 none;
+  }
+  
+  blockquote.twitter-tweet a:hover,
+  blockquote.twitter-tweet a:focus {
+    text-decoration: underline;
+  }

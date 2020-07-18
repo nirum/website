@@ -1,6 +1,7 @@
 import React from "react";
 import { graphql } from "gatsby"
 import Layout from "../components/layout";
+import Title from "../components/title";
 import PublicationCard from "../components/publication-card";
 
 export default ({data}) => {
@@ -9,10 +10,8 @@ export default ({data}) => {
     .map(p => (<PublicationCard key={p.node.id} pub={p.node} />))
   return (
     <Layout>
-      <div className="flex flex-row items-start">
-        <h1 className="text-2xl font-black tracking-tighter sm:text-3xl md:text-4xl text-gradient">Selected Publications</h1>
-      </div>
-      <div className="font-serif italic sm:text-lg md:text-xl text-foreground">For a full list of publications, see <a href="https://scholar.google.com/citations?user=bEOT7ScAAAAJ">Google Scholar</a>.</div>
+      <Title text="Selected Publications" />
+      <p><h4>For a full list of publications, see <a href="https://scholar.google.com/citations?user=bEOT7ScAAAAJ">Google Scholar</a>.</h4></p>
       <div>{Publications}</div>
     </Layout>
   )
