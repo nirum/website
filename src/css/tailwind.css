@@ -213,7 +213,7 @@ p a:hover {
 
 /* Typography */
 h1 {
-    @apply font-sans text-2xl font-black leading-none tracking-tighter text-gradient;
+    @apply overflow-visible font-sans text-2xl font-black leading-snug tracking-tighter text-gradient;
      /* sm:text-3xl md:text-4xl  */
 }
 h2 {
@@ -304,6 +304,18 @@ blockquote {
 .twitter-tweet p {
     @apply mb-4 font-sans text-lg font-normal tracking-normal;
 }
+
+figure.wp-block-embed-twitter blockquote.twitter-tweet {
+    visibility: hidden;
+}
+
+figure.wp-block-embed-twitter blockquote.twitter-tweet p {
+    visibility: hidden;
+}
+/* figure.wp-block-embed-twitter blockquote.twitter-tweet p { */
+    /* visibility: visible; */
+/* } */
+
 
 /* blockquote.twitter-tweet {
     display: inline-block;
