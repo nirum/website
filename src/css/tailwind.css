@@ -224,7 +224,7 @@ h4 {
       /* font-serif italic sm:text-lg md:text-xl text-foreground */
 }
 article {
-    @apply font-serif text-foreground;
+    @apply font-sans text-foreground;
 }
 article p {
     @apply mt-8 leading-7;

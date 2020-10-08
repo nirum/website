@@ -22,11 +22,12 @@ export default ({ data }) => {
         svg.attr("viewBox", `0 0 ${dims.width} ${dims.height}`)
 
         const radius = Math.min(dims.width, dims.height) / 2
-        const counts = d3.nest()
-            .key(d => d).rollup(d => d.length).entries(data)
-            .sort((a, b) => b.value - a.value)
+        const counts = Array.from(d3.rollup(data, d => d.length, d => d).entries())
+            .sort((a, b) => b[1] - a[1])
             .slice(0, numLangs);
-        const pie_data = d3.pie().value(d => d.value)(counts);
+        console.log(counts);
+        const pie_data = d3.pie().value(d => d[1])(counts);
+        // console.log(counts[0][0]);
 
         const arc = d3.arc().innerRadius(0).outerRadius(radius - 1)
         svg.selectAll("path")
@@ -34,7 +35,7 @@ export default ({ data }) => {
             .join("path")
             .attr("fill", (d, i) => d3.schemeCategory10[i])
             .attr("d", arc)
-            .on("mouseover", (d, i) => setLabel(counts[i].key))
+            .on("mouseover", (d, i) => setLabel(d))
             .on("mouseleave", () => setLabel(defaultLabel))
             .style("transform", `translate(${dims.width / 2}px,${dims.height / 2}px)`)
         

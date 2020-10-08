@@ -110,14 +110,14 @@ module.exports = {
         postCssPlugins: [require("tailwindcss"), require("autoprefixer")],
       },
     },
-    {
-      resolve: "gatsby-plugin-purgecss",
-      options: {
-        whitelist: ['dark-mode', 'light-mode', 'w-2', 'w-3', 'w-4', 'w-6', 'h-2', 'h-3', 'h-4', 'h-6', 'twitter-tweet'],
-        printRejected: false,
-        develop: false,
-        tailwind: true,
-      }
-    },
+    // {
+    //   resolve: "gatsby-plugin-purgecss",
+    //   options: {
+    //     whitelist: ['dark-mode', 'light-mode', 'w-2', 'w-3', 'w-4', 'w-6', 'h-2', 'h-3', 'h-4', 'h-6', 'twitter-tweet'],
+    //     printRejected: false,
+    //     develop: false,
+    //     tailwind: true,
+    //   }
+    // },
   ],
 }

@@ -1,5 +1,9 @@
 module.exports = {
-  purge: false,
+  purge: true,
+  future: {
+    removeDeprecatedGapUtilities: true,
+    purgeLayersByDefault: true,
+  },
   theme: {
     extend: {
       spacing: {

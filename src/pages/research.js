@@ -11,7 +11,7 @@ export default ({data}) => {
   return (
     <Layout>
       <Title text="Selected Publications" />
-      <p><h4>For a full list of publications, see <a href="https://scholar.google.com/citations?user=bEOT7ScAAAAJ">Google Scholar</a>.</h4></p>
+      <h4><p>For a full list of publications, see <a href="https://scholar.google.com/citations?user=bEOT7ScAAAAJ">Google Scholar</a>.</p></h4>
       <div>{Publications}</div>
     </Layout>
   )
