@@ -2,4 +2,4 @@
 
 [niru.dev](https://niru.dev).
 
-Made with [GatsbyJS](https://www.gatsbyjs.org/) and [Tailwind CSS](https://tailwindcss.com).
+Made with [NextJS](https://www.nextjs.org/) and [Tailwind CSS](https://tailwindcss.com).
