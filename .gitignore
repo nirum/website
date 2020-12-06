@@ -58,6 +58,7 @@ typings/
 .next/
 .cache/
 public
+out
 
 # Mac files
 .DS_Store
@@ -75,5 +76,6 @@ yarn-error.log
 
 # vscode
 *.code-workspace
+*.nova
 
 tags

@@ -18,7 +18,8 @@ authors:
 
 date: 2020-01-22
 location: NEURON
-tweet: '<blockquote class="twitter-tweet"><p lang="en" dir="ltr">Single-trial variability in spike timing, even in small amounts, can mask striking firing patterns.<br><br>The raster plots below show the same data (a neuron from rat motor cortex). The only difference is that we’ve re-sorted the trial ids with the help of a simple model. <a href="https://t.co/mnskISaETS">pic.twitter.com/mnskISaETS</a></p>&mdash; Alex Williams🌹 (@ItsNeuronal) <a href="https://twitter.com/ItsNeuronal/status/1137034488800636928?ref_src=twsrc%5Etfw">June 7, 2019</a></blockquote>'
+tweet: "1137034488800636928"
+tweet_html: '<blockquote class="twitter-tweet"><p lang="en" dir="ltr">Single-trial variability in spike timing, even in small amounts, can mask striking firing patterns.<br><br>The raster plots below show the same data (a neuron from rat motor cortex). The only difference is that we’ve re-sorted the trial ids with the help of a simple model. <a href="https://t.co/mnskISaETS">pic.twitter.com/mnskISaETS</a></p>&mdash; Alex Williams🌹 (@ItsNeuronal) <a href="https://twitter.com/ItsNeuronal/status/1137034488800636928?ref_src=twsrc%5Etfw">June 7, 2019</a></blockquote>'
 
 url: "https://www.cell.com/neuron/fulltext/S0896-6273(19)30894-3"
 pdf: "https://www.biorxiv.org/content/10.1101/661165v1.full.pdf"

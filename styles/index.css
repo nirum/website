@@ -1,6 +1,120 @@
 @tailwind base;
 
-/* Write your own custom base styles here */
+@font-face {
+  font-family: "Source Serif Pro";
+  src: url("../assets/fonts/SourceSerifPro-Regular.otf.woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: fallback;
+}
+@font-face {
+  font-family: "Source Serif Pro";
+  src: url("../assets/fonts/SourceSerifPro-Semibold.otf.woff2");
+  font-weight: 600;
+  font-style: normal;
+  font-display: fallback;
+}
+@font-face {
+  font-family: "Source Serif Pro";
+  src: url("../assets/fonts/SourceSerifPro-Bold.otf.woff2");
+  font-weight: 700;
+  font-style: normal;
+  font-display: fallback;
+}
+@font-face {
+  font-family: "Source Serif Pro";
+  src: url("../assets/fonts/SourceSerifPro-Black.otf.woff2");
+  font-weight: 900;
+  font-style: normal;
+  font-display: fallback;
+}
+
+@font-face {
+  font-family: "Source Serif Pro";
+  src: url("../assets/fonts/SourceSerifPro-It.otf.woff2");
+  font-weight: 400;
+  font-style: italic;
+  font-display: fallback;
+}
+@font-face {
+  font-family: "Source Serif Pro";
+  src: url("../assets/fonts/SourceSerifPro-SemiboldIt.otf.woff2");
+  font-weight: 600;
+  font-style: italic;
+  font-display: fallback;
+}
+@font-face {
+  font-family: "Source Serif Pro";
+  src: url("../assets/fonts/SourceSerifPro-BoldIt.otf.woff2");
+  font-weight: 700;
+  font-style: italic;
+  font-display: fallback;
+}
+@font-face {
+  font-family: "Source Serif Pro";
+  src: url("../assets/fonts/SourceSerifPro-BlackIt.otf.woff2");
+  font-weight: 900;
+  font-style: italic;
+  font-display: fallback;
+}
+
+@font-face {
+  font-family: "Source Sans Pro";
+  src: url("../assets/fonts/SourceSansPro-Regular.otf.woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: fallback;
+}
+@font-face {
+  font-family: "Source Sans Pro";
+  src: url("../assets/fonts/SourceSansPro-Semibold.otf.woff2");
+  font-weight: 600;
+  font-style: normal;
+  font-display: fallback;
+}
+@font-face {
+  font-family: "Source Sans Pro";
+  src: url("../assets/fonts/SourceSansPro-Bold.otf.woff2");
+  font-weight: 700;
+  font-style: normal;
+  font-display: fallback;
+}
+@font-face {
+  font-family: "Source Sans Pro";
+  src: url("../assets/fonts/SourceSansPro-Black.otf.woff2");
+  font-weight: 900;
+  font-style: normal;
+  font-display: fallback;
+}
+
+@font-face {
+  font-family: "Source Sans Pro";
+  src: url("../assets/fonts/SourceSansPro-It.otf.woff2");
+  font-weight: 400;
+  font-style: italic;
+  font-display: fallback;
+}
+@font-face {
+  font-family: "Source Sans Pro";
+  src: url("../assets/fonts/SourceSansPro-SemiboldIt.otf.woff2");
+  font-weight: 600;
+  font-style: italic;
+  font-display: fallback;
+}
+@font-face {
+  font-family: "Source Sans Pro";
+  src: url("../assets/fonts/SourceSansPro-BoldIt.otf.woff2");
+  font-weight: 700;
+  font-style: italic;
+  font-display: fallback;
+}
+@font-face {
+  font-family: "Source Sans Pro";
+  src: url("../assets/fonts/SourceSansPro-BlackIt.otf.woff2");
+  font-weight: 900;
+  font-style: italic;
+  font-display: fallback;
+}
 
 /* Start purging... */
 @tailwind components;
@@ -8,12 +122,12 @@
 
 /* html */
 /* body { */
-  /* @apply bg-gray-50 dark:bg-gray-900; */
+/* @apply bg-gray-50 dark:bg-gray-900; */
 /* } */
 
 /* Write your own custom component styles here */
 /* .btn-blue { */
-  /* @apply px-4 py-2 font-bold text-white bg-blue-500 rounded; */
+/* @apply px-4 py-2 font-bold text-white bg-blue-500 rounded; */
 /* } */
 
 /* Start purging... */
@@ -21,3 +135,6 @@
 /* Stop purging. */
 
 /* Your own custom utilities */
+a {
+  @apply border-b border-gray-200 hover:text-indigo-800 hover:border-indigo-400 transition duration-100 ease-in;
+}
