@@ -1,20 +1,10 @@
+const colors = require("tailwindcss/colors");
+
 module.exports = {
   purge: ["./components/**/*.{js,ts,jsx,tsx}", "./pages/**/*.{js,ts,jsx,tsx}"],
   darkMode: "media", // 'media' or 'class'
   theme: {
     extend: {
-      colors: {
-        gray: {
-          light: "#f7f6f3",
-          DEFAULT: "#9b989d",
-          dark: "#464541",
-        },
-        foo: {
-          light: "#f9f9f9",
-          DEFAULT: "#5f5f5f",
-          dark: "#1e1e1d",
-        },
-      },
       typography: {
         DEFAULT: {
           css: {
@@ -26,6 +16,14 @@ module.exports = {
           },
         },
       },
+    },
+    colors: {
+      coolgray: colors.coolGray,
+      gray: colors.gray,
+      teal: colors.teal,
+      cyan: colors.cyan,
+      blue: colors.lightBlue,
+      indigo: colors.indigo,
     },
     fontFamily: {
       sans: [

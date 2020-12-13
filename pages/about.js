@@ -4,10 +4,12 @@ import { hrefs } from "../components/metadata";
 export default function IndexPage() {
   return (
     <div className="mt-8">
-      <article className="prose text-gray-dark prose-sm font-serif">
-        <h2>About me</h2>
+      <article className="prose-sm sm:prose lg:prose-lg font-serif mx-auto text-gray-700 dark:text-coolgray-400">
+        <h2 className="text-gray-dark dark:text-coolgray-200 font-semibold">
+          About me
+        </h2>
         <div className="flex flex-wrap justify-center ">
-          <div className="relative w-32 h-32 shadow-xl rounded-full border border-indigo-600">
+          <div className="relative w-32 h-32 lg:w-48 lg:h-48 shadow-xl dark:shadow-none rounded-full border border-indigo-600 dark:border-cyan-400">
             <Image
               src="/profile.png"
               alt="..."

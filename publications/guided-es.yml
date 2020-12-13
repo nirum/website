@@ -7,7 +7,7 @@ authors:
   - Jascha Sohl-Dickstein
 
 date: 2019-06-10
-location: International Conference on Machine Learning
+location: ICML
 tweet: "1012165891251847168"
 tweet_html: '<blockquote class="twitter-tweet"><p lang="en" dir="ltr">Guided evolutionary strategies: escaping the curse of dimensionality in random search. A principled method to leverage training signals which are not the gradient, but which may be correlated with the gradient. Work with <a href="https://twitter.com/niru_m?ref_src=twsrc%5Etfw">@niru_m</a> <a href="https://twitter.com/Luke_Metz?ref_src=twsrc%5Etfw">@Luke_Metz</a> <a href="https://twitter.com/georgejtucker?ref_src=twsrc%5Etfw">@georgejtucker</a>. <a href="https://t.co/LNPHDUrDFu">https://t.co/LNPHDUrDFu</a></p>&mdash; Jascha (@jaschasd) <a href="https://twitter.com/jaschasd/status/1012165891251847168?ref_src=twsrc%5Etfw">June 28, 2018</a></blockquote>'
 

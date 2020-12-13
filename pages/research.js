@@ -6,7 +6,7 @@ import { hrefs } from "../components/metadata";
 import path from "path";
 
 function changeExtension(file) {
-  return path.join("/pubs/", path.basename(file, path.extname(file)) + ".jpg");
+  return path.join("/pubs/", path.basename(file, path.extname(file)) + ".png");
 }
 
 export const getStaticProps = async () => {
@@ -46,14 +46,16 @@ export const getStaticProps = async () => {
 export default function ResearchPage({ pubs }) {
   return (
     <div className="mt-8">
-      <article className="prose text-gray-dark prose-sm font-serif">
-        <h2>Selected publications</h2>
+      <article className="sm:prose text-gray-dark dark:text-foo-light prose-sm font-serif text-gray-700 dark:text-coolgray-400">
+        <h2 className="text-gray-dark dark:text-coolgray-200 font-semibold">
+          Selected publications
+        </h2>
         <p>
           For a full list of recent work, check out&nbsp;
           <a href={hrefs.scholar}>Google Scholar</a>.
         </p>
       </article>
-      <div className="flex flex-col space-y-8 mt-12">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-12">
         {pubs.map((p, i) => {
           return <PubCard key={i} {...p} />;
         })}

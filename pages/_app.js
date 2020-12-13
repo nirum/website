@@ -4,12 +4,12 @@ import Footer from "../components/layout/footer";
 import Head from "next/head";
 
 const GradientBar = () => (
-  <div className="w-full py-1 bg-gradient-to-r from-blue-600 via-purple-700 to-purple-500 "></div>
+  <div className="w-full py-1 bg-gradient-to-r from-cyan-600 via-indigo-700 to-blue-800 dark:from-blue-600 dark:via-cyan-500 dark:via-teal-600"></div>
 );
 
 export default function App({ Component, pageProps }) {
   return (
-    <div className="bg-gray-light min-h-screen">
+    <div className="bg-coolgray-100 dark:bg-gray-900 min-h-screen">
       <Head>
         <title>Niru Maheswaranathan</title>
         <link rel="shortcut icon" href="/favicon.png" />

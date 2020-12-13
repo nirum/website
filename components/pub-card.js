@@ -63,15 +63,15 @@ export const Back = ({ size }) => (
 );
 
 const Pill = ({ children }) => (
-  <div className="inline-flex items-center px-2 rounded-lg hover:bg-indigo-200 text-indigo-800">
+  <div className="inline-flex items-center rounded px-2 py-1 hover:bg-indigo-200 dark:hover:bg-cyan-500 dark:hover:text-gray-100 text-indigo-800 dark:text-coolgray-300 border-gray-400 dark:border-gray-700 border">
     {children}
   </div>
 );
 
 export default function PubCard({ ...pub }) {
   return (
-    <div className="rounded-md bg-white border-gray border px-4 py-4 shadow-md">
-      <div className="uppercase text-sm text-gray tracking-wider">
+    <div className="rounded-md bg-coolgray-50 border-gray-400 dark:border-coolgray-500 border px-4 py-4 shadow-md dark:shadow-none w-full max-w-md mx-auto flex flex-col">
+      <div className="uppercase text-sm sm:text-base text-indigo-500 dark:text-cyan-500 tracking-wider truncate">
         {formatDate(pub.date)}&nbsp;&bull;&nbsp;{pub.location}
       </div>
 
@@ -84,12 +84,15 @@ export default function PubCard({ ...pub }) {
         />
       </div>
       <div className="mt-4 font-serif">
-        <div className="leading-tight font-semibold">{pub.title}</div>
-        <div className="text-sm italic text-gray mt-2">
+        <div className="leading-tight md:text-lg font-semibold text-gray-800 dark:text-coolgray-200">
+          {pub.title}
+        </div>
+        <div className="text-sm md:text-base italic text-gray-600 dark:text-coolgray-400 mt-2">
           {pub.authors.join(", ")}
         </div>
       </div>
-      <div className="mt-4 flex flex-row text-sm">
+      <div className="h-0 flex-grow border border-cyan-700"></div>
+      <div className="mt-4 flex flex-row text-sm space-x-2">
         {pub.url && (
           <a href={pub.url}>
             <Pill>
