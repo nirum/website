@@ -1,7 +1,7 @@
 import fetch from "node-fetch";
 import { repositories } from "../components/metadata";
 import path from "path";
-import fs from "fs";
+// import fs from "fs";
 import emoji from "node-emoji";
 
 const pluralize = (value, word, plural = word + "s") =>
@@ -57,8 +57,8 @@ const Card = ({
   html_url,
   description,
 }) => (
-  <a href={html_url}>
-    <div className="border border-gray-400 dark:border-gray-500 w-full max-w-xs mx-auto px-3 py-4 rounded-md shadow-md flex flex-col text-gray-800 dark:text-coolgray-200 dark:hover:bg-gray-800 hover:bg-gray-100 hover:border-indigo-500 hover:shadow-lg">
+  <a href={html_url} className="flex">
+    <div className="bg-coolgray-50 dark:bg-gray-900 border border-gray-400 dark:border-gray-500 w-full max-w-xs mx-auto px-3 py-4 rounded-md shadow-md flex flex-col text-gray-800 dark:text-coolgray-200 dark:hover:bg-gray-800 hover:bg-gray-100 hover:border-indigo-500 dark:hover:border-cyan-300 hover:shadow-lg">
       <div className="font-mono text-xs sm:text-sm">
         <div className="flex flex-row space-x-1 text-gray-500 dark:text-coolgray-400">
           <div>{full_name}</div>
@@ -68,8 +68,10 @@ const Card = ({
           </div>
         </div>
       </div>
-      <div className="mt-2">{emoji.emojify(description)}</div>
-      <div className="border border-gray-900 flex-grow"></div>
+      <div className="mt-2 leading-tight md:text-lg font-semibold font-serif">
+        {emoji.emojify(description)}
+      </div>
+      <div className="h-0 flex-grow"></div>
       <div className="flex flex-row font-sans space-x-3 mt-2 text-sm sm:text-base">
         <Pill>
           <GitHubBookmark size="3" />{" "}
@@ -87,16 +89,16 @@ const Card = ({
 export async function getStaticProps() {
   const data = [];
   for (let index = 0; index < repositories.length; index++) {
-    // const response = await fetch(
-    //   new URL(path.join("https://api.github.com/repos/", repositories[index]))
-    // );
-    // const json = await response.json();
-    let json = JSON.parse(
-      fs.readFileSync(
-        "repositories/" + path.basename(repositories[index]),
-        "utf-8"
-      )
+    const response = await fetch(
+      new URL(path.join("https://api.github.com/repos/", repositories[index]))
     );
+    const json = await response.json();
+    // let json = JSON.parse(
+    //   fs.readFileSync(
+    //     "repositories/" + path.basename(repositories[index]),
+    //     "utf-8"
+    //   )
+    // );
     data.push(json);
   }
 
@@ -110,11 +112,13 @@ export async function getStaticProps() {
 export default function CodePage({ repos }) {
   return (
     <div className="mt-8">
-      <article className="sm:prose text-gray-dark prose-sm font-serif text-gray-700 dark:text-coolgray-400">
-        <h2 className="text-gray-dark dark:text-coolgray-200 font-semibold">
+      <article className="text-gray-dark font-serif text-gray-700 dark:text-coolgray-400">
+        <h2 className="text-gray-dark dark:text-coolgray-200 text-xl sm:text-2xl lg:text-4xl font-black">
           Code
         </h2>
-        <p>Selected GitHub repositories.</p>
+        <p className="text-md sm:text-lg lg:text-2xl mt-2 font-serif italic text-coolgray-500 dark:text-coolgray-500">
+          Selected GitHub repositories.
+        </p>
       </article>
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 mt-12">
         {repos.map((r, i) => (

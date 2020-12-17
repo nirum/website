@@ -46,11 +46,11 @@ export const getStaticProps = async () => {
 export default function ResearchPage({ pubs }) {
   return (
     <div className="mt-8">
-      <article className="sm:prose text-gray-dark dark:text-foo-light prose-sm font-serif text-gray-700 dark:text-coolgray-400">
-        <h2 className="text-gray-dark dark:text-coolgray-200 font-semibold">
+      <article className="font-serif text-gray-700 dark:text-coolgray-400">
+        <h2 className="dark:text-coolgray-200 text-xl sm:text-2xl lg:text-4xl font-black">
           Selected publications
         </h2>
-        <p>
+        <p className="text-md sm:text-lg lg:text-2xl mt-2 font-serif italic text-coolgray-500 dark:text-coolgray-500">
           For a full list of recent work, check out&nbsp;
           <a href={hrefs.scholar}>Google Scholar</a>.
         </p>

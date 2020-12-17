@@ -1,7 +1,6 @@
 import Link from "next/link";
 import Loading from "./loading";
 import { join } from "path";
-import Image from "next/image";
 
 function formatDate(dateString) {
   let d = new Date(dateString);
@@ -70,17 +69,16 @@ const Pill = ({ children }) => (
 
 export default function PubCard({ ...pub }) {
   return (
-    <div className="rounded-md bg-coolgray-50 border-gray-400 dark:border-coolgray-500 border px-4 py-4 shadow-md dark:shadow-none w-full max-w-md mx-auto flex flex-col">
+    <div className="rounded-md bg-coolgray-50 dark:bg-gray-900 border-gray-400 dark:border-coolgray-500 border px-4 py-4 shadow-md dark:shadow-none w-full max-w-md mx-auto flex flex-col">
       <div className="uppercase text-sm sm:text-base text-indigo-500 dark:text-cyan-500 tracking-wider truncate">
         {formatDate(pub.date)}&nbsp;&bull;&nbsp;{pub.location}
       </div>
 
       <div className="relative w-full h-32 rounded mt-4">
-        <Image
+        <img
           src={pub.image}
           alt="..."
-          layout="fill"
-          className="rounded object-cover"
+          className="rounded object-cover h-32 w-full"
         />
       </div>
       <div className="mt-4 font-serif">
@@ -91,7 +89,7 @@ export default function PubCard({ ...pub }) {
           {pub.authors.join(", ")}
         </div>
       </div>
-      <div className="h-0 flex-grow border border-cyan-700"></div>
+      <div className="h-0 flex-grow"></div>
       <div className="mt-4 flex flex-row text-sm space-x-2">
         {pub.url && (
           <a href={pub.url}>

@@ -20,7 +20,7 @@ export default function Header() {
   const active =
     "text-indigo-600 dark:text-cyan-500 border-b-2 dark:border-cyan-700 border-indigo-400";
   const inactive =
-    "border-0 hover:border-0 hover:text-indigo-600 hover:text-cyan-500 cursor-pointer transition duration-050 ease-linear";
+    "border-0 hover:border-0 hover:text-indigo-600 dark:hover:text-cyan-500 cursor-pointer transition duration-050 ease-linear";
 
   return (
     <header className="mx-auto py-8 w-full">
