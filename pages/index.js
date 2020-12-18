@@ -13,22 +13,22 @@ export default function IndexPage() {
           Machine learning &amp; neuroscience&nbsp;research
         </h2>
         <ul className="flex flex-row mt-8 space-x-2 justify-center text-coolgray-600 dark:text-coolgray-400">
-          <li className="hover:text-indigo-500 dark:hover:text-cyan-300 cursor-pointer transition duration-050 ease-linear">
+          <li className="hover:text-indigo-500 w-8 h-8 dark:hover:text-cyan-300 cursor-pointer transition duration-050 ease-linear">
             <a href={hrefs.twitter}>
               <Twitter size={8} />
             </a>
           </li>
-          <li className="hover:text-indigo-500 dark:hover:text-cyan-300 cursor-pointer transition duration-050 ease-linear">
+          <li className="hover:text-indigo-500 w-8 h-8 dark:hover:text-cyan-300 cursor-pointer transition duration-050 ease-linear">
             <a href={hrefs.scholar}>
               <Scholar size={8} />
             </a>
           </li>
-          <li className="hover:text-indigo-500 dark:hover:text-cyan-300 cursor-pointer transition duration-050 ease-linear">
+          <li className="hover:text-indigo-500 w-8 h-8 dark:hover:text-cyan-300 cursor-pointer transition duration-050 ease-linear">
             <a href={hrefs.github}>
               <GitHub size={8} />
             </a>
           </li>
-          <li className="hover:text-indigo-500 dark:hover:text-cyan-300 cursor-pointer transition duration-050 ease-linear">
+          <li className="hover:text-indigo-500 w-8 h-8 dark:hover:text-cyan-300 cursor-pointer transition duration-050 ease-linear">
             <a href={hrefs.pinboard}>
               <Pinboard size={8} />
             </a>

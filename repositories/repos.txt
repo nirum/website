@@ -1,0 +1,6 @@
+google-research/reverse-engineering-neural-networks
+brain-research/guided-evolutionary-strategies
+nirum/tableprint
+nirum/jetpack
+nirum/descent
+nirum/ADMM

@@ -63,7 +63,7 @@ const Card = ({
         <div className="flex flex-row space-x-1 text-gray-500 dark:text-coolgray-400">
           <div>{full_name}</div>
           <div className="flex-grow"></div>
-          <div>
+          <div className="w-4 h-4">
             <GitHubRepo size="4" />
           </div>
         </div>
@@ -73,12 +73,12 @@ const Card = ({
       </div>
       <div className="h-0 flex-grow"></div>
       <div className="flex flex-row font-sans space-x-3 mt-2 text-sm sm:text-base">
-        <Pill>
-          <GitHubBookmark size="3" />{" "}
+        <Pill className="w-3 h-3">
+          <GitHubBookmark size="3" />
           <span className="ml-1">{pluralize(stargazers_count, "star")}</span>
         </Pill>
-        <Pill>
-          <GitHubFork size="3" />{" "}
+        <Pill className="w-3 h-3">
+          <GitHubFork size="3" />
           <span className="ml-1">{pluralize(forks_count, "fork")}</span>
         </Pill>
       </div>

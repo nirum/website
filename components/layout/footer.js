@@ -2,7 +2,7 @@ import Link from "next/link";
 
 export default function Footer() {
   return (
-    <footer className=" mt-20 mb-8 border-t border-gray-300 dark:border-gray-700">
+    <footer className="mt-24 mb-8 border-t border-gray-300 dark:border-gray-700">
       <div className="mt-4 font-sans text-coolgray-500 text-center mx-auto text-sm sm:text-base lg:text-lg">
         <p>&copy; 2015-2020 Niru Maheswaranathan</p>
         <p>

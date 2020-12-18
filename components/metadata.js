@@ -13,4 +13,5 @@ export const repositories = [
   "nirum/jetpack",
   "nirum/descent",
   "nirum/ADMM",
+  "nirum/heather",
 ];
