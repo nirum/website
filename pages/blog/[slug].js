@@ -4,17 +4,19 @@ import path from "path";
 import matter from "gray-matter";
 import remark from "remark";
 import html from "remark-html";
+import { format } from "date-fns";
 
 async function markdownToHtml(markdown) {
   const result = await remark().use(html).process(markdown);
   return result.toString();
 }
 
-const Post = ({ title, description, slug, content }) => {
+const Post = ({ title, date, slug, content }) => {
+  const formattedDate = format(new Date(date), "PPP");
   return (
     <div>
       <h1>{title}</h1>
-      <h4>{description}</h4>
+      <h4>{formattedDate}</h4>
       <article
         className="pt-16"
         dangerouslySetInnerHTML={{ __html: content }}

@@ -112,7 +112,7 @@ export async function getStaticProps() {
 export default function CodePage({ repos }) {
   return (
     <div className="mt-8">
-      <HTMLDivElement className="text-gray-dark font-serif text-gray-700 dark:text-coolgray-400">
+      <div className="text-gray-dark font-serif text-gray-700 dark:text-coolgray-400">
         <h2 className="text-gray-dark dark:text-coolgray-200 text-xl sm:text-2xl lg:text-4xl font-black">
           Code
         </h2>

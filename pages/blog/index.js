@@ -20,6 +20,7 @@ export const getStaticProps = async () => {
     posts.push(data);
   });
 
+  posts.sort((p, q) => new Date(q.date) - new Date(p.date));
   return {
     props: {
       posts,
@@ -32,16 +33,21 @@ export default function BlogPage({ posts }) {
     <div>
       <h1>Blog posts</h1>
       <h4>We have {posts.length} posts.</h4>
-      <div className="mt-8">
+      <div className="mt-8 flex flex-col space-y-4 mt-12 mx-auto">
         {posts.map((p, i) => (
-          <div key={i}>
-            <Link href={"blog/" + p.slug}>{p.title}</Link>
-            <div>
+          <article key={i} className="font-sans w-full">
+            <Link
+              href={"blog/" + p.slug}
+              className="font-semibold text-sm sm:text-base lg:text-lg"
+            >
+              {p.title}
+            </Link>
+            <div className="text-coolgray-400 text-xs sm:text-sm lg:text-base">
               {formatDistance(new Date(p.date), new Date(), {
                 addSuffix: true,
               })}
             </div>
-          </div>
+          </article>
         ))}
       </div>
     </div>

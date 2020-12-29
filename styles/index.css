@@ -19,7 +19,8 @@
 }
 
 article a {
-  @apply border-b border-gray-500 hover:border-indigo-300 dark:border-coolgray-500 dark:hover:border-cyan-600 fade pb-0;
+  @apply underline fade pb-0;
+  text-decoration-color: theme("colors.gray.400");
 }
 
 a {
@@ -27,11 +28,11 @@ a {
 }
 
 article {
-  @apply text-coolgray-800 dark:text-coolgray-200 font-sans sm:font-serif mx-auto sm:text-lg lg:text-xl;
+  @apply text-coolgray-700 dark:text-coolgray-200 font-sans sm:font-serif mx-auto sm:text-lg lg:text-xl;
 }
 
 h1 {
-  @apply overflow-visible text-coolgray-800 dark:text-coolgray-200 font-serif text-xl sm:text-2xl lg:text-4xl font-black leading-snug mt-8 lg:mt-16;
+  @apply overflow-visible text-coolgray-700 dark:text-coolgray-200 font-serif text-xl sm:text-2xl lg:text-4xl font-black leading-snug mt-8 lg:mt-16;
 }
 
 h2 {
@@ -91,7 +92,7 @@ figure > img {
 }
 
 blockquote {
-  @apply border-l-2 sm:border-l-4 border-indigo-600 dark:border-cyan-300 pl-2 sm:pl-4 italic font-semibold sm:text-xl lg:text-2xl;
+  @apply border-l-2 sm:border-l-4 border-indigo-600 dark:border-cyan-300 pl-2 sm:pl-4 italic font-semibold;
 }
 
 code {
