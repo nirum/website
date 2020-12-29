@@ -1,6 +1,7 @@
+import "../styles/tailwind.css";
 import "../styles/index.css";
-import Header from "../components/layout/header";
-import Footer from "../components/layout/footer";
+import Header from "../components/header";
+import Footer from "../components/footer";
 import Head from "next/head";
 
 const GradientBar = () => (
@@ -17,7 +18,7 @@ export default function App({ Component, pageProps }) {
       <GradientBar />
       <div className="flex flex-col min-h-screen w-5/6 max-w-3xl mx-auto -mt-2">
         <Header />
-        <div className="flex-grow">
+        <div className="flex-grow base-color">
           <Component {...pageProps} />
         </div>
         <Footer />

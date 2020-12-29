@@ -57,10 +57,10 @@ const Card = ({
   html_url,
   description,
 }) => (
-  <a href={html_url} className="flex">
-    <div className="bg-coolgray-50 dark:bg-gray-900 border border-gray-400 dark:border-gray-500 w-full max-w-xs mx-auto px-3 py-4 rounded-md shadow-md flex flex-col text-gray-800 dark:text-coolgray-200 dark:hover:bg-gray-800 hover:bg-gray-100 hover:border-indigo-500 dark:hover:border-cyan-300 hover:shadow-lg">
+  <div href={html_url} className="flex cursor-pointer">
+    <div className="card w-full max-w-xs px-3 py-4 dark:hover:bg-gray-800 hover:bg-gray-100 hover:border-indigo-500 dark:hover:border-cyan-300 hover:shadow-lg fade">
       <div className="font-mono text-xs sm:text-sm">
-        <div className="flex flex-row space-x-1 text-gray-500 dark:text-coolgray-400">
+        <div className="flex flex-row space-x-1">
           <div>{full_name}</div>
           <div className="flex-grow"></div>
           <div className="w-4 h-4">
@@ -68,7 +68,7 @@ const Card = ({
           </div>
         </div>
       </div>
-      <div className="mt-2 leading-tight md:text-lg font-semibold font-serif">
+      <div className="mt-2 leading-tight md:text-lg font-semibold font-serif bright-color">
         {emoji.emojify(description)}
       </div>
       <div className="h-0 flex-grow"></div>
@@ -83,7 +83,7 @@ const Card = ({
         </Pill>
       </div>
     </div>
-  </a>
+  </div>
 );
 
 export async function getStaticProps() {
@@ -112,14 +112,14 @@ export async function getStaticProps() {
 export default function CodePage({ repos }) {
   return (
     <div className="mt-8">
-      <article className="text-gray-dark font-serif text-gray-700 dark:text-coolgray-400">
+      <HTMLDivElement className="text-gray-dark font-serif text-gray-700 dark:text-coolgray-400">
         <h2 className="text-gray-dark dark:text-coolgray-200 text-xl sm:text-2xl lg:text-4xl font-black">
           Code
         </h2>
         <p className="text-md sm:text-lg lg:text-2xl mt-2 font-serif italic text-coolgray-500 dark:text-coolgray-500">
           Selected GitHub repositories.
         </p>
-      </article>
+      </div>
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 mt-12">
         {repos.map((r, i) => (
           <Card key={i} {...r} />

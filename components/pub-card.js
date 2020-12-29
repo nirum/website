@@ -1,5 +1,4 @@
 import Link from "next/link";
-import Loading from "./loading";
 import { join } from "path";
 
 function formatDate(dateString) {
@@ -62,14 +61,14 @@ export const Back = ({ size }) => (
 );
 
 const Pill = ({ children }) => (
-  <div className="inline-flex items-center rounded px-2 py-1 hover:bg-indigo-200 dark:hover:bg-cyan-500 dark:hover:text-gray-100 text-indigo-800 dark:text-coolgray-300 border-gray-400 dark:border-gray-700 border">
+  <div className="inline-flex items-center rounded px-2 py-1 hover:bg-indigo-200 dark:hover:bg-cyan-500 dark:hover:text-gray-100 text-indigo-800 dark:text-coolgray-300 border-gray-400 dark:border-gray-700 border fade">
     {children}
   </div>
 );
 
 export default function PubCard({ ...pub }) {
   return (
-    <div className="rounded-md bg-coolgray-50 dark:bg-gray-900 border-gray-400 dark:border-coolgray-500 border px-4 py-4 shadow-md dark:shadow-none w-full max-w-md mx-auto flex flex-col">
+    <div className="card px-4 py-4 w-full max-w-md">
       <div className="uppercase text-sm sm:text-base text-indigo-500 dark:text-cyan-500 tracking-wider truncate">
         {formatDate(pub.date)}&nbsp;&bull;&nbsp;{pub.location}
       </div>
@@ -82,38 +81,38 @@ export default function PubCard({ ...pub }) {
         />
       </div>
       <div className="mt-4 font-serif">
-        <div className="leading-tight md:text-lg font-semibold text-gray-800 dark:text-coolgray-200">
+        <div className="leading-tight md:text-lg font-semibold bright-color">
           {pub.title}
         </div>
-        <div className="text-sm md:text-base italic text-gray-600 dark:text-coolgray-400 mt-2">
+        <div className="text-sm md:text-base italic base-color mt-2">
           {pub.authors.join(", ")}
         </div>
       </div>
       <div className="h-0 flex-grow"></div>
       <div className="my-4 flex flex-row text-sm space-x-2">
         {pub.url && (
-          <a href={pub.url} className="h-3">
+          <div href={pub.url} className="h-3 cursor-pointer">
             <Pill>
               <Links size={3} />
               &nbsp;URL
             </Pill>
-          </a>
+          </div>
         )}
         {pub.pdf && (
-          <a href={pub.pdf} className="h-3">
+          <div href={pub.pdf} className="h-3  cursor-pointer">
             <Pill>
               <Document size={3} />
               &nbsp;PDF
             </Pill>
-          </a>
+          </div>
         )}
         {pub.code && (
-          <a href={pub.code} className="h-3">
+          <div href={pub.code} className="h-3  cursor-pointer">
             <Pill>
               <Code size={3} />
               &nbsp;CODE
             </Pill>
-          </a>
+          </div>
         )}
       </div>
     </div>

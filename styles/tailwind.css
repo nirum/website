@@ -1,0 +1,120 @@
+@tailwind base;
+
+@font-face {
+  font-family: "Source Serif Pro";
+  src: url("../assets/fonts/SourceSerifPro-Regular.otf.woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: fallback;
+}
+@font-face {
+  font-family: "Source Serif Pro";
+  src: url("../assets/fonts/SourceSerifPro-Semibold.otf.woff2");
+  font-weight: 600;
+  font-style: normal;
+  font-display: fallback;
+}
+@font-face {
+  font-family: "Source Serif Pro";
+  src: url("../assets/fonts/SourceSerifPro-Bold.otf.woff2");
+  font-weight: 700;
+  font-style: normal;
+  font-display: fallback;
+}
+@font-face {
+  font-family: "Source Serif Pro";
+  src: url("../assets/fonts/SourceSerifPro-Black.otf.woff2");
+  font-weight: 900;
+  font-style: normal;
+  font-display: fallback;
+}
+
+@font-face {
+  font-family: "Source Serif Pro";
+  src: url("../assets/fonts/SourceSerifPro-It.otf.woff2");
+  font-weight: 400;
+  font-style: italic;
+  font-display: fallback;
+}
+@font-face {
+  font-family: "Source Serif Pro";
+  src: url("../assets/fonts/SourceSerifPro-SemiboldIt.otf.woff2");
+  font-weight: 600;
+  font-style: italic;
+  font-display: fallback;
+}
+@font-face {
+  font-family: "Source Serif Pro";
+  src: url("../assets/fonts/SourceSerifPro-BoldIt.otf.woff2");
+  font-weight: 700;
+  font-style: italic;
+  font-display: fallback;
+}
+@font-face {
+  font-family: "Source Serif Pro";
+  src: url("../assets/fonts/SourceSerifPro-BlackIt.otf.woff2");
+  font-weight: 900;
+  font-style: italic;
+  font-display: fallback;
+}
+
+@font-face {
+  font-family: "Source Sans Pro";
+  src: url("../assets/fonts/SourceSansPro-Regular.otf.woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: fallback;
+}
+@font-face {
+  font-family: "Source Sans Pro";
+  src: url("../assets/fonts/SourceSansPro-Semibold.otf.woff2");
+  font-weight: 600;
+  font-style: normal;
+  font-display: fallback;
+}
+@font-face {
+  font-family: "Source Sans Pro";
+  src: url("../assets/fonts/SourceSansPro-Bold.otf.woff2");
+  font-weight: 700;
+  font-style: normal;
+  font-display: fallback;
+}
+@font-face {
+  font-family: "Source Sans Pro";
+  src: url("../assets/fonts/SourceSansPro-Black.otf.woff2");
+  font-weight: 900;
+  font-style: normal;
+  font-display: fallback;
+}
+
+@font-face {
+  font-family: "Source Sans Pro";
+  src: url("../assets/fonts/SourceSansPro-It.otf.woff2");
+  font-weight: 400;
+  font-style: italic;
+  font-display: fallback;
+}
+@font-face {
+  font-family: "Source Sans Pro";
+  src: url("../assets/fonts/SourceSansPro-SemiboldIt.otf.woff2");
+  font-weight: 600;
+  font-style: italic;
+  font-display: fallback;
+}
+@font-face {
+  font-family: "Source Sans Pro";
+  src: url("../assets/fonts/SourceSansPro-BoldIt.otf.woff2");
+  font-weight: 700;
+  font-style: italic;
+  font-display: fallback;
+}
+@font-face {
+  font-family: "Source Sans Pro";
+  src: url("../assets/fonts/SourceSansPro-BlackIt.otf.woff2");
+  font-weight: 900;
+  font-style: italic;
+  font-display: fallback;
+}
+
+@tailwind components;
+@tailwind utilities;

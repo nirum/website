@@ -1,10 +1,10 @@
 import Link from "next/link";
-import ActiveLink from "../active-link";
+import ActiveLink from "./active-link";
 
 const Logo = () => (
   <Link href="/">
     <svg
-      className="w-6 h-6 sm:w-8 sm:h-8 fill-current text-indigo-600 dark:text-cyan-500 hover:text-gray-100 dark:hover:text-gray-900 hover:cursor-pointer hover:bg-gradient-to-r from-cyan-600 via-indigo-700 to-blue-800 dark:from-blue-400 dark:via-cyan-400 dark:to-teal-500 rounded-full cursor-pointer transition duration-050 ease-linear"
+      className="w-6 h-6 sm:w-8 sm:h-8 fill-current text-indigo-600 dark:text-cyan-500 hover:text-gray-100 dark:hover:text-gray-900 hover:bg-gradient-to-r from-cyan-600 via-indigo-700 to-blue-800 dark:from-blue-400 dark:via-cyan-400 dark:to-teal-500 rounded-full cursor-pointer fade"
       viewBox="0 0 64 64"
       strokeLinejoin="round"
     >
@@ -20,26 +20,30 @@ export default function Header() {
   const active =
     "text-indigo-600 dark:text-cyan-500 border-b-2 dark:border-cyan-700 border-indigo-400";
   const inactive =
-    "border-0 hover:border-0 hover:text-indigo-600 dark:hover:text-cyan-500 cursor-pointer transition duration-050 ease-linear";
-
+    "hover:text-indigo-600 dark:hover:text-cyan-500 cursor-pointer hover:border-indigo-400 dark:hover:border-cyan-700 fade";
   return (
     <header className="mx-auto py-8 w-full">
-      <ul className="flex flex-row text-sm sm:text-base text-gray-500 dark:text-coolgray-500 space-x-3 uppercase tracking-wide">
+      <ul className="flex flex-row text-sm sm:text-base dim-color space-x-3 uppercase tracking-wide">
         <Logo />
         <div className="flex-grow"></div>
         <li>
           <ActiveLink href="/about" activeClassName={active}>
-            <a className={inactive}>About</a>
+            <div className={inactive}>About</div>
+          </ActiveLink>
+        </li>
+        <li>
+          <ActiveLink href="/blog" activeClassName={active}>
+            <div className={inactive}>Blog</div>
           </ActiveLink>
         </li>
         <li>
           <ActiveLink href="/research" activeClassName={active}>
-            <a className={inactive}>Research</a>
+            <div className={inactive}>Research</div>
           </ActiveLink>
         </li>
         <li>
           <ActiveLink href="/code" activeClassName={active}>
-            <a className={inactive}>Code</a>
+            <div className={inactive}>Code</div>
           </ActiveLink>
         </li>
       </ul>

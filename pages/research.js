@@ -46,15 +46,11 @@ export const getStaticProps = async () => {
 export default function ResearchPage({ pubs }) {
   return (
     <div className="mt-8">
-      <article className="font-serif text-gray-700 dark:text-coolgray-400">
-        <h2 className="dark:text-coolgray-200 text-xl sm:text-2xl lg:text-4xl font-black">
-          Selected publications
-        </h2>
-        <p className="text-md sm:text-lg lg:text-2xl mt-2 font-serif italic text-coolgray-500 dark:text-coolgray-500">
-          For a full list of recent work, check out&nbsp;
-          <a href={hrefs.scholar}>Google Scholar</a>.
-        </p>
-      </article>
+      <h1>Selected publications</h1>
+      <h4>
+        For a full list of recent work, check out&nbsp;
+        <a href={hrefs.scholar}>Google Scholar</a>.
+      </h4>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-12">
         {pubs.map((p, i) => {
           return <PubCard key={i} {...p} />;

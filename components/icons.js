@@ -1,5 +1,3 @@
-import React from "react";
-
 export const Twitter = ({ size }) => (
   <svg
     className={`w-${size} h-${size} fill-current`}
