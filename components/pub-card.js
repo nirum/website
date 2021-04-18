@@ -91,28 +91,28 @@ export default function PubCard({ ...pub }) {
       <div className="h-0 flex-grow"></div>
       <div className="my-4 flex flex-row text-sm space-x-2">
         {pub.url && (
-          <div href={pub.url} className="h-3 cursor-pointer">
+          <a href={pub.url} className="h-3 cursor-pointer">
             <Pill>
               <Links size={3} />
               &nbsp;URL
             </Pill>
-          </div>
+          </a>
         )}
         {pub.pdf && (
-          <div href={pub.pdf} className="h-3  cursor-pointer">
+          <a href={pub.pdf} className="h-3 cursor-pointer">
             <Pill>
               <Document size={3} />
               &nbsp;PDF
             </Pill>
-          </div>
+          </a>
         )}
         {pub.code && (
-          <div href={pub.code} className="h-3  cursor-pointer">
+          <a href={pub.code} className="h-3 cursor-pointer">
             <Pill>
               <Code size={3} />
               &nbsp;CODE
             </Pill>
-          </div>
+          </a>
         )}
       </div>
     </div>
