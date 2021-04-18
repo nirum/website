@@ -1,0 +1,12 @@
+The nirum@ guide to figures
+
+Outline
+- Sizing (how big to make figures, font sizes)
+- Color (colormaps, consistency, intuitive)
+- Choosing the right plot type (histogram? Line? Bar? Etc)
+- Focus on the right message
+- Misc
+	- Choose the right font for labels & numbers
+
+
+# Sizing figures properly

@@ -10,14 +10,14 @@ export const getStaticProps = async () => {
   const posts = [];
 
   filenames.forEach((filename) => {
-    console.log(filename);
     let file = fs.readFileSync("posts/" + filename, "utf-8");
-    console.log(file);
     const { data, content } = matter(file);
-    console.log(data);
-    data["slug"] = filename.replace(".md", "");
-    data["date"] = data["date"].toString();
-    posts.push(data);
+    console.log(data.tags.includes("draft"));
+    if (!data.tags.includes("draft")) {
+      data["slug"] = filename.replace(".md", "");
+      data["date"] = data["date"].toString();
+      posts.push(data);
+    }
   });
 
   posts.sort((p, q) => new Date(q.date) - new Date(p.date));
@@ -32,22 +32,21 @@ export default function BlogPage({ posts }) {
   return (
     <div>
       <h1>Blog posts</h1>
-      <h4>We have {posts.length} posts.</h4>
       <div className="mt-8 flex flex-col space-y-4 mt-12 mx-auto">
         {posts.map((p, i) => (
-          <article key={i} className="font-sans w-full">
+          <div key={i} className="font-sans w-full">
             <Link
               href={"blog/" + p.slug}
-              className="font-semibold text-sm sm:text-base lg:text-lg"
+              className="font-semibold text-sm sm:text-base lg:text-lg bright-color"
             >
               {p.title}
             </Link>
-            <div className="text-coolgray-400 text-xs sm:text-sm lg:text-base">
+            <div className="dim-color text-xs sm:text-sm lg:text-base">
               {formatDistance(new Date(p.date), new Date(), {
                 addSuffix: true,
               })}
             </div>
-          </article>
+          </div>
         ))}
       </div>
     </div>

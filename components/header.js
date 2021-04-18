@@ -16,6 +16,13 @@ const Logo = () => (
   </Link>
 );
 
+// (removed blog link)
+// <li>
+//   <ActiveLink href="/blog" activeClassName={active}>
+//     <div className={inactive}>Blog</div>
+//   </ActiveLink>
+// </li>
+
 export default function Header() {
   const active =
     "text-indigo-600 dark:text-cyan-500 border-b-2 dark:border-cyan-700 border-indigo-400";
@@ -31,11 +38,7 @@ export default function Header() {
             <div className={inactive}>About</div>
           </ActiveLink>
         </li>
-        <li>
-          <ActiveLink href="/blog" activeClassName={active}>
-            <div className={inactive}>Blog</div>
-          </ActiveLink>
-        </li>
+
         <li>
           <ActiveLink href="/research" activeClassName={active}>
             <div className={inactive}>Research</div>
