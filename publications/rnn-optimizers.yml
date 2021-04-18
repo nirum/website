@@ -1,0 +1,17 @@
+title: Reverse engineering learned optimizers reveals known and novel mechanisms
+
+authors:
+  - Niru Maheswaranathan
+  - David Sussillo
+  - Luke Metz
+  - Ruoxi Sun
+  - Jascha Sohl-Dickstein
+
+date: 2020-11-04
+location: arXiv
+
+url: "https://arxiv.org/abs/2011.02159"
+pdf: "https://arxiv.org/pdf/2011.02159.pdf"
+
+slug: "rnn-optimizers"
+bibtex: "@inproceedings{maheswaranathan2020recurrent,title={How recurrent networks implement contextual processing in sentiment analysis}, author={Maheswaranathan, Niru and Sussillo, David}, booktitle={International Conference on Machine Learning}, pages={6608--6619}, year={2020}, organization={PMLR}}"

@@ -57,7 +57,7 @@ const Card = ({
   html_url,
   description,
 }) => (
-  <div href={html_url} className="flex cursor-pointer">
+  <a href={html_url} className="flex cursor-pointer">
     <div className="card w-full max-w-xs px-3 py-4 dark:hover:bg-gray-800 hover:bg-gray-100 hover:border-indigo-500 dark:hover:border-cyan-300 hover:shadow-lg fade">
       <div className="font-mono text-xs sm:text-sm">
         <div className="flex flex-row space-x-1">
@@ -83,7 +83,7 @@ const Card = ({
         </Pill>
       </div>
     </div>
-  </div>
+  </a>
 );
 
 export async function getStaticProps() {

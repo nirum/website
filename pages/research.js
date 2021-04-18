@@ -18,7 +18,7 @@ export const getStaticProps = async () => {
   };
   filenames.forEach((filename) => {
     let file = fs.readFileSync("publications/" + filename, "utf-8");
-    let obj = yaml.safeLoad(file);
+    let obj = yaml.load(file);
     obj.image = changeExtension(filename);
     data.push(parse(obj));
   });
