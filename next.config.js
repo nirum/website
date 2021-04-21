@@ -1,5 +1,5 @@
 module.exports = {
-  exportTrailingSlash: true,
+  trailingSlash: true,
   future: {
     webpack5: true,
   },
