@@ -10,21 +10,13 @@
   @apply text-gray-700 dark:text-coolgray-200;
 }
 
-.fade {
-  @apply transition duration-100 ease-linear;
-}
-
-.card {
-  @apply rounded-md bg-coolgray-50 dark:bg-gray-900 border-gray-400 dark:border-coolgray-500 border shadow-md flex flex-col mx-auto;
-}
-
 article a {
-  @apply underline fade pb-0;
+  @apply underline transition duration-100 ease-linear pb-0;
   text-decoration-color: theme("colors.gray.400");
 }
 
 a {
-  @apply hover:text-indigo-600 dark:hover:text-cyan-300 cursor-pointer fade;
+  @apply hover:text-indigo-600 dark:hover:text-cyan-300 cursor-pointer transition duration-100 ease-linear;
 }
 
 article {
@@ -117,6 +109,10 @@ table tr:last-child {
 
 table td {
   @apply pr-4 md:pr-6 lg:pr-8 py-1 lg:py-2 text-left;
+}
+
+.card {
+  @apply rounded-md bg-coolgray-50 dark:bg-gray-900 border-gray-400 dark:border-coolgray-500 border shadow-md flex flex-col mx-auto;
 }
 
 /* 

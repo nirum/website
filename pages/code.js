@@ -113,12 +113,8 @@ export default function CodePage({ repos }) {
   return (
     <div className="mt-8">
       <div className="text-gray-dark font-serif text-gray-700 dark:text-coolgray-400">
-        <h2 className="text-gray-dark dark:text-coolgray-200 text-xl sm:text-2xl lg:text-4xl font-black">
-          Code
-        </h2>
-        <p className="text-md sm:text-lg lg:text-2xl mt-2 font-serif italic text-coolgray-500 dark:text-coolgray-500">
-          Selected GitHub repositories.
-        </p>
+        <h1>Code</h1>
+        <h4>Selected GitHub repositories.</h4>
       </div>
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 mt-12">
         {repos.map((r, i) => (
