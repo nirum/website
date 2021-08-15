@@ -16,23 +16,25 @@ export default function IndexPage() {
       </div>
       <article>
         <p>
-          I am interested in developing tools and analyses for understanding
-          exactly <em>how</em> machine learning models work. Currently, I
-          conduct this work on the&nbsp;
-          <a href="https://research.google/people/105568/">Brain Team</a>
-          &nbsp;at Google Research.
+          I am currently a Research Scientist at Facebook Reality Labs, working
+          on{" "}
+          <a href="https://tech.fb.com/inside-facebook-reality-labs-wrist-based-interaction-for-the-next-computing-platform/">
+            neural interfaces
+          </a>
+          .
         </p>
         <p>
-          Previously, I completed my PhD in neuroscience in the labs of&nbsp;
+          Previously, I was on the Brain Team at Google Research, where I
+          conducted research trying to understand exactly how deep networks
+          worked. Before that, I completed my PhD in neuroscience in the labs
+          of&nbsp;
           <a href="https://ganguli-gang.stanford.edu/people.html">
             Surya Ganguli
           </a>
           &nbsp; and&nbsp;
           <a href="https://baccuslab.sites.stanford.edu">Steve Baccus</a>
           &nbsp; at Stanford University, where I studied neural circuits in the
-          retina. My research focused on bringing together computational models
-          and data from electrophysiological experiments to better understand
-          how we process visual information.
+          retina.
         </p>
         <p>
           Outside of research, I enjoy cooking, working on open source projects,

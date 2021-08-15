@@ -1,6 +1,5 @@
 import React from "react";
 import fs from "fs";
-import path from "path";
 import matter from "gray-matter";
 import Link from "next/link";
 import formatDistance from "date-fns/formatDistance";
@@ -11,7 +10,7 @@ export const getStaticProps = async () => {
 
   filenames.forEach((filename) => {
     let file = fs.readFileSync("posts/" + filename, "utf-8");
-    const { data, content } = matter(file);
+    const { data } = matter(file);
     console.log(data.tags.includes("draft"));
     if (!data.tags.includes("draft")) {
       data["slug"] = filename.replace(".md", "");
