@@ -4,7 +4,7 @@ export default function Footer() {
   return (
     <footer className="mt-24 mb-8 border-t border-gray-300 dark:border-gray-700">
       <div className="mt-4 font-sans dim-color text-center mx-auto text-xs sm:text-sm lg:text-base">
-        <div>&copy; 2015-2020 Niru Maheswaranathan</div>
+        <div>&copy; 2015-2021 Niru Maheswaranathan</div>
         <div>
           Made with&nbsp;
           <a href="https://tailwindcss.com/">Tailwind CSS</a>
