@@ -23,7 +23,7 @@ module.exports = {
       gray: colors.gray,
       teal: colors.teal,
       cyan: colors.cyan,
-      blue: colors.lightBlue,
+      blue: colors.sky,
       indigo: colors.indigo,
     },
     fontFamily: {
