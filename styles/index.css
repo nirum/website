@@ -11,8 +11,7 @@
 }
 
 article a {
-  @apply underline transition duration-100 ease-linear pb-0;
-  text-decoration-color: theme("colors.gray.400");
+  @apply underline underline-offset-2 dark:decoration-cyan-300 decoration-indigo-600 decoration-2 transition duration-100 ease-linear pb-0;
 }
 
 a {
