@@ -1,9 +1,7 @@
 const colors = require("tailwindcss/colors");
 
 module.exports = {
-  purge: ["./components/**/*.{js,ts,jsx,tsx}", "./pages/**/*.{js,ts,jsx,tsx}"],
-  darkMode: "media", // 'media' or 'class'
-  mode: "jit",
+  content: ["./components/**/*.{js,ts,jsx,tsx}", "./pages/**/*.{js,ts,jsx,tsx}"],
   theme: {
     extend: {
       typography: {
@@ -17,14 +15,6 @@ module.exports = {
           },
         },
       },
-    },
-    colors: {
-      coolgray: colors.coolGray,
-      gray: colors.gray,
-      teal: colors.teal,
-      cyan: colors.cyan,
-      blue: colors.sky,
-      indigo: colors.indigo,
     },
     fontFamily: {
       sans: [
@@ -66,12 +56,6 @@ module.exports = {
       semibold: 600,
       bold: 700,
       black: 900,
-    },
-  },
-  variants: {
-    extend: {
-      backgroundImage: ["hover", "focus"],
-      cursor: ["hover", "focus"],
     },
   },
   plugins: [],

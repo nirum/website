@@ -16,7 +16,7 @@ export default function IndexPage() {
       </div>
       <article>
         <p>
-          I am currently a Research Scientist at Facebook Reality Labs, working
+          I am currently a Research Scientist at Reality Labs at Meta, working
           on{" "}
           <a href="https://tech.fb.com/inside-facebook-reality-labs-wrist-based-interaction-for-the-next-computing-platform/">
             neural interfaces
