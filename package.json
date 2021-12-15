@@ -2,7 +2,7 @@
   "name": "nirum",
   "private": true,
   "description": "Niru's personal website",
-  "version": "0.5.0",
+  "version": "0.5.1",
   "scripts": {
     "dev": "next",
     "build": "next build",
