@@ -112,7 +112,7 @@ export async function getStaticProps() {
 export default function CodePage({ repos }) {
   return (
     <div className="mt-8">
-      <div className="text-gray-dark font-serif text-gray-700 dark:text-coolgray-400">
+      <div className="text-gray-dark font-serif text-gray-700 dark:text-gray-400">
         <h1>Code</h1>
         <h4>Selected GitHub repositories.</h4>
       </div>

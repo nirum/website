@@ -10,7 +10,7 @@ const GradientBar = () => (
 
 export default function App({ Component, pageProps }) {
   return (
-    <div className="bg-coolgray-100 dark:bg-gray-900 min-h-screen">
+    <div className="bg-gray-100 dark:bg-zinc-900 min-h-screen">
       <Head>
         <title>Niru Maheswaranathan</title>
         <link rel="shortcut icon" href="/favicon.png" />

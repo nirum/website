@@ -1,13 +1,13 @@
 .base-color {
-  @apply text-gray-700 dark:text-coolgray-400;
+  @apply text-gray-700 dark:text-gray-400;
 }
 
 .dim-color {
-  @apply text-gray-500 dark:text-coolgray-500;
+  @apply text-gray-500 dark:text-gray-500;
 }
 
 .bright-color {
-  @apply text-gray-700 dark:text-coolgray-200;
+  @apply text-gray-700 dark:text-gray-200;
 }
 
 article a {
@@ -20,11 +20,11 @@ a {
 }
 
 article {
-  @apply text-coolgray-700 dark:text-coolgray-200 font-sans sm:font-serif mx-auto sm:text-lg lg:text-xl;
+  @apply text-gray-700 dark:text-gray-200 font-sans sm:font-serif mx-auto sm:text-lg lg:text-xl;
 }
 
 h1 {
-  @apply overflow-visible text-coolgray-700 dark:text-coolgray-200 font-serif text-xl sm:text-2xl lg:text-4xl font-black leading-snug mt-8 lg:mt-16;
+  @apply overflow-visible text-gray-700 dark:text-gray-200 font-serif text-xl sm:text-2xl lg:text-4xl font-black leading-snug mt-8 lg:mt-16;
 }
 
 h2 {
@@ -36,7 +36,7 @@ h3 {
 }
 
 h4 {
-  @apply text-base sm:text-lg lg:text-2xl font-serif italic text-coolgray-500 dark:text-coolgray-500;
+  @apply text-base sm:text-lg lg:text-2xl font-serif italic text-gray-500 dark:text-gray-500;
 }
 
 p {
@@ -68,7 +68,7 @@ hr {
 }
 
 pre {
-  @apply mt-6 lg:mt-8 bg-coolgray-800 text-gray-200 dark:bg-gray-800 p-4 lg:p-6 rounded-lg border border-indigo-500 dark:border-cyan-300 text-sm sm:text-base lg:text-lg overflow-x-scroll;
+  @apply mt-6 lg:mt-8 bg-gray-800 text-gray-200 dark:bg-gray-800 p-4 lg:p-6 rounded-lg border border-indigo-500 dark:border-cyan-300 text-sm sm:text-base lg:text-lg overflow-x-scroll;
 }
 
 article > figure {
@@ -112,7 +112,7 @@ table td {
 }
 
 .card {
-  @apply rounded-md bg-coolgray-50 dark:bg-gray-900 border-gray-400 dark:border-coolgray-500 border shadow-md flex flex-col mx-auto;
+  @apply rounded-md bg-gray-50 dark:bg-zinc-900 border-gray-400 dark:border-zinc-500 border shadow-md flex flex-col mx-auto;
 }
 
 /* 

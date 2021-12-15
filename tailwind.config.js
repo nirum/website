@@ -16,14 +16,6 @@ module.exports = {
         },
       },
     },
-    colors: {
-      coolgray: colors.gray,
-      gray: colors.zinc,
-      teal: colors.teal,
-      cyan: colors.cyan,
-      blue: colors.sky,
-      indigo: colors.indigo,
-    },
     fontFamily: {
       sans: [
         '"Source Sans Pro"',

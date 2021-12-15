@@ -61,7 +61,7 @@ export const Back = ({ size }) => (
 );
 
 const Pill = ({ children }) => (
-  <div className="inline-flex items-center rounded px-2 py-1 hover:bg-indigo-200 dark:hover:bg-cyan-500 dark:hover:text-gray-100 text-indigo-800 dark:text-coolgray-300 border-gray-400 dark:border-gray-700 border fade">
+  <div className="inline-flex items-center rounded px-2 py-1 hover:bg-indigo-200 dark:hover:bg-cyan-500 dark:hover:text-gray-100 text-indigo-800 dark:text-gray-300 border-gray-400 dark:border-gray-700 border fade">
     {children}
   </div>
 );
