@@ -3,17 +3,17 @@ default:
 
 dev:
   echo 'Launching dev server...'
-  next
+  npm run dev
   echo 'Done!'
 
 build:
   echo 'Building html...'
-  next build
+  npm run build
   echo 'Done!'
 
 publish: build
   echo 'Exporting...'
-  next export
+  npm run export
   echo 'Done'
 
 sloc:
