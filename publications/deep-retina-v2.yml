@@ -1,23 +1,23 @@
-title: The dynamic neural code of the retina for natural scenes
+title: "Interpreting the retinal neural code for natural scenes: From computations to neurons"
 
 authors:
   - Niru Maheswaranathan*
   - Lane T. Mcintosh*
-  - Hidenori Tanaka
-  - Satchel Grant
+  - Hidenori Tanaka*
+  - Satchel Grant*
   - David B. Kastner
-  - Josh B. Melander
+  - Joshua B. Melander
   - Aran Nayebi
-  - Luke Brezovec
-  - Julia Wang
+  - Luke E. Brezovec
+  - Julia H. Wang
   - Surya Ganguli
   - Stephen A. Baccus
 
-date: 2019-12-17
-location: bioRxiv
+date: 2023-07-07
+location: Neuron
 
-url: "https://www.biorxiv.org/content/10.1101/340943v5"
-pdf: "https://www.biorxiv.org/content/10.1101/340943v5.full.pdf"
+url: "https://www.cell.com/neuron/fulltext/S0896-6273(23)00467-1?_returnURL=https%3A%2F%2Flinkinghub.elsevier.com%2Fretrieve%2Fpii%2FS0896627323004671"
+pdf: "https://www.cell.com/neuron/pdf/S0896-6273(23)00467-1.pdf"
 
 slug: 'deep-retina-v2'
-bibtex: "@article{maheswaranathan2018deep, title={Deep learning models reveal internal structure and diverse computations in the retina under natural scenes}, author={Maheswaranathan, Niru and McIntosh, Lane T and Kastner, David B and Melander, Josh and Brezovec, Luke and Nayebi, Aran and Wang, Julia and Ganguli, Surya and Baccus, Stephen A}, journal={bioRxiv}, pages={340943}, year={2018}, publisher={Cold Spring Harbor Laboratory} }"
+bibtex: "@article{maheswaranathan2023interpreting, title={Interpreting the retinal neural code for natural scenes: From computations to neurons}, author={Maheswaranathan, Niru and McIntosh, Lane T and Tanaka, Hidenori and Grant, Satchel and Kastner, David B and Melander, Joshua B and Nayebi, Aran and Brezovec, Luke E and Wang, Julia H and Ganguli, Surya and others}, journal={Neuron}, publisher={Elsevier} }"
