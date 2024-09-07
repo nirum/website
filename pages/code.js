@@ -1,8 +1,7 @@
 import fetch from "node-fetch";
 import { repositories } from "../components/metadata";
 import path from "path";
-// import fs from "fs";
-import emoji from "node-emoji";
+import { emojify } from "node-emoji";
 
 const pluralize = (value, word, plural = word + "s") =>
   value === 1 ? value + " " + word : value + " " + plural;
@@ -69,7 +68,7 @@ const Card = ({
         </div>
       </div>
       <div className="mt-2 leading-tight md:text-lg font-semibold font-serif bright-color">
-        {emoji.emojify(description)}
+        {emojify(description)}
       </div>
       <div className="h-0 flex-grow"></div>
       <div className="flex flex-row font-sans space-x-3 mt-2 text-sm sm:text-base">
