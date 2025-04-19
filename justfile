@@ -12,4 +12,4 @@ build:
   echo 'Done!'
 
 sloc:
-  @echo "`wc -l **/*.{js,jsx,ts}` lines of code"
+  @echo "`wc -l **/*.js` lines of code"
