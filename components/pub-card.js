@@ -61,7 +61,7 @@ export const Back = ({ size }) => (
 );
 
 const Pill = ({ children }) => (
-  <div className="inline-flex items-center rounded px-2 py-1 hover:bg-indigo-200 dark:hover:bg-cyan-500 dark:hover:text-gray-100 text-indigo-800 dark:text-gray-300 border-gray-400 dark:border-gray-700 border fade">
+  <div className="inline-flex items-center rounded-sm px-2 py-1 hover:bg-indigo-200 dark:hover:bg-cyan-500 dark:hover:text-gray-100 text-indigo-800 dark:text-gray-300 border-gray-400 dark:border-gray-700 border fade">
     {children}
   </div>
 );
@@ -73,11 +73,11 @@ export default function PubCard({ ...pub }) {
         {formatDate(pub.date)}&nbsp;&bull;&nbsp;{pub.location}
       </div>
 
-      <div className="relative w-full h-32 rounded mt-4">
+      <div className="relative w-full h-32 rounded-sm mt-4">
         <img
           src={pub.image}
           alt="..."
-          className="rounded object-cover h-32 w-full"
+          className="rounded-sm object-cover h-32 w-full"
         />
       </div>
       <div className="mt-4 font-serif">
@@ -88,7 +88,7 @@ export default function PubCard({ ...pub }) {
           {pub.authors.join(", ")}
         </div>
       </div>
-      <div className="h-0 flex-grow"></div>
+      <div className="h-0 grow"></div>
       <div className="my-4 flex flex-row text-sm space-x-2">
         {pub.url && (
           <a href={pub.url} className="h-3 cursor-pointer">

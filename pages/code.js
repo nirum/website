@@ -61,7 +61,7 @@ const Card = ({
       <div className="font-mono text-xs sm:text-sm">
         <div className="flex flex-row space-x-1">
           <div>{full_name}</div>
-          <div className="flex-grow"></div>
+          <div className="grow"></div>
           <div className="w-4 h-4">
             <GitHubRepo size="4" />
           </div>
@@ -70,7 +70,7 @@ const Card = ({
       <div className="mt-2 leading-tight md:text-lg font-semibold font-serif bright-color">
         {emojify(description)}
       </div>
-      <div className="h-0 flex-grow"></div>
+      <div className="h-0 grow"></div>
       <div className="flex flex-row font-sans space-x-3 mt-2 text-sm sm:text-base">
         <Pill className="w-3 h-3">
           <GitHubBookmark size="3" />

@@ -4,7 +4,7 @@ import ActiveLink from "./active-link";
 const Logo = () => (
   <Link href="/">
     <svg
-      className="w-6 h-6 sm:w-8 sm:h-8 fill-current text-indigo-600 dark:text-cyan-500 hover:text-gray-100 dark:hover:text-gray-900 hover:bg-gradient-to-r from-cyan-600 via-indigo-700 to-blue-800 dark:from-blue-400 dark:via-cyan-400 dark:to-teal-500 rounded-full cursor-pointer fade"
+      className="w-6 h-6 sm:w-8 sm:h-8 fill-current text-indigo-600 dark:text-cyan-500 hover:text-gray-100 dark:hover:text-gray-900 hover:bg-linear-to-r from-cyan-600 via-indigo-700 to-blue-800 dark:from-blue-400 dark:via-cyan-400 dark:to-teal-500 rounded-full cursor-pointer fade"
       viewBox="0 0 64 64"
       strokeLinejoin="round"
     >
@@ -32,7 +32,7 @@ export default function Header() {
     <header className="mx-auto py-8 w-full">
       <ul className="flex flex-row text-sm sm:text-base dim-color space-x-3 uppercase tracking-wide">
         <Logo />
-        <div className="flex-grow"></div>
+        <div className="grow"></div>
         <li>
           <ActiveLink href="/about" activeClassName={active}>
             <div className={inactive}>About</div>
