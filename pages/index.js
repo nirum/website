@@ -10,11 +10,6 @@ export default function IndexPage() {
         <h4>Machine learning &amp; neuroscience&nbsp;research</h4>
         <ul className="flex flex-row mt-8 space-x-2 justify-center text-gray-600 dark:text-gray-400">
           <li className="hover:text-indigo-500 w-8 h-8 dark:hover:text-cyan-300 cursor-pointer transition duration-050 ease-linear">
-            <a href={hrefs.twitter}>
-              <Twitter size={8} />
-            </a>
-          </li>
-          <li className="hover:text-indigo-500 w-8 h-8 dark:hover:text-cyan-300 cursor-pointer transition duration-050 ease-linear">
             <a href={hrefs.scholar}>
               <Scholar size={8} />
             </a>
