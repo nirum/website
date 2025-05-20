@@ -11,8 +11,9 @@ export const getStaticProps = async () => {
   filenames.forEach((filename) => {
     let file = fs.readFileSync("posts/" + filename, "utf-8");
     const { data } = matter(file);
-    console.log(data.tags.includes("draft"));
-    if (!data.tags.includes("draft")) {
+    const tags = data.tags || [];
+    console.log(tags.includes("draft"));
+    if (!tags.includes("draft")) {
       data["slug"] = filename.replace(".md", "");
       data["date"] = data["date"].toString();
       posts.push(data);
