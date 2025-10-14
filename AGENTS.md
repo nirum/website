@@ -29,6 +29,9 @@ just build     # wrapper: announces and runs npm run build
 - When adding data loaders or parsers, include quick utility scripts under `scripts/` or tests in `__tests__/` (Jest configuration is not present, so add it alongside the new tests).
 
 ## Commit & Pull Request Guidelines
+- Keep commits atomic: commit only the files you touched and list each path explicitly.
 - Follow the existing Git log: short, imperative subjects (e.g., `Fix blog tag handling`) and optional scope details.
 - Each PR should describe the change, link relevant issues, and include screenshots or terminal output for UI or build-facing updates.
 - Note any schema or content migrations, list manual verification steps, and confirm `npm run build` completion in the PR checklist.
+- For tracked files run `git commit -m "<scoped message>" -- path/to/file1 path/to/file2`.
+- For brand-new files, use the one-liner `git restore --staged :/ && git add "path/to/file1" "path/to/file2" && git commit -m "<scoped message>" -- path/to/file1 path/to/file2`.
