@@ -1,3 +1,4 @@
+import { useEffect, useState } from "react";
 import Link from "next/link";
 import ActiveLink from "./active-link";
 
@@ -28,6 +29,41 @@ export default function Header() {
     "text-indigo-600 dark:text-cyan-500 border-b-2 dark:border-cyan-700 border-indigo-400";
   const inactive =
     "hover:text-indigo-600 dark:hover:text-cyan-500 cursor-pointer hover:border-indigo-400 dark:hover:border-cyan-700 fade";
+  const [theme, setTheme] = useState("light");
+
+  useEffect(() => {
+    if (typeof window === "undefined") {
+      return;
+    }
+
+    const root = window.document.documentElement;
+    const storedTheme = window.localStorage.getItem("theme");
+    const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
+    const resolvedTheme =
+      storedTheme === "dark" || storedTheme === "light"
+        ? storedTheme
+        : prefersDark
+        ? "dark"
+        : "light";
+
+    root.classList.toggle("dark", resolvedTheme === "dark");
+    setTheme(resolvedTheme);
+  }, []);
+
+  const toggleTheme = () => {
+    if (typeof window === "undefined") {
+      return;
+    }
+
+    setTheme((current) => {
+      const nextTheme = current === "dark" ? "light" : "dark";
+      const root = window.document.documentElement;
+      root.classList.toggle("dark", nextTheme === "dark");
+      window.localStorage.setItem("theme", nextTheme);
+      return nextTheme;
+    });
+  };
+
   return (
     <header className="mx-auto py-8 w-full">
       <ul className="flex flex-row text-sm sm:text-base dim-color space-x-3 uppercase tracking-wide">
@@ -48,6 +84,16 @@ export default function Header() {
           <ActiveLink href="/code" activeClassName={active}>
             <div className={inactive}>Code</div>
           </ActiveLink>
+        </li>
+        <li className="flex items-center">
+          <button
+            type="button"
+            onClick={toggleTheme}
+            className={`border-b-2 border-transparent px-2 py-1 ${inactive}`}
+            aria-label={`Switch to ${theme === "dark" ? "light" : "dark"} mode`}
+          >
+            {theme === "dark" ? "Dark" : "Light"}
+          </button>
         </li>
       </ul>
     </header>
