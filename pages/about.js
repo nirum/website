@@ -46,7 +46,7 @@ export default function IndexPage() {
         </p>
         <p>
           You can get in contact with me at:&nbsp;
-          <a href={hrefs.email}>niru@hey.com</a>
+          <a href={hrefs.email}>hello@niru.dev</a>
         </p>
       </article>
     </div>
