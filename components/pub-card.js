@@ -1,13 +1,4 @@
-import Link from "next/link";
-import { join } from "path";
-
-function formatDate(dateString) {
-  let d = new Date(dateString);
-  let day = d.getDate();
-  let month = d.getMonth() + 1;
-  let year = d.getFullYear();
-  return year;
-}
+import { formatDate } from '../lib/utils.js';
 
 export const Library = ({ size }) => (
   <svg

@@ -1,10 +1,8 @@
-import fetch from "node-fetch";
-import { repositories } from "../components/metadata";
-import path from "path";
-import { emojify } from "node-emoji";
-
-const pluralize = (value, word, plural = word + "s") =>
-  value === 1 ? value + " " + word : value + " " + plural;
+import fetch from 'node-fetch';
+import { repositories } from '../components/metadata';
+import path from 'path';
+import { emojify } from 'node-emoji';
+import { pluralize } from '../lib/utils.js';
 
 const GitHubBookmark = ({ size }) => (
   <svg
