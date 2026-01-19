@@ -69,7 +69,7 @@ export default function Header({ theme, onToggleTheme }) {
             <div className={inactive}>Code</div>
           </ActiveLink>
         </li>
-        <li className='flex items-center'>
+        <li className='ml-4 flex items-center'>
           <ThemeToggle theme={theme} onToggleTheme={onToggleTheme} />
         </li>
       </ul>
