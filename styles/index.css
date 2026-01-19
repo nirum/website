@@ -1,4 +1,5 @@
-@reference "tailwindcss";
+@reference 'tailwindcss';
+@config '../tailwind.config.js';
 
 @layer base {
   html {
