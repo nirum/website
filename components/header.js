@@ -16,6 +16,26 @@ const Logo = () => (
   </Link>
 );
 
+const ThemeToggle = ({ theme, onToggleTheme }) => {
+  const isDark = theme === 'dark';
+
+  return (
+    <button
+      type='button'
+      onClick={onToggleTheme}
+      aria-label={isDark ? 'Switch to light mode' : 'Switch to dark mode'}
+      aria-pressed={isDark}
+      className='relative inline-flex h-6 w-11 items-center rounded-full border border-indigo-400 dark:border-cyan-700 bg-gray-100 dark:bg-zinc-800 transition duration-150 ease-linear focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-indigo-500 dark:focus-visible:ring-cyan-500'
+    >
+      <span
+        className={`inline-block h-4 w-4 rounded-full bg-indigo-600 dark:bg-cyan-500 transition duration-150 ease-linear ${
+          isDark ? 'translate-x-5' : 'translate-x-1'
+        }`}
+      />
+    </button>
+  );
+};
+
 // (removed blog link)
 // <li>
 //   <ActiveLink href="/blog" activeClassName={active}>
@@ -23,14 +43,14 @@ const Logo = () => (
 //   </ActiveLink>
 // </li>
 
-export default function Header() {
+export default function Header({ theme, onToggleTheme }) {
   const active =
     "text-indigo-600 dark:text-cyan-500 border-b-2 dark:border-cyan-700 border-indigo-400";
   const inactive =
     "hover:text-indigo-600 dark:hover:text-cyan-500 cursor-pointer hover:border-indigo-400 dark:hover:border-cyan-700 fade";
   return (
     <header className="mx-auto py-8 w-full">
-      <ul className="flex flex-row text-sm sm:text-base dim-color space-x-3 uppercase tracking-wide">
+      <ul className="flex flex-row items-center text-sm sm:text-base dim-color space-x-3 uppercase tracking-wide">
         <Logo />
         <div className="grow"></div>
         <li>
@@ -48,6 +68,9 @@ export default function Header() {
           <ActiveLink href="/code" activeClassName={active}>
             <div className={inactive}>Code</div>
           </ActiveLink>
+        </li>
+        <li className='ml-4 flex items-center'>
+          <ThemeToggle theme={theme} onToggleTheme={onToggleTheme} />
         </li>
       </ul>
     </header>
