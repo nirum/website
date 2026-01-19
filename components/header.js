@@ -50,7 +50,7 @@ export default function Header({ theme, onToggleTheme }) {
     "hover:text-indigo-600 dark:hover:text-cyan-500 cursor-pointer hover:border-indigo-400 dark:hover:border-cyan-700 fade";
   return (
     <header className="mx-auto py-8 w-full">
-      <ul className="flex flex-row text-sm sm:text-base dim-color space-x-3 uppercase tracking-wide">
+      <ul className="flex flex-row items-center text-sm sm:text-base dim-color space-x-3 uppercase tracking-wide">
         <Logo />
         <div className="grow"></div>
         <li>
