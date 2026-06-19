@@ -12,7 +12,6 @@ export const getStaticProps = async () => {
     let file = fs.readFileSync("posts/" + filename, "utf-8");
     const { data } = matter(file);
     const tags = data.tags || [];
-    console.log(tags.includes("draft"));
     if (!tags.includes("draft")) {
       data["slug"] = filename.replace(".md", "");
       data["date"] = data["date"].toString();
@@ -33,6 +32,9 @@ export default function BlogPage({ posts }) {
     <div>
       <h1>Blog posts</h1>
       <div className="mt-8 flex flex-col space-y-4 mt-12 mx-auto">
+        {posts.length === 0 && (
+          <p className="dim-color font-sans">No posts yet.</p>
+        )}
         {posts.map((p, i) => (
           <div key={i} className="font-sans w-full">
             <Link
