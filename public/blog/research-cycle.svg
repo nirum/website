@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 660 160" role="img" aria-labelledby="title">
+  <title id="title">An idea leads to an experiment, which leads to a result</title>
+  <rect width="660" height="160" rx="12" fill="#f3f4f6"/>
+  <g fill="#eef2ff" stroke="#4f46e5" stroke-width="2">
+    <rect x="20" y="45" width="160" height="70" rx="8"/>
+    <rect x="250" y="45" width="160" height="70" rx="8"/>
+    <rect x="480" y="45" width="160" height="70" rx="8"/>
+    <path d="M190 80h48m-10-8 10 8-10 8M420 80h48m-10-8 10 8-10 8" fill="none"/>
+  </g>
+  <g fill="#312e81" font-family="system-ui, sans-serif" font-size="20" text-anchor="middle">
+    <text x="100" y="87">Idea</text><text x="330" y="87">Experiment</text><text x="560" y="87">Result</text>
+  </g>
+</svg>

@@ -2,7 +2,7 @@ import Link from "next/link";
 import ActiveLink from "./active-link";
 
 const Logo = () => (
-  <Link href="/">
+  <Link href="/" aria-label='Home'>
     <svg
       className="w-6 h-6 sm:w-8 sm:h-8 fill-current text-indigo-600 dark:text-cyan-500 hover:text-gray-100 dark:hover:text-gray-900 hover:bg-linear-to-r from-cyan-600 via-indigo-700 to-blue-800 dark:from-blue-400 dark:via-cyan-400 dark:to-teal-500 rounded-full cursor-pointer fade"
       viewBox="0 0 64 64"
@@ -36,13 +36,6 @@ const ThemeToggle = ({ theme, onToggleTheme }) => {
   );
 };
 
-// (removed blog link)
-// <li>
-//   <ActiveLink href="/blog" activeClassName={active}>
-//     <div className={inactive}>Blog</div>
-//   </ActiveLink>
-// </li>
-
 export default function Header({ theme, onToggleTheme }) {
   const active =
     "text-indigo-600 dark:text-cyan-500 border-b-2 dark:border-cyan-700 border-indigo-400";
@@ -50,29 +43,35 @@ export default function Header({ theme, onToggleTheme }) {
     "hover:text-indigo-600 dark:hover:text-cyan-500 cursor-pointer hover:border-indigo-400 dark:hover:border-cyan-700 fade";
   return (
     <header className="mx-auto py-8 w-full">
-      <ul className="flex flex-row items-center text-sm sm:text-base dim-color space-x-3 uppercase tracking-wide">
-        <Logo />
-        <div className="grow"></div>
-        <li>
-          <ActiveLink href="/about" activeClassName={active}>
-            <div className={inactive}>About</div>
-          </ActiveLink>
-        </li>
+      <nav aria-label='Main navigation'>
+        <ul className="flex flex-row flex-wrap gap-x-3 gap-y-4 items-center text-xs sm:text-base dim-color uppercase tracking-wide">
+          <li className='mr-auto'><Logo /></li>
+          <li>
+            <ActiveLink href="/about" activeClassName={active}>
+              <div className={inactive}>About</div>
+            </ActiveLink>
+          </li>
 
-        <li>
-          <ActiveLink href="/research" activeClassName={active}>
-            <div className={inactive}>Research</div>
-          </ActiveLink>
-        </li>
-        <li>
-          <ActiveLink href="/code" activeClassName={active}>
-            <div className={inactive}>Code</div>
-          </ActiveLink>
-        </li>
-        <li className='ml-4 flex items-center'>
-          <ThemeToggle theme={theme} onToggleTheme={onToggleTheme} />
-        </li>
-      </ul>
+          <li>
+            <ActiveLink href="/research" activeClassName={active}>
+              <div className={inactive}>Research</div>
+            </ActiveLink>
+          </li>
+          <li>
+            <ActiveLink href="/code" activeClassName={active}>
+              <div className={inactive}>Code</div>
+            </ActiveLink>
+          </li>
+          <li>
+            <ActiveLink href='/blog' activeClassName={active}>
+              <div className={inactive}>Blog</div>
+            </ActiveLink>
+          </li>
+          <li className='flex items-center'>
+            <ThemeToggle theme={theme} onToggleTheme={onToggleTheme} />
+          </li>
+        </ul>
+      </nav>
     </header>
   );
 }
