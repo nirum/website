@@ -139,3 +139,54 @@ article >
 article > p {
   @apply leading-relaxed sm:text-lg lg:text-xl mt-8;
 } */
+
+.blog-content {
+  overflow-wrap: anywhere;
+}
+
+.blog-content img {
+  @apply max-w-full h-auto rounded-lg my-8;
+}
+
+.blog-content ul,
+.blog-content ol {
+  @apply pl-6 my-6;
+}
+
+.blog-content ul {
+  @apply list-disc;
+}
+
+.blog-content ol {
+  @apply list-decimal;
+}
+
+.blog-content li {
+  @apply my-2;
+}
+
+.blog-content pre {
+  @apply max-w-full overflow-x-auto;
+  overflow-wrap: normal;
+}
+
+.blog-content pre code {
+  font-size: inherit;
+}
+
+/* Highlight.js tokens on the existing dark code-block background. */
+.hljs-comment,
+.hljs-quote { color: #a1a1aa; }
+.hljs-keyword,
+.hljs-selector-tag,
+.hljs-literal { color: #c4b5fd; }
+.hljs-string,
+.hljs-attr,
+.hljs-addition { color: #a7f3d0; }
+.hljs-number,
+.hljs-built_in,
+.hljs-type { color: #fcd34d; }
+.hljs-title,
+.hljs-section { color: #67e8f9; }
+.hljs-meta,
+.hljs-deletion { color: #fda4af; }
