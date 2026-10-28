@@ -137,12 +137,13 @@ public assets or content. No paid service is required by this implementation.
 - Inspect page source for unique titles/descriptions, canonical URLs under
   `https://niru.dev/`, and `og:type=article` on posts. Parse RSS/sitemap as XML and
   confirm that only published posts appear. Subscribe to `/rss.xml` in a reader.
-- Restore and commit the existing public assets before cutover: this checkout
-  originally omitted `public/` entirely. At minimum `/profile.png`, `/favicon.png`,
-  and `/pubs/<publication-name>.png` are referenced. Inventory the live site's
-  other downloads and URLs too, and copy them at their original paths. Do not
-  replace them with placeholder images. A successful build alone does not prove
-  the old assets are present.
+- The profile photo, favicon, and all ten publication images are now committed
+  at their original paths. Inventory the live site's other downloads and URLs
+  before cutover. The recovered `thesis.pdf` is 35,620,123 bytes, above Pages'
+  25 MiB per-file limit; lossless stream recompression did not bring it below
+  that limit. It is not included in the export. Before cutover, provide a smaller
+  approved web copy at `/thesis.pdf` or arrange separate hosting and a redirect
+  preserving that URL. Keep the original PDF and Linode copy until resolved.
 - Preview deployments receive Cloudflare's `X-Robots-Tag: noindex` by default.
   The production `pages.dev` URL is different: if needed, protect it during
   staging with Cloudflare Access. Canonical links already point to `niru.dev`.
@@ -206,7 +207,8 @@ No DNS changes or production deployment actions are performed by `npm run build`
   build leaves the last successful Pages deployment in place. Review the Code
   page in every preview. Repository snapshots under `repositories/` are not used
   by the existing loader.
-- `public/` was ignored; it is now trackable so assets can reach Git builds.
+- `public/` was ignored; it is now trackable and the referenced images have
+  been restored so they reach Git builds.
   `CLAUDE.md`, referenced by AGENTS.md, is absent from this checkout. Existing
   CodeQL configuration is preserved; no FTP/Linode deployment configuration was
   found in the tracked files.
